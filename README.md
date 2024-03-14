@@ -26,6 +26,8 @@ David Canelada Velasco
 
 Adrián del Pozo Hernández
 
-Jimbo
+Jaime Vicente Arroyo
 
-(y otras dos personas)
+Daniel Zhu
+
+Luis Parres Sánchez
