@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
+#Diego está utilizando Linux. Como no hay Visual Studio, tiene que utilizar el code. Gitignore del VSCode.
+.vscode
