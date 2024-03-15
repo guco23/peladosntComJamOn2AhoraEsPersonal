@@ -9,10 +9,33 @@ public class ResourseManager : MonoBehaviour
 
     [SerializeField] private float cooldown;
 
-    [SerializeField] private float resourseWin;
+    [SerializeField] private float resourseWinAmount;
 
-    private float elapsedTime;
-    
+    private float elapsedTime = 0;
+
+    [SerializeField]
+    private float resourseAmount = 0;
+
+
+    #region methods
+
+    public bool SpendResourses(float cost)
+    {
+        if(cost < resourseAmount)
+        {
+            resourseAmount -= cost;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+
+    }
+
+
+    #endregion
 
     void Start()
     {
@@ -23,5 +46,19 @@ public class ResourseManager : MonoBehaviour
     void Update()
     {
         
+        if(elapsedTime >= cooldown)
+        {
+
+            resourseAmount += resourseWinAmount;
+            elapsedTime = 0;
+
+        }
+        else
+        {
+            elapsedTime += Time.deltaTime;
+        }
+
+        
+
     }
 }
