@@ -18,13 +18,16 @@ public class PlacementSystem : MonoBehaviour
 
     [SerializeField]
     private Vector3 placeOffSetSpawn = new Vector3(1, 1, 1);
+
     #region references
 
-    [SerializeField] private GameObject mouseIcon, cellIndicator,basicSoldierPrefab;
+    [SerializeField] private GameObject mouseIcon, cellIndicator, basicSoldierPrefab, basicSoldierPickAxePrefab;
     [SerializeField] private InputManager inputManager;
     [SerializeField] private Grid grid_;
 
     [SerializeField] int spawnCellX;
+
+    [SerializeField] int enemyType;
 
     #endregion
     bool b = false;
@@ -46,22 +49,44 @@ public class PlacementSystem : MonoBehaviour
         {
             if(elapsedTime > minSpawnRate)
             {
+
                 elapsedTime = 0;
 
-                cellPos.x = spawnCellX;
+                Vector3Int cellPosSpawn = cellPos;
 
-                GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPos) + placeOffSetSpawn, Quaternion.identity);
+                cellPosSpawn.x = spawnCellX;
 
-                soldier.transform.Rotate(new Vector3(0, 90, 0));
-
-                /*
-                 
-                if(b)
+                if (enemyType == 0)
                 {
-                    soldier.transform.position += new Vector3(0, 0, 1);
+
+                   
+                    GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
+
+                    soldier.transform.Rotate(new Vector3(0, 90, 0));
+
+                    /*
+
+                    if(b)
+                    {
+                        soldier.transform.position += new Vector3(0, 0, 1);
+                    }
+                    b = !b;
+                     */
+
                 }
-                b = !b;
-                 */
+                else if(enemyType == 1)
+                {
+
+                    GameObject soldierPickaxe = Instantiate(basicSoldierPickAxePrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
+
+                    soldierPickaxe.transform.Rotate(new Vector3(0, 90, 0));
+
+                    BuildTrinchera trinBuild = soldierPickaxe.GetComponent<BuildTrinchera>();
+
+                    trinBuild.setTrinPos(grid_.CellToWorld(cellPos));
+
+                }
+                
             }
         }
     }

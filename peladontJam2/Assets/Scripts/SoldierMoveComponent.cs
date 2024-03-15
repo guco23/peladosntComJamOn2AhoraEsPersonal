@@ -26,6 +26,9 @@ public class SoldierMoveComponent : MonoBehaviour
     }
 
     public void stopMoving() {
+
+        Debug.Log("Stop");
+
         rb.velocity = Vector3.zero;
     }
 

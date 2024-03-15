@@ -48,12 +48,9 @@ public class ResourseManager : MonoBehaviour
         
         if(elapsedTime >= cooldown)
         {
-            Debug.Log(elapsedTime);
 
             resourseAmount += resourseWinAmount;
             elapsedTime = 0;
-
-            Debug.Log(elapsedTime);
 
         }
         else
