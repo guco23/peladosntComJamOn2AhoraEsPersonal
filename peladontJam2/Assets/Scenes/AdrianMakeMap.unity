@@ -294,7 +294,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ca814e10ea6c854408ddc872e57140f1, type: 2}
+  - {fileID: 2100000, guid: ad5aa5acde5d1ef4a8a5a79121b636f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -479,12 +479,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1048689121503718524, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1048689121503718524, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4
+      value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 1048689121503718526, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca814e10ea6c854408ddc872e57140f1, type: 2}
     - target: {fileID: 1048689121807814756, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: sceneCamera
       value: 
