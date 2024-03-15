@@ -4911,7 +4911,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8458075916828830884}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4983,6 +4983,7 @@ MonoBehaviour:
   target: {fileID: 0}
   bulletPrefab: {fileID: 1040333240147439518, guid: 1f4ff7d51bf52784dadabf70684299df, type: 3}
   spawnPoint: {fileID: 8458075917345982202}
+  soldierDectect: {fileID: 0}
 --- !u!114 &8118551125445715157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5089,7 +5090,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8458075917345982199}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

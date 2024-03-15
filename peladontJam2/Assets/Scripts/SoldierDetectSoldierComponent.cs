@@ -15,7 +15,7 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
 
     [SerializeField]
     [Tooltip("La distancia de detección")]
-    int distancia;
+    float distancia;
 
     [SerializeField]
     [Tooltip("El layerMASK de las unidades enemigas")]
@@ -34,11 +34,15 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!targetFocused) {
-            Physics.Raycast(transform.position, transform.forward, out deteccionEnemigos, distancia, targetLayerMask );
-            Debug.DrawRay(transform.position, transform.forward, Color.green, 0f, false); //debug
+        if (!targetFocused)
+        {
+            
+            //Physics.BoxCast(transform.position,new Vector3(1,0,1), transform.forward,out deteccionEnemigos, Quaternion.identity, distancia, targetLayerMask,QueryTriggerInteraction.Collide);
+            Physics.Raycast(transform.position, transform.forward, out deteccionEnemigos, distancia, targetLayerMask);
+            //Debug.DrawRay(transform.position, transform.forward, Color.green, 0f, false); //debug
 
-            if(deteccionEnemigos.collider != null) {
+            if (deteccionEnemigos.collider != null)
+            {
                 targetFocused = true;
                 LifeComponent enemyLife = deteccionEnemigos.collider.gameObject.GetComponent<LifeComponent>();
                 soldierMoveComponent.stopMoving();
@@ -50,8 +54,17 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
     /**
     A llamar una vez haya muerto el enemigo que tenía como objetuivo
     */
-    public void enemyDefeated() {
+    public void enemyDefeated()
+    {
         targetFocused = false;
-        soldierMoveComponent.continueMoving();
+        if (soldierMoveComponent.GetEstadoSoldado() == EstadoSoldado.SOLDADO_EN_CAMPO)
+            soldierMoveComponent.continueMoving();
     }
+
+
+    public void ReduceRange(float offSet)
+    {
+        distancia -= offSet;
+    }
+
 }
