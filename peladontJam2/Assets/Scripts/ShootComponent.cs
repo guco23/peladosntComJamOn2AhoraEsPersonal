@@ -5,6 +5,12 @@ using UnityEngine;
 public class ShootComponent : MonoBehaviour
 {
     [SerializeField]
+    ParticleSystem _shootParticles;
+
+    [SerializeField]
+    private float firstShootDelay = 0.5f;
+
+    [SerializeField]
     private float fireRate = 1.5f;
 
     [SerializeField]    
@@ -30,18 +36,22 @@ public class ShootComponent : MonoBehaviour
     private void Start()
     {
         RandFireRate();
+        elapsedTime = fireRate - firstShootDelay;
+
     }
 
     private void Update()
     {
         if (shooting)
         {
+            //control de tiempo
             elapsedTime += Time.deltaTime;
 
             if (elapsedTime > fireRate)
             {
                 elapsedTime = 0;
 
+                //si toca disparar, shoot
                 shoot();
             }
         }
@@ -49,29 +59,43 @@ public class ShootComponent : MonoBehaviour
 
     }
 
-    void shoot()
+    private void shoot()
     {
+        //si matamos al enemigo
         if (target.reciveDamage(damage))
         {
             target = null;
             shooting = false;
         }
-
+        //recalcular el fire rate(aleatorio entre min y max)
         RandFireRate();
 
         Debug.Log("disparo");
 
+        _shootParticles.Play();
+
         //llamar al sonido de disparo
     }
 
-    public void StartShooting()
+    private void StartShooting()
     {
         shooting = true;
+
+        RandFireRate();
+
+        elapsedTime = fireRate - firstShootDelay;
     }
 
     private void RandFireRate()
     {
         fireRate = Random.Range(minFireRate, maxFireRate); 
+    }
+
+    public void SetTarget(LifeComponent _target)
+    {
+        target = _target;
+
+        StartShooting();
     }
 }
 
