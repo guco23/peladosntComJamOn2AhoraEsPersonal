@@ -6,46 +6,48 @@
             "id": "64dd8c37-18c3-4481-a69b-86e92c6ac09c",
             "actions": [
                 {
-                    "name": "Camera_Go_Left",
-                    "type": "Button",
+                    "name": "Move",
+                    "type": "Value",
                     "id": "f5b46bdb-785d-4a43-91f2-f79a2126cbaa",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Camera_Go_Right",
-                    "type": "Button",
-                    "id": "9a3111f5-9978-4bc6-a294-5ba4c61ad6e6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "6dcb572e-d349-4054-9146-f5a8f121a8a5",
+                    "name": "2D Vector",
+                    "id": "497843c1-94d6-4377-80ff-bb55946b6e7c",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "dc49c460-577b-4905-9592-b40569d615dd",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera_Go_Left",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "51173b95-d317-4dab-ab7e-5cb36c0d7b43",
+                    "name": "right",
+                    "id": "9bfe3fc0-98be-4587-909c-e5d2b4920222",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera_Go_Right",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 }
             ]
         }
