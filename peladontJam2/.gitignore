@@ -73,4 +73,4 @@ crashlytics-build.properties
 
 
 #Diego está utilizando Linux. Como no hay Visual Studio, tiene que utilizar el code. Gitignore del VSCode.
-.vscode
+.vscode/
