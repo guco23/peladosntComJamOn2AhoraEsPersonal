@@ -33,6 +33,12 @@ public class ShootComponent : MonoBehaviour
     [SerializeField]
     private LifeComponent target;
 
+    [SerializeField]
+    private GameObject bulletPrefab;
+
+    [SerializeField]
+    private Transform spawnPoint;
+
     private void Start()
     {
         RandFireRate();
@@ -61,20 +67,29 @@ public class ShootComponent : MonoBehaviour
 
     private void shoot()
     {
+        GameObject bullet = Instantiate(bulletPrefab,spawnPoint.position,Quaternion.identity);
+
+        bullet.GetComponent<BulletComponent>().SetTarget(target);
+        bullet.GetComponent<BulletComponent>().SetDamage(damage);
+
+        bullet.GetComponent<BulletComponent>().SetShootingComp(this);
+
         //si matamos al enemigo
+        /*
         if (target.reciveDamage(damage))
         {
             target = null;
             shooting = false;
         }
+         */
         //recalcular el fire rate(aleatorio entre min y max)
         RandFireRate();
 
-        Debug.Log("disparo");
+        //Debug.Log("disparo");
 
         _shootParticles.Play();
 
-        //llamar al sonido de disparo
+        //llamar al sonido de disparo(LUIS HAZ TU COSA)
     }
 
     private void StartShooting()
@@ -96,6 +111,12 @@ public class ShootComponent : MonoBehaviour
         target = _target;
 
         StartShooting();
+    }
+
+    public void StopShooting()
+    {
+        target = null;
+        shooting = false;
     }
 }
 
