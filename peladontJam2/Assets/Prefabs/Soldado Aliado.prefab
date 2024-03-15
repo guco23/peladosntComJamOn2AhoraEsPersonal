@@ -5041,7 +5041,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ca9023af1399e0d918f0bdbf700a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  estado: 0
   speed: 8
+  inputsound:
+    Guid:
+      Data1: 2124073749
+      Data2: 1325532620
+      Data3: -325574209
+      Data4: 89965162
+    Path: event:/Walk
+  timeBetweenSteps: 0.5
 --- !u!114 &3317857188800991815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5081,6 +5090,13 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1040333240147439518, guid: 1f4ff7d51bf52784dadabf70684299df, type: 3}
   spawnPoint: {fileID: 7405620061709281189}
   soldierDectect: {fileID: 0}
+  inputsound:
+    Guid:
+      Data1: -856145737
+      Data2: 1188983198
+      Data3: 1546288299
+      Data4: -2125214151
+    Path: event:/Shoot
 --- !u!114 &7137625083669611914
 MonoBehaviour:
   m_ObjectHideFlags: 0
