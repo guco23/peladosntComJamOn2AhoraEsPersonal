@@ -7,7 +7,7 @@ public class InputManager : MonoBehaviour
 
     #region references
 
-    [SerializeField] private Camera sceneCamera;
+    private Camera sceneCamera;
 
     [SerializeField] private LayerMask placementLayer;
 
@@ -48,7 +48,7 @@ public class InputManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        sceneCamera= Camera.main;
     }
 
     // Update is called once per frame
