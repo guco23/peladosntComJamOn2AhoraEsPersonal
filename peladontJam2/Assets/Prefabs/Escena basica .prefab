@@ -75,7 +75,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3356545334321665657}
   m_LocalRotation: {x: 0.37491396, y: -0, z: -0, w: 0.92705965}
-  m_LocalPosition: {x: 21.7773, y: 5.0876617, z: -18.27}
+  m_LocalPosition: {x: 21.7773, y: 6.7, z: -16.710234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -541,6 +541,14 @@ PrefabInstance:
       propertyPath: spawnCellX
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: teamResourses
+      value: 
+      objectReference: {fileID: 1943921000563988144}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: basicSoldierPickAxePrefab
+      value: 
+      objectReference: {fileID: 7405620062232497659, guid: d539e9da531596d4db99ae6fa05fad77, type: 3}
     - target: {fileID: 1048689122854863828, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: m_Name
       value: SpawnSystem

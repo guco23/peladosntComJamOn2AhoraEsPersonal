@@ -29,6 +29,8 @@ public class PlacementSystem : MonoBehaviour
 
     [SerializeField] int enemyType;
 
+    [SerializeField] ResourseManager teamResourses;
+
     #endregion
     bool posIzq = false;
     bool menosRango = false;
@@ -59,7 +61,7 @@ public class PlacementSystem : MonoBehaviour
                 cellPosSpawn.x = spawnCellX;
 
 
-                if (enemyType == 0)
+                if (enemyType == 0 && teamResourses.SpendResourses(100))
                 {
 
                    
@@ -99,7 +101,7 @@ public class PlacementSystem : MonoBehaviour
                      */
 
                 }
-                else if(enemyType == 1)
+                else if(enemyType == 1 && teamResourses.SpendResourses(300))
                 {
 
                     GameObject soldierPickaxe = Instantiate(basicSoldierPickAxePrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
