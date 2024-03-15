@@ -5059,6 +5059,11 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1040333240147439518, guid: 1f4ff7d51bf52784dadabf70684299df, type: 3}
   spawnPoint: {fileID: 386693067}
   soldierDectect: {fileID: 0}
+--- !u!156049354 &322356976 stripped
+Grid:
+  m_CorrespondingSourceObject: {fileID: 3356545335670620190, guid: 6c16d45e67a17cc468fe9f3c701ae235, type: 3}
+  m_PrefabInstance: {fileID: 1361709224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &386693066
 GameObject:
   m_ObjectHideFlags: 0
@@ -5323,6 +5328,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &798750408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 798750409}
+  - component: {fileID: 798750410}
+  m_Layer: 0
+  m_Name: IA manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &798750409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798750408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.1773, y: 2.4123383, z: -1.210233}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &798750410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798750408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b18ae847eff4348a439f283af267a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPosX: 19
+  fil1PosY: -3
+  enemySoldierPrefab: {fileID: 8458075916828830884, guid: 9396dc5f4a113364dabe497954b4cdf1, type: 3}
+  spawnPosOffSet: {x: 1, y: 1.5, z: 1}
+  grid_: {fileID: 322356976}
+  enemySpawnRate: 1
 --- !u!4 &820213381 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7405620062232497648, guid: f2c19017b194c904dafd863a0d11c92c, type: 3}
