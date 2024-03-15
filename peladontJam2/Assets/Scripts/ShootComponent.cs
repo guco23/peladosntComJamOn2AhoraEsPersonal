@@ -134,5 +134,7 @@ public class ShootComponent : MonoBehaviour
         bullet.SetShootingComp(this);
     }
 
+
+    
 }
 

@@ -27,7 +27,9 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] int spawnCellX;
 
     #endregion
-    bool b = false;
+    bool posIzq = false;
+    bool menosRango = false;
+    int contadorRango = 0;
 
 
     // Update is called once per frame
@@ -54,14 +56,32 @@ public class PlacementSystem : MonoBehaviour
 
                 soldier.transform.Rotate(new Vector3(0, 90, 0));
 
-                /*
+                
                  
-                if(b)
+                if(posIzq)
                 {
-                    soldier.transform.position += new Vector3(0, 0, 1);
+                    soldier.transform.position += new Vector3(0, 0, 0.5f);
                 }
-                b = !b;
-                 */
+                else
+                {
+                    soldier.transform.position += new Vector3(0, 0, -0.5f);
+                }
+
+                if(menosRango)
+                {
+                    soldier.GetComponent<SoldierDetectSoldierComponent>().ReduceRange(0.5f);
+                }
+
+                posIzq = !posIzq;
+                contadorRango++;
+                if(contadorRango >= 2)
+                {
+                    contadorRango = 0;
+                    menosRango = !menosRango;
+                }
+
+
+                 
             }
         }
     }
