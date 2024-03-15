@@ -7,6 +7,14 @@ public class ShootComponent : MonoBehaviour
     [SerializeField]
     private float fireRate = 1.5f;
 
+    [SerializeField]    
+    private float minFireRate = 1.3f;
+
+    [SerializeField]
+    private float maxFireRate = 1.7f;
+
+
+
     private float elapsedTime = 0;
 
     [SerializeField]
@@ -18,6 +26,11 @@ public class ShootComponent : MonoBehaviour
 
     [SerializeField]
     private LifeComponent target;
+
+    private void Start()
+    {
+        RandFireRate();
+    }
 
     private void Update()
     {
@@ -43,9 +56,22 @@ public class ShootComponent : MonoBehaviour
             target = null;
             shooting = false;
         }
+
+        RandFireRate();
+
         Debug.Log("disparo");
 
         //llamar al sonido de disparo
+    }
+
+    public void StartShooting()
+    {
+        shooting = true;
+    }
+
+    private void RandFireRate()
+    {
+        fireRate = Random.Range(minFireRate, maxFireRate); 
     }
 }
 
