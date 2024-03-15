@@ -16,7 +16,7 @@ public class PauseMenuComponent : MonoBehaviour
 
     public void Resume()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 1.0f;
         pauseButton.SetActive(true);
         pauseMenu.SetActive(false);
     }
