@@ -30,7 +30,9 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] int enemyType;
 
     #endregion
-    bool b = false;
+    bool posIzq = false;
+    bool menosRango = false;
+    int contadorRango = 0;
 
 
     // Update is called once per frame
@@ -56,6 +58,7 @@ public class PlacementSystem : MonoBehaviour
 
                 cellPosSpawn.x = spawnCellX;
 
+
                 if (enemyType == 0)
                 {
 
@@ -63,6 +66,28 @@ public class PlacementSystem : MonoBehaviour
                     GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
 
                     soldier.transform.Rotate(new Vector3(0, 90, 0));
+
+                    if(posIzq)
+                    {
+                        soldier.transform.position += new Vector3(0, 0, 0.5f);
+                    }
+                    else
+                    {
+                        soldier.transform.position += new Vector3(0, 0, -0.5f);
+                    }
+
+                    if(menosRango)
+                    {
+                        soldier.GetComponent<SoldierDetectSoldierComponent>().ReduceRange(0.5f);
+                    }
+
+                    posIzq = !posIzq;
+                    contadorRango++;
+                    if(contadorRango >= 2)
+                    {
+                        contadorRango = 0;
+                        menosRango = !menosRango;
+                    }
 
                     /*
 
@@ -81,12 +106,36 @@ public class PlacementSystem : MonoBehaviour
 
                     soldierPickaxe.transform.Rotate(new Vector3(0, 90, 0));
 
+                    if(posIzq)
+                    {
+                        soldier.transform.position += new Vector3(0, 0, 0.5f);
+                    }
+                    else
+                    {
+                        soldier.transform.position += new Vector3(0, 0, -0.5f);
+                    }
+
+                    if(menosRango)
+                    {
+                        soldier.GetComponent<SoldierDetectSoldierComponent>().ReduceRange(0.5f);
+                    }
+
+                    posIzq = !posIzq;
+                    contadorRango++;
+                    if(contadorRango >= 2)
+                    {
+                        contadorRango = 0;
+                        menosRango = !menosRango;
+                    }
+
+
                     BuildTrinchera trinBuild = soldierPickaxe.GetComponent<BuildTrinchera>();
 
                     trinBuild.setTrinPos(grid_.CellToWorld(cellPos));
 
                 }
                 
+
             }
         }
     }
