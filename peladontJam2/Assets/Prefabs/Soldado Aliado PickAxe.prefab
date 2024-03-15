@@ -5042,6 +5042,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   estado: 0
   speed: 8
+  inputsound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  timeBetweenSteps: 0.5
 --- !u!114 &7137625083669611914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5070,3 +5078,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBuildSpend: 3
   trinchera: {fileID: 588691648375685508, guid: 0352b4a070768c0d18542f241acd3928, type: 3}
+  offsetTrinchera: {x: 1, y: 0, z: 0.75}

@@ -106,29 +106,6 @@ public class PlacementSystem : MonoBehaviour
 
                     soldierPickaxe.transform.Rotate(new Vector3(0, 90, 0));
 
-                    if(posIzq)
-                    {
-                        soldier.transform.position += new Vector3(0, 0, 0.5f);
-                    }
-                    else
-                    {
-                        soldier.transform.position += new Vector3(0, 0, -0.5f);
-                    }
-
-                    if(menosRango)
-                    {
-                        soldier.GetComponent<SoldierDetectSoldierComponent>().ReduceRange(0.5f);
-                    }
-
-                    posIzq = !posIzq;
-                    contadorRango++;
-                    if(contadorRango >= 2)
-                    {
-                        contadorRango = 0;
-                        menosRango = !menosRango;
-                    }
-
-
                     BuildTrinchera trinBuild = soldierPickaxe.GetComponent<BuildTrinchera>();
 
                     trinBuild.setTrinPos(grid_.CellToWorld(cellPos));

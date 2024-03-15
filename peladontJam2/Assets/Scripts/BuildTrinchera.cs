@@ -9,7 +9,7 @@ public class BuildTrinchera : MonoBehaviour
 
     [SerializeField] private GameObject trinchera;
 
-    [SerializeField] private float offsetTrinchera;
+    [SerializeField] private Vector3 offsetTrinchera;
 
     private SoldierMoveComponent moveComponent;
 
@@ -57,9 +57,9 @@ public class BuildTrinchera : MonoBehaviour
             if (elapsedTime > timeBuildSpend)
             {
 
-                GameObject trin = Instantiate(trinchera, posWhereBuild, Quaternion.identity);
+                GameObject trin = Instantiate(trinchera, posWhereBuild + offsetTrinchera, Quaternion.identity);
 
-                
+                Destroy(this.gameObject);
 
             }
 
