@@ -27,7 +27,7 @@ public class PlacementSystem : MonoBehaviour
     {
         Vector3 mousePos = inputManager.GetSelectedMapPoint();
         Vector3Int cellPos = grid_.WorldToCell(mousePos);
-        print(cellPos);
+        //print(cellPos);
         mouseIcon.transform.position = grid_.CellToWorld(cellPos) +placeOffSet;
         cellIndicator.transform.position = grid_.CellToWorld(cellPos);
 
