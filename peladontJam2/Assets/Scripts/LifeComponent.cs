@@ -27,6 +27,9 @@ public class LifeComponent : MonoBehaviour
             return true;
         }
         return false;
+
+        //LUIS HAZ TU COSA (SONIDO AQUI)
+
     }
 
 }

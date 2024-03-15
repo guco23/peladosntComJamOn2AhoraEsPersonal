@@ -16,7 +16,7 @@ public class BulletComponent : MonoBehaviour
     private LifeComponent target;
 
     private ShootComponent shootComponent;
-    private void Start()
+    private void Awake()
     {
         myTransform = transform;
         rb = GetComponent<Rigidbody>();
@@ -31,7 +31,8 @@ public class BulletComponent : MonoBehaviour
 
     public void SetTarget(LifeComponent _target)
     {
-        target = _target;   
+        target = _target; 
+        rb.velocity = (_target.gameObject.GetComponent<Transform>().position - myTransform.position).normalized * speed;
     }
 
     public void SetDamage(float _damage)
@@ -45,7 +46,7 @@ public class BulletComponent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print(target);
+        //print(target);
         if(other.GetComponent<LifeComponent>() == target) {
 
             if (target.reciveDamage(damage))
