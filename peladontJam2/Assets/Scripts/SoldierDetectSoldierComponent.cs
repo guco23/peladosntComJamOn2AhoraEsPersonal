@@ -4,31 +4,36 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-/**
-* Tenemos un problema: el soldado tiene dos colliders, el del propio cuertpo, el rango de visión y el rango de disparo.
-* Al no conocer el tipo de de Collider que quiero para cada cosa, no tengo forma de saber cual es cual, porque todos están siendo accedidos como Collider
-* Así que tengo dos opciones, poner tipos fijos (sphere collider, mesh, etc) y así desambiguar. O hacer subobjetos con los distintos colliders (puede ser tedioso).
-*/
-[RequireComponent(typeof(SphereCollider))]
+//Nueva idea: hacer un raycast hacia delante y lo que pille
 public class SoldierDetectSoldierComponent : MonoBehaviour
 {
-    Collider deteccionEnemigos;
+    RaycastHit deteccionEnemigos;
+    bool targetFocused;
+
+    [SerializeField]
+    [Tooltip("La distancia de detección")]
+    int distancia;
+
+    [SerializeField]
+    [Tooltip("El layerMASK de las unidades enemigas (porfa mirar lo que es un layermask)")]
+    LayerMask targetLayerMask;
     // Start is called before the first frame update
     void Start()
     {
-        deteccionEnemigos = this.GetComponent<SphereCollider>();
+        targetFocused = false;
+        deteccionEnemigos = new RaycastHit();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        if(!targetFocused) {
+            Physics.Raycast(transform.position, transform.forward, out deteccionEnemigos, distancia, targetLayerMask );
+            Debug.DrawRay(transform.position, transform.forward, Color.green, 0f, false); //debug
 
-    //Esto hay que hacerlo de otra forma, no con layers
-    private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.layer == 6) {
-            Debug.Log("soldado detectado");
-        }   
+            if(deteccionEnemigos.collider == null) {
+                Debug.Log("nadie ha sido detectado");
+            }
+        }
     }
 }

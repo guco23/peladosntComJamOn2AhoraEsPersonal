@@ -16,13 +16,11 @@ public class SoldierMoveComponent : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+    public void stopMoving() {
+        rb.velocity = Vector3.zero;
     }
 
-    void stopMoving() {
-        rb.velocity = Vector3.zero;
+    public void continueMoving() {
+
     }
 }
