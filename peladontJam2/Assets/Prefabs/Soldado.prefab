@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad5aa5acde5d1ef4a8a5a79121b636f6, type: 2}
+  - {fileID: 2100000, guid: c20b451663ec8e24888ab225cb29e1ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,6 +112,8 @@ GameObject:
   - component: {fileID: 5385825977535051522}
   - component: {fileID: 3943453969018366032}
   - component: {fileID: 176526100504406196}
+  - component: {fileID: 7099367801844985465}
+  - component: {fileID: 5725676252343861113}
   m_Layer: 6
   m_Name: Soldado
   m_TagString: Untagged
@@ -163,7 +165,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad5aa5acde5d1ef4a8a5a79121b636f6, type: 2}
+  - {fileID: 2100000, guid: c20b451663ec8e24888ab225cb29e1ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -226,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ca9023af1399e0d918f0bdbf700a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
 --- !u!114 &176526100504406196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,4 +244,38 @@ MonoBehaviour:
   distancia: 9
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+--- !u!114 &7099367801844985465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385825977535051528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016686eff36a883479abb67fb4bc21a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootParticles: {fileID: 0}
+  firstShootDelay: 0.5
+  fireRate: 1.5
+  minFireRate: 1.3
+  maxFireRate: 1.7
+  shooting: 0
+  damage: 2
+  target: {fileID: 0}
+--- !u!114 &5725676252343861113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385825977535051528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35344c7340d7b448ab16f9b2a05c38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 10
+  life: 10
