@@ -8,12 +8,15 @@ public class SoldierMoveComponent : MonoBehaviour
 {
     Rigidbody rb;
 
+    [SerializeField]
+    [Tooltip("La velocidad del personaje")]
+    float speed;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
-        rb.velocity = transform.forward * 10;
-
+        continueMoving();
     }
 
     public void stopMoving() {
@@ -21,6 +24,6 @@ public class SoldierMoveComponent : MonoBehaviour
     }
 
     public void continueMoving() {
-
+        rb.velocity = transform.forward * speed;
     }
 }
