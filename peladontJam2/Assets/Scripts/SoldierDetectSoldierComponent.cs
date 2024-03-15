@@ -50,7 +50,7 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
     /**
     A llamar una vez haya muerto el enemigo que tenía como objetuivo
     */
-    void enemyDefeated() {
+    public void enemyDefeated() {
         targetFocused = false;
         soldierMoveComponent.continueMoving();
     }

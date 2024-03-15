@@ -39,11 +39,15 @@ public class ShootComponent : MonoBehaviour
     [SerializeField]
     private Transform spawnPoint;
 
+    [SerializeField]
+    private SoldierDetectSoldierComponent soldierDectect;
+
     private void Start()
     {
         RandFireRate();
         elapsedTime = fireRate - firstShootDelay;
 
+        soldierDectect = GetComponent<SoldierDetectSoldierComponent>();    
     }
 
     private void Update()
@@ -62,6 +66,9 @@ public class ShootComponent : MonoBehaviour
             }
         }
 
+        if(target == null) {
+            StopShooting(); 
+        }
 
     }
 
@@ -113,6 +120,8 @@ public class ShootComponent : MonoBehaviour
     {
         target = null;
         shooting = false;
+
+        soldierDectect.enemyDefeated();
     }
 
     private void SpawnBullet()
