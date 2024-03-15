@@ -1,0 +1,54 @@
+{
+    "name": "CameraControls",
+    "maps": [
+        {
+            "name": "CameraControl",
+            "id": "64dd8c37-18c3-4481-a69b-86e92c6ac09c",
+            "actions": [
+                {
+                    "name": "Camera_Go_Left",
+                    "type": "Button",
+                    "id": "f5b46bdb-785d-4a43-91f2-f79a2126cbaa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Camera_Go_Right",
+                    "type": "Button",
+                    "id": "9a3111f5-9978-4bc6-a294-5ba4c61ad6e6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6dcb572e-d349-4054-9146-f5a8f121a8a5",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera_Go_Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51173b95-d317-4dab-ab7e-5cb36c0d7b43",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera_Go_Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
