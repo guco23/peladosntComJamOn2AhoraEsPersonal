@@ -5,17 +5,19 @@ using UnityEngine;
 public class ShootComponent : MonoBehaviour
 {
     [SerializeField]
-    float fireRate = 1.5f;
+    private float fireRate = 1.5f;
 
-    float elapsedTime = 0;
-
-    [SerializeField]
-    bool shooting = true;
-
+    private float elapsedTime = 0;
 
     [SerializeField]
-    float damage = 2f;
+    private bool shooting = true;
 
+
+    [SerializeField]
+    private float damage = 2f;
+
+    [SerializeField]
+    private LifeComponent target;
 
     private void Update()
     {
@@ -32,13 +34,18 @@ public class ShootComponent : MonoBehaviour
         }
 
 
-
     }
 
     void shoot()
     {
-        
+        if (target.reciveDamage(damage))
+        {
+            target = null;
+            shooting = false;
+        }
+        Debug.Log("disparo");
 
+        //llamar al sonido de disparo
     }
 }
 
