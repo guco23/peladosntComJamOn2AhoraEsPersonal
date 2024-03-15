@@ -29,7 +29,6 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
         deteccionEnemigos = new RaycastHit();
         soldierMoveComponent = this.GetComponent<SoldierMoveComponent>();
         shootComponent = this.GetComponent<ShootComponent>();
-        
     }
 
     // Update is called once per frame
@@ -40,11 +39,19 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
             Debug.DrawRay(transform.position, transform.forward, Color.green, 0f, false); //debug
 
             if(deteccionEnemigos.collider != null) {
-                LifeComponent enemyLife = deteccionEnemigos.collider.gameObject.GetComponent<LifeComponent>();
                 targetFocused = true;
+                LifeComponent enemyLife = deteccionEnemigos.collider.gameObject.GetComponent<LifeComponent>();
                 soldierMoveComponent.stopMoving();
                 shootComponent.SetTarget(enemyLife);
             }
         }
+        //También debería comprobarse si hay una trinchera, en ese caso, entrar en ella y lo que eso conlleve
+    }
+    /**
+    A llamar una vez haya muerto el enemigo que tenía como objetuivo
+    */
+    void enemyDefeated() {
+        targetFocused = false;
+        soldierMoveComponent.continueMoving();
     }
 }
