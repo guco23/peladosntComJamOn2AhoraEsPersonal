@@ -12,8 +12,9 @@ public enum ControlTrinchera
 
 public class TrincheraManager : MonoBehaviour
 {
-    //La cantidad máxima de soldados que pueden ocupar la trinchera.
-    const int MAX_OCUP = 30;
+    [Tooltip("El numero maximo de soldados que admite la trinchera")]
+    [SerializeField]
+    int MAX_OCUP;
     //Los soldados que están resguardados en esta trinchera.
     GameObject[] contenidos;
     ControlTrinchera estado;
@@ -23,7 +24,7 @@ public class TrincheraManager : MonoBehaviour
     // Start is called before the first frame update.
     void Start()
     {
-        contenidos = new GameObject[MAX_OCUP];
+        contenidos = new GameObject[30];
         ocupacion = 0;
         estado = ControlTrinchera.VACIA;
     }
@@ -38,17 +39,17 @@ public class TrincheraManager : MonoBehaviour
 
     }
 
-    //A llamar cuando un soldado llega a la trinchera, para meterse dentro
-    public void EntrarEnTrinchera(GameObject soldado)
+    //A llamar cuando un soldado llega a la trinchera, para meterse dentro, si devuelve true ha entrado y hace lo que proceda, si devuelve false no ha entrado.
+    public bool EntrarEnTrinchera(GameObject soldado)
     {
-        //Esto tiene que ocultar o hacer lo que sea para la unidad que va a entrar.
-        //Y aplicar todos los cambios necesarios en la trinchera.
         if(estado == ControlTrinchera.VACIA) {
             CambiarControl((ControlTrinchera) soldado.layer);
+        } else if(ocupacion >= MAX_OCUP) {
+            return false;
         }
-        contenidos[ocupacion] = soldado;
-        ocupacion++;
-        //Aqui el tema de detener al soldado, agregar la vida, ocultarlo, etc
+        //Añade al soldado al array de soldados
+        MeterSoldado(soldado);
+        return true;
     }
 
     //A llamar cuando la trinchera haya MUERTO, es decir, se haya quedado sin vida.
@@ -59,6 +60,19 @@ public class TrincheraManager : MonoBehaviour
 
     //Saca a todas las unidades en la trinchera.
     public void SacarDeTrinchera() {
-
+        
     }
+    
+    //Aqui el tema de detener al soldado, agregar la vida, ocultarlo, etc
+    private void MeterSoldado(GameObject soldado) {
+        contenidos[ocupacion] = soldado;
+        ocupacion++;
+        //Detiene al soldado y lo indica como estado de soldado atrincherado
+        soldado.GetComponent<SoldierMoveComponent>().stopMoving();
+        soldado.GetComponent<SoldierMoveComponent>().setEstadoSoldado(EstadoSoldado.SOLDADO_ATRINCHERADO);
+        //Cambia su posicion para estar metido abajo, en la trinchera
+        soldado.transform.position = this.transform.position - new Vector3(0,0.5f,0);
+    }
+
+
 }
