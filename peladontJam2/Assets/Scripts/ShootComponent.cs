@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,6 +43,8 @@ public class ShootComponent : MonoBehaviour
 
     [SerializeField]
     private SoldierDetectSoldierComponent soldierDectect;
+
+    public FMODUnity.EventReference inputsound;
 
     private void Start()
     {
@@ -93,6 +97,9 @@ public class ShootComponent : MonoBehaviour
         _shootParticles.Play();
 
         //llamar al sonido de disparo(LUIS HAZ TU COSA)
+        EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
+        soundInstance.start();
+        soundInstance.release();
     }
 
     private void StartShooting()
@@ -134,5 +141,7 @@ public class ShootComponent : MonoBehaviour
         bullet.SetShootingComp(this);
     }
 
+
+    
 }
 
