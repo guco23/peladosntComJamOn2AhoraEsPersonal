@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{90fe5dd6-c688-46cf-b6ac-aa8946a684b8}">
+		<property name="assetPath">
+			<value>Bluezone_BC0264_snow_footsteps_walk_013.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.99337500000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9c6f9bc6-3a82-40f9-9bc2-9b0df09b9b8a}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EstadoSoldado {
+    SOLDADO_EN_CAMPO,
+    SOLDADO_ATRINCHERADO
+}
 //Queremos que el soldadito
 [RequireComponent(typeof(Rigidbody))]
 public class SoldierMoveComponent : MonoBehaviour
 {
     Rigidbody rb;
-
+    [Tooltip("el estado del soldado")]
+    [SerializeField]
+    EstadoSoldado estado;
     [SerializeField]
     [Tooltip("La velocidad del personaje")]
     float speed;
@@ -25,5 +31,11 @@ public class SoldierMoveComponent : MonoBehaviour
 
     public void continueMoving() {
         rb.velocity = transform.forward * speed;
+    }
+    public EstadoSoldado GetEstadoSoldado() {
+        return estado;
+    }
+    public void setEstadoSoldado(EstadoSoldado estado) {
+        this.estado = estado;
     }
 }
