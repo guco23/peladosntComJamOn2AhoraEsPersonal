@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
+
+    [SerializeField]
+    private float minSpawnRate = 0.3f;
+
+    private float elapsedTime = 0;
+
+    private bool spawnSoldier = false;
 
     [SerializeField]
     private Vector3 placeOffSet = new Vector3(1, 1, 1);
@@ -31,22 +39,34 @@ public class PlacementSystem : MonoBehaviour
         mouseIcon.transform.position = grid_.CellToWorld(cellPos) +placeOffSet;
         cellIndicator.transform.position = grid_.CellToWorld(cellPos);
 
-        if (Input.GetMouseButtonDown(0))
+        elapsedTime += Time.deltaTime;
+
+
+        if (spawnSoldier)
         {
-            SpawnBasicSoldier();
+            if(elapsedTime > minSpawnRate)
+            {
+                elapsedTime = 0;
+
+                cellPos.x = spawnCellX;
+
+                GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPos) + placeOffSetSpawn, Quaternion.identity);
+
+                soldier.transform.Rotate(new Vector3(0, 90, 0));
+            }
         }
     }
 
-    public void SpawnBasicSoldier()
+    public void SpawnBasicSoldier(InputAction.CallbackContext callback)
     {
-        Vector3 mousePos = inputManager.GetSelectedMapPoint();
-        Vector3Int cellPos = grid_.WorldToCell(mousePos);
-
-        cellPos.x = spawnCellX;
-
-        GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPos) + placeOffSetSpawn, Quaternion.identity);
-
-        soldier.transform.Rotate(new Vector3(0, 90, 0));
+        if(callback.started )
+        {
+            spawnSoldier = true;
+        }
+        if (callback.canceled)
+        {
+            spawnSoldier = false;
+        }
     
     }
 }
