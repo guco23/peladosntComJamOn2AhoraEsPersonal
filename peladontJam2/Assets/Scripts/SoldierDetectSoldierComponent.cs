@@ -7,6 +7,9 @@ using UnityEngine;
 //Nueva idea: hacer un raycast hacia delante y lo que pille
 public class SoldierDetectSoldierComponent : MonoBehaviour
 {
+    //El move component del soldado
+    SoldierMoveComponent soldierMoveComponent;
+    ShootComponent shootComponent;
     RaycastHit deteccionEnemigos;
     bool targetFocused;
 
@@ -15,13 +18,18 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
     int distancia;
 
     [SerializeField]
-    [Tooltip("El layerMASK de las unidades enemigas (porfa mirar lo que es un layermask)")]
+    [Tooltip("El layerMASK de las unidades enemigas")]
     LayerMask targetLayerMask;
+    //LifeComponent enemyLife;
+
     // Start is called before the first frame update
     void Start()
     {
         targetFocused = false;
         deteccionEnemigos = new RaycastHit();
+        soldierMoveComponent = this.GetComponent<SoldierMoveComponent>();
+        shootComponent = this.GetComponent<ShootComponent>();
+        
     }
 
     // Update is called once per frame
@@ -31,8 +39,11 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
             Physics.Raycast(transform.position, transform.forward, out deteccionEnemigos, distancia, targetLayerMask );
             Debug.DrawRay(transform.position, transform.forward, Color.green, 0f, false); //debug
 
-            if(deteccionEnemigos.collider == null) {
-                Debug.Log("nadie ha sido detectado");
+            if(deteccionEnemigos.collider != null) {
+                LifeComponent enemyLife = deteccionEnemigos.collider.gameObject.GetComponent<LifeComponent>();
+                targetFocused = true;
+                soldierMoveComponent.stopMoving();
+                shootComponent.SetTarget(enemyLife);
             }
         }
     }
