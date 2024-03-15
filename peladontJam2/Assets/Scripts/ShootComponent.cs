@@ -67,13 +67,8 @@ public class ShootComponent : MonoBehaviour
 
     private void shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab,spawnPoint.position,Quaternion.identity);
 
-        bullet.GetComponent<BulletComponent>().SetTarget(target);
-        bullet.GetComponent<BulletComponent>().SetDamage(damage);
-
-        bullet.GetComponent<BulletComponent>().SetShootingComp(this);
-
+        SpawnBullet();
         //si matamos al enemigo
         /*
         if (target.reciveDamage(damage))
@@ -82,6 +77,7 @@ public class ShootComponent : MonoBehaviour
             shooting = false;
         }
          */
+
         //recalcular el fire rate(aleatorio entre min y max)
         RandFireRate();
 
@@ -118,5 +114,16 @@ public class ShootComponent : MonoBehaviour
         target = null;
         shooting = false;
     }
+
+    private void SpawnBullet()
+    {
+        BulletComponent bullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity).GetComponent<BulletComponent>();
+
+        bullet.SetTarget(target);
+        bullet.SetDamage(damage);
+
+        bullet.SetShootingComp(this);
+    }
+
 }
 
