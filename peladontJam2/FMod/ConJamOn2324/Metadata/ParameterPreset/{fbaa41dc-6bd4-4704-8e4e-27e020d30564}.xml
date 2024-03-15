@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{fbaa41dc-6bd4-4704-8e4e-27e020d30564}">
+		<property name="name">
+			<value>InMovingSoldiers</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d35528aa-f2a7-4079-9099-5b8dc052b01f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1242f673-028a-4c4d-9741-0cd41a92a371}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1242f673-028a-4c4d-9741-0cd41a92a371}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

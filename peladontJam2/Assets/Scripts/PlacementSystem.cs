@@ -27,7 +27,7 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] int spawnCellX;
 
     #endregion
-
+    bool b = false;
 
 
     // Update is called once per frame
@@ -53,6 +53,15 @@ public class PlacementSystem : MonoBehaviour
                 GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPos) + placeOffSetSpawn, Quaternion.identity);
 
                 soldier.transform.Rotate(new Vector3(0, 90, 0));
+
+                /*
+                 
+                if(b)
+                {
+                    soldier.transform.position += new Vector3(0, 0, 1);
+                }
+                b = !b;
+                 */
             }
         }
     }
