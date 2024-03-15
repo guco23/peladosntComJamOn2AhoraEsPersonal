@@ -499,7 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fogWar: {fileID: 0}
   visibility: 1
-  additionalRadius: 0
+  additionalRadius: 1
 --- !u!65 &816003321
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
     updateOnlyOnMove: 0
     lastSeenAt: {x: 0, y: 0}
   levelMidPoint: {fileID: 425646177}
-  FogRefreshRate: 30
+  FogRefreshRate: 15
   fogPlaneHeight: 0
   fogPlaneMaterial: {fileID: 2100000, guid: 36b93ac6fcf129c449491654e397fe4a, type: 2}
   fogColor: {r: 0.5849056, g: 0.542969, b: 0.542969, a: 1}
