@@ -368,7 +368,7 @@ Transform:
   m_GameObject: {fileID: 144535068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.2997}
-  m_LocalScale: {x: 8.257965, y: 1, z: 1.256836}
+  m_LocalScale: {x: 8, y: 1, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -662,38 +662,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1048689120933622879, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
-      propertyPath: m_CellSize.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048689120933622879, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
-      propertyPath: m_CellSize.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048689121503718524, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048689121503718524, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048689121503718524, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048689121503718524, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048689121503718526, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ca814e10ea6c854408ddc872e57140f1, type: 2}
-    - target: {fileID: 1048689121807814756, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
-      propertyPath: sceneCamera
-      value: 
-      objectReference: {fileID: 59033262}
     - target: {fileID: 1048689122854863828, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: m_Name
       value: SpawnSystem
