@@ -4842,9 +4842,72 @@ Transform:
   m_Children:
   - {fileID: 4058541937004326807}
   - {fileID: 8660714607469992122}
+  - {fileID: 2526534237627268936}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1001 &7422822995808297510
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8464027730083739688}
+    m_Modifications:
+    - target: {fileID: 796169540136873184, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_Name
+      value: InfanteriaPose_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+--- !u!4 &2526534237627268936 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4905308052068212078, guid: 4faebcaa18c8ca746951315f816cfcd7, type: 3}
+  m_PrefabInstance: {fileID: 7422822995808297510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8997913800641169963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4907,6 +4970,10 @@ PrefabInstance:
     - target: {fileID: 9074229741098429695, guid: 236c76438575c6b41ab819af94f6bae2, type: 3}
       propertyPath: m_Name
       value: Infanteria_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074229741098429695, guid: 236c76438575c6b41ab819af94f6bae2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3820071586188161525, guid: 236c76438575c6b41ab819af94f6bae2, type: 3}
