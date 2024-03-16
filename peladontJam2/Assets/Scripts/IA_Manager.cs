@@ -8,7 +8,7 @@ public class IA_Manager : MonoBehaviour
     [SerializeField]
     private int spawnPosX = 19;
 
-    [SerializeField]
+    [SerializeField]   
     private int fil1PosY = -3;
 
     [SerializeField]
@@ -63,7 +63,7 @@ public class IA_Manager : MonoBehaviour
         if(elapsedTime > stateTime) {
             elapsedTime = 0;
 
-            state = (IA_STATE)Random.Range((int)0, (int)4);
+            state = (IA_STATE)Random.Range((int)0, (int)3);
 
             //spawnEnemy(Random.Range((int)1, (int)6));
             //spawnEnemy(Random.Range((int)1, (int)2));

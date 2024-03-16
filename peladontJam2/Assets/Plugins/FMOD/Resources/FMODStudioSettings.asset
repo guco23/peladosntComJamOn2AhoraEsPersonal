@@ -451,7 +451,7 @@ MonoBehaviour:
   sourceProjectPath: FMod/ConJamOn2324/ConJamOn2324.fspro
   sourceBankPath: FMod/ConJamOn2324/Build
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0

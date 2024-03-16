@@ -47,6 +47,8 @@ public class BulletComponent : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //print(target);
+        if (target == null) return;
+
         if(other.GetComponent<LifeComponent>() == target) {
 
             if (target.reciveDamage(damage))

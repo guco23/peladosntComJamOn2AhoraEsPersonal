@@ -1,3 +1,4 @@
+using FischlWorks_FogWar;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,7 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] private GameObject mouseIcon, cellIndicator, basicSoldierPrefab, basicSoldierPickAxePrefab;
     [SerializeField] private InputManager inputManager;
     [SerializeField] private Grid grid_;
+    [SerializeField] private csFogWar fog_;
 
     [SerializeField] int spawnCellX;
 
@@ -63,9 +65,8 @@ public class PlacementSystem : MonoBehaviour
 
                 if (enemyType == 0 && teamResourses.SpendResourses(100))
                 {
-
-                   
                     GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
+                    //fog_.AddFogRevealer(new csFogWar.FogRevealer(soldier.transform, 2, false));
 
                     soldier.transform.Rotate(new Vector3(0, 90, 0));
 

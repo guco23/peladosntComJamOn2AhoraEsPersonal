@@ -22,4 +22,9 @@ public class LifeComponentTrinchera : LifeComponent
         //LUIS HAZ TU COSA (SONIDO AQUI)
 
     }
+
+    public void AddLife(float life)
+    {
+        this.life += life;
+    }
 }
