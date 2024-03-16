@@ -4947,6 +4947,8 @@ Transform:
   - {fileID: 2639394090634307390}
   - {fileID: 7442480631780888939}
   - {fileID: 3057261010725432449}
+  - {fileID: 8443043516191908917}
+  - {fileID: 9133656504344613880}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5069,6 +5071,8 @@ MonoBehaviour:
       Data3: 612297624
       Data4: 1288530296
     Path: event:/Damage
+  bloodEffect: {fileID: 8443043515642830939}
+  miniBloodEffect: {fileID: 9133656503795013526}
 --- !u!114 &2787748402267371320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5190,4 +5194,138 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 81ebc9953332f0c458a2c7aae8d10230, type: 3}
   m_PrefabInstance: {fileID: 2534325431809114325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8084973570140333859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2848098044362845256}
+    m_Modifications:
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0066036037
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.434
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.089
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494807, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_Name
+      value: blood_vfx
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+--- !u!2083052967 &8443043515642830939 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 367096113568450424, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+  m_PrefabInstance: {fileID: 8084973570140333859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8443043516191908917 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+  m_PrefabInstance: {fileID: 8084973570140333859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8924282655538663662
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2848098044362845256}
+    m_Modifications:
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0066036037
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.434
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.089
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367096111953494807, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+      propertyPath: m_Name
+      value: miniBlood_vfx
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+--- !u!2083052967 &9133656503795013526 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 367096113568450424, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+  m_PrefabInstance: {fileID: 8924282655538663662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9133656504344613880 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 367096111953494806, guid: 811a67e1cbca4c8498e916480684342e, type: 3}
+  m_PrefabInstance: {fileID: 8924282655538663662}
   m_PrefabAsset: {fileID: 0}

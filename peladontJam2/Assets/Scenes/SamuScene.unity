@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11036,7 +11036,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 341591838}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 638564455}
+        m_TargetAssemblyTypeName: PlacementSystem, Assembly-CSharp
+        m_MethodName: setSoldierType
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &341591838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12650,6 +12662,17 @@ Transform:
   m_Father: {fileID: 1697081446}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &638564455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+  m_PrefabInstance: {fileID: 4918166309535079645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3bac6bb91876bb429c29ae6b13267fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &647649993
 GameObject:
   m_ObjectHideFlags: 0
@@ -13694,7 +13717,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 908614673}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 638564455}
+        m_TargetAssemblyTypeName: PlacementSystem, Assembly-CSharp
+        m_MethodName: setSoldierType
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &908614673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28591,7 +28626,8 @@ MonoBehaviour:
   sceneID: {fileID: 0}
   pauseButton: {fileID: 1524464191}
   pauseMenu: {fileID: 1401889824}
-  controlsPanel: {fileID: 0}
+  controlsPanel1: {fileID: 0}
+  controlsPanel2: {fileID: 0}
 --- !u!114 &1702521970
 MonoBehaviour:
   m_ObjectHideFlags: 0
