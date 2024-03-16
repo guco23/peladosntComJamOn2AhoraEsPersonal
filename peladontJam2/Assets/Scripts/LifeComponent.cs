@@ -18,6 +18,9 @@ public class LifeComponent : MonoBehaviour
 
     [SerializeField] 
     private VisualEffect bloodEffect;
+    
+    [SerializeField] 
+    private VisualEffect miniBloodEffect;
 
     protected void Start()
     {
@@ -30,6 +33,11 @@ public class LifeComponent : MonoBehaviour
     {
         life -= damage;
         EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
+
+        if (miniBloodEffect)
+        {
+            miniBloodEffect.SendEvent("Bleed");
+        }
 
         //si tenemos 0 o menos vida, destroy
         if (life <= 0) {
