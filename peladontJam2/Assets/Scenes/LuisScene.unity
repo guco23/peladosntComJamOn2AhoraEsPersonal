@@ -5389,6 +5389,7 @@ MonoBehaviour:
   spawnPosX: 19
   fil1PosY: -3
   enemySoldierPrefab: {fileID: 8458075916828830884, guid: 9396dc5f4a113364dabe497954b4cdf1, type: 3}
+  basicSoldierPickAxePrefab: {fileID: 0}
   spawnPosOffSet: {x: 1, y: 1.5, z: 1}
   grid_: {fileID: 322356976}
   enemySpawnRate: 1

@@ -7,7 +7,8 @@ public class PauseMenuComponent : MonoBehaviour
     [SerializeField] GameObject sceneID;
     [SerializeField] GameObject pauseButton;
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] GameObject controlsPanel;
+    [SerializeField] GameObject controlsPanel1;
+    [SerializeField] GameObject controlsPanel2;
     public void Pausa()
     {
         Debug.Log("pause Dededne");
@@ -32,11 +33,21 @@ public class PauseMenuComponent : MonoBehaviour
 
     public void ControlesOn()
     {
-        controlsPanel.SetActive(true);
+        controlsPanel1.SetActive(true);
     }
     public void ControlesOff()
     {
-        controlsPanel.SetActive(false);
+        controlsPanel1.SetActive(false);
+    }
+    public void ChangePage1()
+    {
+        controlsPanel1.SetActive(false);
+        controlsPanel2.SetActive(true);
+    }
+    public void ChangePage2()
+    {
+        controlsPanel1.SetActive(true);
+        controlsPanel2.SetActive(false);
     }
 
 }
