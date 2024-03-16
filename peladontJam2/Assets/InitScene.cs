@@ -24,4 +24,9 @@ public class InitScene : MonoBehaviour
     {
         _animator.SetTrigger("FadeIn");
     }
+
+    public void desactivar()
+    {
+        gameObject.SetActive(false);
+    }
 }
