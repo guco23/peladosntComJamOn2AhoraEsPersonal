@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
-
+    [SerializeField]
+    private int fil1PosY = -3;
     public struct spawnInfo
     {
         public spawnInfo(bool pos,bool rango, int contador)
@@ -83,7 +84,9 @@ public class PlacementSystem : MonoBehaviour
 
                     soldier.transform.Rotate(new Vector3(0, 90, 0));
 
-                    spawnInfo sp = spawns[cellPosSpawn.y];
+                    print(cellPosSpawn.y - fil1PosY);
+                    spawnInfo sp = spawns[cellPosSpawn.y - fil1PosY];
+
 
                     if(sp.posIzq)
                     {
@@ -108,7 +111,7 @@ public class PlacementSystem : MonoBehaviour
                     }
 
 
-                    spawns[cellPosSpawn.y] = sp;
+                    spawns[cellPosSpawn.y - fil1PosY ] = sp;
                 }
                 else if(enemyType == 1 && teamResourses.SpendResourses(300))
                 {
@@ -144,6 +147,10 @@ public class PlacementSystem : MonoBehaviour
 
     private void Start()
     {
-        spawns.Add(new spawnInfo(false, false, 0));
+        for (int i = 0;i <5;i++)
+        {
+            spawns.Add(new spawnInfo(false, false, 0));
+        }
+
     }
 }

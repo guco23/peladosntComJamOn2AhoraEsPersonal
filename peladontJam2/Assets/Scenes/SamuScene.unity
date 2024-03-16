@@ -26556,8 +26556,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b852aa698b53154682574fc579aaba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: {fileID: 0}
   pauseButton: {fileID: 1524464191}
   pauseMenu: {fileID: 1401889824}
+  controlsPanel: {fileID: 0}
 --- !u!114 &1702521970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28442,7 +28444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4918166307911865899, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: resourseAmount
-      value: 100
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 4918166307911865899, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: resourseWinAmount
@@ -28470,7 +28472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: enemyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9151729844168503522, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_RootOrder
