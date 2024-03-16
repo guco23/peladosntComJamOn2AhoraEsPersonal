@@ -15,7 +15,7 @@ public class LifeComponentTrinchera : LifeComponent
         //si tenemos 0 o menos vida, destroy
         if(life <= 0) {
             this.GetComponent<TrincheraManager>().DeadTrinchera(); //"Muerte" de la trinchera
-            return true;
+            return true;        
         }
         return false;
 
@@ -26,5 +26,10 @@ public class LifeComponentTrinchera : LifeComponent
     public void AddLife(float life)
     {
         this.life += life;
+    }
+
+    public void SetLife(float life)
+    {
+        this.life = life;
     }
 }
