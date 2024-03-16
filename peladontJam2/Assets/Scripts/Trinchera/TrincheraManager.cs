@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //Indica quien controla la trinchera, los valores por defecto son los mismos que la layer del mismo
@@ -23,9 +24,16 @@ public class TrincheraManager : MonoBehaviour
     [SerializeField]
     [Tooltip("Campo para probar la caracteríatica de sacar a los bichones de la trinchera")]
     bool debugSacar;
+    [SerializeField]
+    [Tooltip("El tamaño de la trinchera, del 1 al 5")]
+    int tamañoDeTrinchera;
+    Grid grid; //La y es el carril en el que está
+
     // Start is called before the first frame update.
     void Start()
     {
+        //El la hora de hacer STRING TYPING
+        grid = GameObject.Find("Grid").GetComponent<Grid>();
         contenidos = new GameObject[30];
         ocupacion = 0;
         estado = ControlTrinchera.VACIA;
@@ -110,7 +118,32 @@ public class TrincheraManager : MonoBehaviour
     {
         //Debe comprobar si hay trincheras adyacentes, con el mismo bando
         //Crea una instancia del tamaño apropiado, suma sus características y destruye las anteriores.
+        //Primero recogemos los objetos de las casillas adyacentes
+        Vector3 izq = grid.CellToWorld(grid.WorldToCell(this.transform.position) + new Vector3Int(0,10, 1));
+        Vector3 der = grid.CellToWorld(grid.WorldToCell(this.transform.position) + new Vector3Int(0, 10, -1));
+        RaycastHit hitIzq;
+        RaycastHit hitDer;
+        Physics.Raycast(izq, Vector3.down, out hitIzq, 100, LayerMask.GetMask("Aliado", "Enemigo", "TrincheraVacia"));
+        Physics.Raycast(izq, Vector3.down, out hitDer, 100, LayerMask.GetMask("Aliado", "Enemigo", "TrincheraVacia"));
+
+        GameObject objDer = hitDer.collider.gameObject;
+        GameObject objIzq = hitIzq.collider.gameObject;
+
+        if (objDer != null && objDer.layer == this.gameObject.layer)
+            Fusionar(objDer);
+        if (objIzq != null && objIzq.layer == this.gameObject.layer)
+            Fusionar(objIzq);
 
         //RECORDATORIO: los soldados de la trinchera pueden atacar a cualquiera de las filas accesibles.
+    }
+
+    public int GetCarril()
+    {
+        return grid.WorldToCell(this.transform.position).y;
+    }
+
+    public void Fusionar(GameObject trinchera)
+    {
+
     }
 }

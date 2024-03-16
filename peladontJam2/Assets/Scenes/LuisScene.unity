@@ -5389,6 +5389,7 @@ MonoBehaviour:
   spawnPosX: 19
   fil1PosY: -3
   enemySoldierPrefab: {fileID: 8458075916828830884, guid: 9396dc5f4a113364dabe497954b4cdf1, type: 3}
+  basicSoldierPickAxePrefab: {fileID: 0}
   spawnPosOffSet: {x: 1, y: 1.5, z: 1}
   grid_: {fileID: 322356976}
   enemySpawnRate: 1
@@ -6159,8 +6160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b852aa698b53154682574fc579aaba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: {fileID: 0}
   pauseButton: {fileID: 1524464191}
   pauseMenu: {fileID: 1401889824}
+  controlsPanel: {fileID: 0}
 --- !u!114 &1702521970
 MonoBehaviour:
   m_ObjectHideFlags: 0

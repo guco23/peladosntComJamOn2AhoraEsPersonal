@@ -15,6 +15,9 @@ public class IA_Manager : MonoBehaviour
     private GameObject enemySoldierPrefab;
 
     [SerializeField]
+    private GameObject basicSoldierPickAxePrefab;
+
+    [SerializeField]
     private Vector3 spawnPosOffSet;
 
     [SerializeField] private Grid grid_;
@@ -40,6 +43,11 @@ public class IA_Manager : MonoBehaviour
     private ManagerResourcesTrincher resourceManager;
 
 
+    public 
+    List<Vector3Int> posicionesConTrincheras;
+
+
+
     /* FILAS:
      * 5
      * 4
@@ -55,6 +63,27 @@ public class IA_Manager : MonoBehaviour
 
         soldier.transform.Rotate(new Vector3(0, -90, 0));
     }
+
+    void spawnTrincher(int fila,int col) {
+
+        Vector3Int cellPos = new Vector3Int(col, fil1PosY + fila - 1, 0);
+
+
+        Vector3Int cellPosSpawn = new Vector3Int(spawnPosX, fil1PosY + fila - 1, 0);
+
+        GameObject soldierPickaxe = Instantiate(basicSoldierPickAxePrefab, grid_.CellToWorld(cellPosSpawn)+spawnPosOffSet , Quaternion.identity);
+
+        soldierPickaxe.transform.Rotate(new Vector3(0, -90, 0));
+
+        BuildTrinchera trinBuild = soldierPickaxe.GetComponent<BuildTrinchera>();
+
+        trinBuild.setTrinPos(grid_.CellToWorld(cellPos));
+
+        trinBuild.setType(1);
+
+        posicionesConTrincheras.Add(cellPos);
+    }
+
 
     private void Update()
     {
@@ -92,13 +121,33 @@ public class IA_Manager : MonoBehaviour
         }
         else if(state == IA_STATE.BUILD_TRINCHER)
         {
+            if (resourceManager.getResources() >= 300){
 
+                resourceManager.SpendResourses(300);
+
+
+                int fila = Random.Range((int)1,(int)6);
+                
+                int col = Random.Range((int)-10, (int)18);
+           
+                Vector3Int cellPos = new Vector3Int(col, fil1PosY + fila - 1, 0);
+
+                while (posicionesConTrincheras.Contains(cellPos)){
+                    fila = Random.Range((int)0, (int)6);
+                    col = Random.Range((int)-10, (int)18);
+                    cellPos = new Vector3Int(col, fil1PosY + fila - 1, 0);
+                }
+
+                spawnTrincher(fila, col);
+            }
         }
     }
 
     private void Start()
     {
+        state = (IA_STATE)Random.Range((int)0, (int)3);
         state = IA_STATE.ATACK_TACTIC;
+        //spawnTrincher(1, 2);
         //spawnEnemy(Random.Range((int)1, (int)2));
     }
 }

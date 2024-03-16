@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IntroCinematicController : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-
-    GameObject _menuUI;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +14,5 @@ public class IntroCinematicController : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void activateMenuUI()
-    {
-        _menuUI.SetActive(true);
     }
 }
