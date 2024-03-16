@@ -32,7 +32,7 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] ResourseManager teamResourses;
 
     #endregion
-    bool posIzq = false;
+    bool posIzq = true;
     bool menosRango = false;
     int contadorRango = 0;
 
@@ -71,11 +71,11 @@ public class PlacementSystem : MonoBehaviour
 
                     if(posIzq)
                     {
-                        soldier.transform.position += new Vector3(0, 0, 0.5f);
+                        soldier.transform.position += new Vector3(0, 0, 0.45f);
                     }
                     else
                     {
-                        soldier.transform.position += new Vector3(0, 0, -0.5f);
+                        soldier.transform.position += new Vector3(0, 0, -0.45f);
                     }
 
                     if(menosRango)

@@ -37,15 +37,20 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
         if (!targetFocused)
         {
             
-            //Physics.BoxCast(transform.position,new Vector3(1,0,1), transform.forward,out deteccionEnemigos, Quaternion.identity, distancia, targetLayerMask,QueryTriggerInteraction.Collide);
-            Physics.Raycast(transform.position, transform.forward, out deteccionEnemigos, distancia, targetLayerMask);
+            Physics.BoxCast(transform.position,transform.lossyScale/2, transform.forward,
+                out deteccionEnemigos, transform.rotation, distancia, targetLayerMask);
+            
+                      
+            //Physics.Raycast(transform.position, transform.forward, out deteccionEnemigos, distancia, targetLayerMask);
+           
+            
             //Debug.DrawRay(transform.position, transform.forward, Color.green, 0f, false); //debug
 
             if (deteccionEnemigos.collider != null)
             {
+                soldierMoveComponent.stopMoving();
                 targetFocused = true;
                 LifeComponent enemyLife = deteccionEnemigos.collider.gameObject.GetComponent<LifeComponent>();
-                soldierMoveComponent.stopMoving();
                 shootComponent.SetTarget(enemyLife);
             }
         }
@@ -66,5 +71,12 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
     {
         distancia -= offSet;
     }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position + transform.forward * distancia, transform.lossyScale);
+    }
+
 
 }
