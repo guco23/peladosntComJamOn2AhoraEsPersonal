@@ -119,20 +119,31 @@ public class TrincheraManager : MonoBehaviour
         //Debe comprobar si hay trincheras adyacentes, con el mismo bando
         //Crea una instancia del tamaño apropiado, suma sus características y destruye las anteriores.
         //Primero recogemos los objetos de las casillas adyacentes
-        Vector3 izq = grid.CellToWorld(grid.WorldToCell(this.transform.position) + new Vector3Int(0,10, 1));
-        Vector3 der = grid.CellToWorld(grid.WorldToCell(this.transform.position) + new Vector3Int(0, 10, -1));
+        Vector3 izq = grid.CellToWorld(grid.WorldToCell(this.transform.position) + new Vector3Int(0, 0, 0));
+        Vector3 der = grid.CellToWorld(grid.WorldToCell(this.transform.position) + new Vector3Int(0, 0, 0));
         RaycastHit hitIzq;
         RaycastHit hitDer;
-        Physics.Raycast(izq, Vector3.down, out hitIzq, 100, LayerMask.GetMask("Aliado", "Enemigo", "TrincheraVacia"));
-        Physics.Raycast(izq, Vector3.down, out hitDer, 100, LayerMask.GetMask("Aliado", "Enemigo", "TrincheraVacia"));
 
-        GameObject objDer = hitDer.collider.gameObject;
-        GameObject objIzq = hitIzq.collider.gameObject;
 
-        if (objDer != null && objDer.layer == this.gameObject.layer)
-            Fusionar(objDer);
-        if (objIzq != null && objIzq.layer == this.gameObject.layer)
-            Fusionar(objIzq);
+        //Comprobar para el objeto en la izquierda
+        if (Physics.Raycast(izq, Vector3.down, out hitIzq, 100, LayerMask.GetMask("Aliado", "Enemigo", "TrincheraVacia"))) {
+            GameObject objIzq = hitIzq.collider.gameObject;
+            Debug.Log("si, esta encontrando algo algo");
+
+            if (objIzq.layer == this.gameObject.layer)
+                Fusionar(objIzq);
+        }
+        Debug.DrawLine(izq, izq + new Vector3(0,-10,0), Color.green, 10);
+        //Comprobar para el objeto en la derecha
+        if (Physics.Raycast(der, Vector3.down, out hitDer, 100, LayerMask.GetMask("Aliado", "Enemigo", "TrincheraVacia")))
+        {
+            GameObject objDer = hitDer.collider.gameObject;
+            Debug.Log("si, esta encontrando algo");
+
+            if (objDer.layer == this.gameObject.layer)
+                Fusionar(objDer);
+        }
+        Debug.DrawLine(der, der + new Vector3(0, 10, 0), Color.green, 10);
 
         //RECORDATORIO: los soldados de la trinchera pueden atacar a cualquiera de las filas accesibles.
     }
@@ -144,6 +155,6 @@ public class TrincheraManager : MonoBehaviour
 
     public void Fusionar(GameObject trinchera)
     {
-
+        Debug.Log("fusionar con trinchera en " + trinchera.transform.ToString());
     }
 }
