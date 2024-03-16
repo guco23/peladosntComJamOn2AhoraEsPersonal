@@ -5014,6 +5014,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 100
   life: 10
+  inputsound:
+    Guid:
+      Data1: 978851718
+      Data2: 1239059808
+      Data3: 612297624
+      Data4: 1288530296
+    Path: event:/Damage
 --- !u!1 &8458075917345982199
 GameObject:
   m_ObjectHideFlags: 0

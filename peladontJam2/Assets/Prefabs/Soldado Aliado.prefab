@@ -5111,3 +5111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 10
   life: 10
+  inputsound:
+    Guid:
+      Data1: 978851718
+      Data2: 1239059808
+      Data3: 612297624
+      Data4: 1288530296
+    Path: event:/Damage

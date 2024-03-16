@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f5c388ca-f1b6-4346-9a5a-05e226eddf17}">
+		<property name="assetPath">
+			<value>Vodka Theme v1.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>195.05632653061224</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9c6f9bc6-3a82-40f9-9bc2-9b0df09b9b8a}</destination>
+		</relationship>
+	</object>
+</objects>
