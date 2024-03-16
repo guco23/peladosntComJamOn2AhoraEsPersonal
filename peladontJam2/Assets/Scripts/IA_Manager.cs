@@ -51,11 +51,14 @@ public class IA_Manager : MonoBehaviour
             if(elapsedTime > enemySpawnRate) {
                 elapsedTime = 0;
                 //spawnEnemy(Random.Range((int)1, (int)6));
-                spawnEnemy(Random.Range((int)1, (int)2));
+                //spawnEnemy(Random.Range((int)1, (int)2));
             }
         }
     }
 
-
+    private void Start()
+    {
+        spawnEnemy(Random.Range((int)1, (int)2));
+    }
 }
 

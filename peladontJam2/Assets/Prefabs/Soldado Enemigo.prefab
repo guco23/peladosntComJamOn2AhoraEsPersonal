@@ -4992,7 +4992,7 @@ MonoBehaviour:
   target: {fileID: 0}
   bulletPrefab: {fileID: 1040333240147439518, guid: 1f4ff7d51bf52784dadabf70684299df, type: 3}
   spawnPoint: {fileID: 8458075917345982202}
-  soldierDectect: {fileID: 0}
+  soldierDectect: {fileID: 4444057253006553880}
   inputsound:
     Guid:
       Data1: -856145737
@@ -5012,7 +5012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35344c7340d7b448ab16f9b2a05c38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 10
+  maxLife: 100
   life: 10
 --- !u!1 &8458075917345982199
 GameObject:
@@ -5026,7 +5026,7 @@ GameObject:
   - component: {fileID: 8458075917345982203}
   - component: {fileID: 8458075917345982196}
   - component: {fileID: 8458075917345982197}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Arma
   m_TagString: Untagged
   m_Icon: {fileID: 0}

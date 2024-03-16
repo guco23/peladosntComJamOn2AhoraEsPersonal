@@ -21,7 +21,7 @@ public class ResourseManager : MonoBehaviour
 
     public bool SpendResourses(float cost)
     {
-        if(cost < resourseAmount)
+        if(cost <= resourseAmount)
         {
             resourseAmount -= cost;
             return true;

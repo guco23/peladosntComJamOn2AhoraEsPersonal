@@ -5089,7 +5089,7 @@ MonoBehaviour:
   target: {fileID: 0}
   bulletPrefab: {fileID: 1040333240147439518, guid: 1f4ff7d51bf52784dadabf70684299df, type: 3}
   spawnPoint: {fileID: 7405620061709281189}
-  soldierDectect: {fileID: 0}
+  soldierDectect: {fileID: 3317857188800991815}
   inputsound:
     Guid:
       Data1: -856145737
