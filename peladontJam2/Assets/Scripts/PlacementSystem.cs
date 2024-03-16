@@ -29,7 +29,7 @@ public class PlacementSystem : MonoBehaviour
 
     [SerializeField] int enemyType;
 
-    [SerializeField] ResourseManager teamResourses;
+    [SerializeField] ManagerResourcesTrincher teamResourses;
 
     #endregion
     bool posIzq = true;

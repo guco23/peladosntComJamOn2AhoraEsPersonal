@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class ResourseManager : MonoBehaviour
+public class ManagerResourcesTrincher : MonoBehaviour
 {
 
 
@@ -21,7 +20,7 @@ public class ResourseManager : MonoBehaviour
 
     public bool SpendResourses(float cost)
     {
-        if(cost <= resourseAmount)
+        if (cost <= resourseAmount)
         {
             resourseAmount -= cost;
             return true;
@@ -30,8 +29,11 @@ public class ResourseManager : MonoBehaviour
         {
             return false;
         }
+    }
 
-
+    public float getResources()
+    {
+        return resourseAmount;
     }
 
 
@@ -39,14 +41,14 @@ public class ResourseManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(elapsedTime >= cooldown)
+
+        if (elapsedTime >= cooldown)
         {
 
             resourseAmount += resourseWinAmount;
@@ -58,7 +60,8 @@ public class ResourseManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
         }
 
-        
+
 
     }
 }
+

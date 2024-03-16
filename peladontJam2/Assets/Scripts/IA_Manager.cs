@@ -25,6 +25,21 @@ public class IA_Manager : MonoBehaviour
 
     private float elapsedTime = 0;
 
+    [SerializeField]
+    private float stateTime = 15;
+    public enum IA_STATE
+    {
+        ATACK_FRENETIC,//spawnea todos los soldados posibles
+        ATACK_TACTIC,//espera un poco y spawnea soldados
+        BUILD_TRINCHER//intenta construir trincheras
+    }
+
+    private IA_STATE state;
+
+    [SerializeField]
+    private ManagerResourcesTrincher resourceManager;
+
+
     /* FILAS:
      * 5
      * 4
@@ -45,20 +60,46 @@ public class IA_Manager : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;  
 
-        if(elapsedTime > 0)
+        if(elapsedTime > stateTime) {
+            elapsedTime = 0;
+
+            state = (IA_STATE)Random.Range((int)0, (int)4);
+
+            //spawnEnemy(Random.Range((int)1, (int)6));
+            //spawnEnemy(Random.Range((int)1, (int)2));
+        }
+        
+
+        if(state == IA_STATE.ATACK_FRENETIC)
+        {
+            if(resourceManager.getResources() >= 150)
+            {
+                resourceManager.SpendResourses(100);
+                spawnEnemy(Random.Range((int)1, (int)6));
+            }
+        }
+        else if (state == IA_STATE.ATACK_TACTIC)
+        {
+            if (resourceManager.getResources() >= 500)
+            {
+                resourceManager.SpendResourses(500);
+                spawnEnemy(1);
+                spawnEnemy(2);
+                spawnEnemy(3);
+                spawnEnemy(4);
+                spawnEnemy(5);
+            }
+        }
+        else if(state == IA_STATE.BUILD_TRINCHER)
         {
 
-            if(elapsedTime > enemySpawnRate) {
-                elapsedTime = 0;
-                //spawnEnemy(Random.Range((int)1, (int)6));
-                //spawnEnemy(Random.Range((int)1, (int)2));
-            }
         }
     }
 
     private void Start()
     {
-        spawnEnemy(Random.Range((int)1, (int)2));
+        state = IA_STATE.ATACK_TACTIC;
+        //spawnEnemy(Random.Range((int)1, (int)2));
     }
 }
 
