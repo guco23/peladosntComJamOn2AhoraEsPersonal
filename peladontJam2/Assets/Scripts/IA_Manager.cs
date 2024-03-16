@@ -8,7 +8,7 @@ public class IA_Manager : MonoBehaviour
     [SerializeField]
     private int spawnPosX = 19;
 
-    [SerializeField]
+    [SerializeField]   
     private int fil1PosY = -3;
 
     [SerializeField]
