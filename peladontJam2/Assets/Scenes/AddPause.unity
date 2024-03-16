@@ -5136,6 +5136,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 10
   life: 0
+  inputsound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!136 &512528436
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5384,6 +5391,8 @@ MonoBehaviour:
   spawnPosOffSet: {x: 1, y: 1.5, z: 1}
   grid_: {fileID: 322356976}
   enemySpawnRate: 1
+  stateTime: 15
+  resourceManager: {fileID: 0}
 --- !u!224 &820211954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5820,7 +5829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1401889825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6675,8 +6684,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b852aa698b53154682574fc579aaba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: {fileID: 0}
   pauseButton: {fileID: 1524464191}
   pauseMenu: {fileID: 1401889824}
+  controlsPanel: {fileID: 0}
 --- !u!1 &2070474466
 GameObject:
   m_ObjectHideFlags: 0
