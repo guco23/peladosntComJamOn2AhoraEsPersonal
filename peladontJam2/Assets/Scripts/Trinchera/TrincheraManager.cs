@@ -55,6 +55,7 @@ public class TrincheraManager : MonoBehaviour
         //Hacer todo lo que sea necesario al cambiar el control de la trinchera
         this.estado = estado;
         this.gameObject.layer = (int) estado;
+        this.GetComponent<LifeComponentTrinchera>().SetLife(0);
         ComprobarFusion();
     }
 
@@ -81,7 +82,7 @@ public class TrincheraManager : MonoBehaviour
         {
             Destroy(contenidos[i]);
         }
-        estado = ControlTrinchera.VACIA;
+        CambiarControl(ControlTrinchera.VACIA);
     }
 
     //Saca a todas las unidades en la trinchera.
@@ -90,7 +91,7 @@ public class TrincheraManager : MonoBehaviour
         {
             SacarSoldado(contenidos[i]);
         }
-        estado = ControlTrinchera.VACIA;
+        CambiarControl(ControlTrinchera.VACIA);
         ocupacion = 0;
         contenidos = new GameObject[30];
     }
@@ -104,6 +105,7 @@ public class TrincheraManager : MonoBehaviour
         soldado.GetComponent<SoldierMoveComponent>().setEstadoSoldado(EstadoSoldado.SOLDADO_ATRINCHERADO);
         //Cambia su posicion para estar metido abajo, en la trinchera
         soldado.transform.position = this.transform.position - new Vector3(0,0.5f,0);
+        this.GetComponent<LifeComponentTrinchera>().AddLife(soldado.GetComponent<LifeComponent>().getLife());
     }
 
     private void SacarSoldado(GameObject soldado)
