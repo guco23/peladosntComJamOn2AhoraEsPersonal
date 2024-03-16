@@ -5,7 +5,7 @@ using UnityEngine;
 public class IntroCinematicController : MonoBehaviour
 {
 
-    GameObject _menuUI;
+    [SerializeField] private GameObject _menuUI;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +22,6 @@ public class IntroCinematicController : MonoBehaviour
     public void activateMenuUI()
     {
         _menuUI.SetActive(true);
+        Debug.Log("activar menu");
     }
 }
