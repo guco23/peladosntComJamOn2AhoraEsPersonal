@@ -111,7 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c9ac64ad87bc8049426a7385dfc3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_OCUP: 0
+  MAX_OCUP: 10
+  ocupacion: 0
 --- !u!114 &588691648375685511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +127,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 10
   life: 0
+  inputsound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
