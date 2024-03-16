@@ -21,6 +21,8 @@ public class SoldierMoveComponent : MonoBehaviour
     float speed;
     public FMODUnity.EventReference inputsound;
     public float timeBetweenSteps = 0.5f;
+
+    private float time;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,15 +33,16 @@ public class SoldierMoveComponent : MonoBehaviour
     }
     private void Update()
     {
-        if(timeBetweenSteps < 0 && rb.velocity.magnitude >0)
+        if(time < 0 && rb.velocity.magnitude >0)
         {
-            timeBetweenSteps = 0.5f;
+            time = timeBetweenSteps;
             EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
             soundInstance.start();
             soundInstance.release();
 
         }
-        timeBetweenSteps -=Time.deltaTime;
+
+        time -=Time.deltaTime;
     }
 
     public void stopMoving() {
