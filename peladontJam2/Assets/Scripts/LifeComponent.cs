@@ -42,5 +42,7 @@ public class LifeComponent : MonoBehaviour
 
     }
 
+    public float getLife() { return life; }
+
 }
 

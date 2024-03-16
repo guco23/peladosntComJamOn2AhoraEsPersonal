@@ -29,6 +29,7 @@ public class TrincheraManager : MonoBehaviour
         contenidos = new GameObject[30];
         ocupacion = 0;
         estado = ControlTrinchera.VACIA;
+        ComprobarFusion();
     }
 
     private void Update()
@@ -46,7 +47,7 @@ public class TrincheraManager : MonoBehaviour
         //Hacer todo lo que sea necesario al cambiar el control de la trinchera
         this.estado = estado;
         this.gameObject.layer = (int) estado;
-
+        ComprobarFusion();
     }
 
     //A llamar cuando un soldado llega a la trinchera, para meterse dentro, si devuelve true ha entrado y hace lo que proceda, si devuelve false no ha entrado.
@@ -59,12 +60,19 @@ public class TrincheraManager : MonoBehaviour
         }
         //Añade al soldado al array de soldados
         MeterSoldado(soldado);
+        //Añade a la trinchera la vida del soldado
+        this.GetComponent<LifeComponentTrinchera>().AddLife(soldado.GetComponent<LifeComponent>().getLife());
         return true;
     }
 
     //A llamar cuando la trinchera haya MUERTO, es decir, se haya quedado sin vida.
     public void DeadTrinchera()
     {
+        //Mata a todos los pibes en la trinchera
+        for(int i = 0; i < ocupacion; i++)
+        {
+            Destroy(contenidos[i]);
+        }
         estado = ControlTrinchera.VACIA;
     }
 
@@ -95,5 +103,14 @@ public class TrincheraManager : MonoBehaviour
         soldado.transform.position = this.transform.position + new Vector3(0, 0.5f, 0);
         soldado.GetComponent<SoldierMoveComponent>().continueMoving();
         soldado.GetComponent<SoldierMoveComponent>().setEstadoSoldado(EstadoSoldado.SOLDADO_EN_CAMPO);
+    }
+
+    //Lanzar al crear la instancia de trinchera y al cambiar de bando
+    private void ComprobarFusion()
+    {
+        //Debe comprobar si hay trincheras adyacentes, con el mismo bando
+        //Crea una instancia del tamaño apropiado, suma sus características y destruye las anteriores.
+
+        //RECORDATORIO: los soldados de la trinchera pueden atacar a cualquiera de las filas accesibles.
     }
 }

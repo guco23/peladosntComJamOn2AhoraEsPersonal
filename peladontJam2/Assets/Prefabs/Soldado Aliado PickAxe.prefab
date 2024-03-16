@@ -4925,6 +4925,7 @@ GameObject:
   - component: {fileID: 1928022744564388515}
   - component: {fileID: 7137625083669611914}
   - component: {fileID: -5309955403272233215}
+  - component: {fileID: 7769188403861413989}
   m_Layer: 6
   m_Name: Soldado Aliado PickAxe
   m_TagString: Untagged
@@ -5064,6 +5065,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 10
   life: 10
+  inputsound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &-5309955403272233215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5079,3 +5087,15 @@ MonoBehaviour:
   timeBuildSpend: 3
   trinchera: {fileID: 588691648375685508, guid: 0352b4a070768c0d18542f241acd3928, type: 3}
   offsetTrinchera: {x: 1, y: 0, z: 0.75}
+--- !u!114 &7769188403861413989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405620062232497659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68bd8702c33b4869f0151bb4660ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

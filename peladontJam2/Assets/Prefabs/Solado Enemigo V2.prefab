@@ -4924,6 +4924,7 @@ GameObject:
   - component: {fileID: 4287769332336253254}
   - component: {fileID: 3849211497791706590}
   - component: {fileID: 194654207145889438}
+  - component: {fileID: 570784883455051407}
   m_Layer: 7
   m_Name: Solado Enemigo V2
   m_TagString: Untagged
@@ -5068,6 +5069,18 @@ MonoBehaviour:
       Data3: 612297624
       Data4: 1288530296
     Path: event:/Damage
+--- !u!114 &570784883455051407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811220729997808166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68bd8702c33b4869f0151bb4660ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2534325431809114325
 PrefabInstance:
   m_ObjectHideFlags: 0
