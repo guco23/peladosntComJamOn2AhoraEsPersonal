@@ -7,6 +7,20 @@ using UnityEngine.InputSystem;
 public class PlacementSystem : MonoBehaviour
 {
 
+    public struct spawnInfo
+    {
+        public spawnInfo(bool pos,bool rango, int contador)
+        {
+            posIzq = pos;
+            menosRango = rango;
+            contadorRango = contador;
+        }
+
+        public bool posIzq;
+        public bool menosRango;
+        public int contadorRango;
+    }
+
     [SerializeField]
     private float minSpawnRate = 0.3f;
 
@@ -38,7 +52,7 @@ public class PlacementSystem : MonoBehaviour
     bool menosRango = false;
     int contadorRango = 0;
 
-
+    List<spawnInfo> spawns = new List<spawnInfo>();
     // Update is called once per frame
     void Update()
     {
@@ -69,6 +83,9 @@ public class PlacementSystem : MonoBehaviour
                     //fog_.AddFogRevealer(new csFogWar.FogRevealer(soldier.transform, 2, false));
 
                     soldier.transform.Rotate(new Vector3(0, 90, 0));
+
+                    spawns[0].contadorRango += contadorRango;
+
 
                     if(posIzq)
                     {
@@ -123,5 +140,10 @@ public class PlacementSystem : MonoBehaviour
             spawnSoldier = false;
         }
     
+    }
+
+    private void Start()
+    {
+        spawns.Add(new spawnInfo(false, false, 0));
     }
 }
