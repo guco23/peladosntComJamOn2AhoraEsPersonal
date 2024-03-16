@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
+
+    [SerializeField] private LayerMask placementLayer;
     [SerializeField]
     private int fil1PosY = -3;
     public struct spawnInfo
@@ -52,7 +54,7 @@ public class PlacementSystem : MonoBehaviour
     #endregion
 
     public void setSoldierType(int i)
-    { enemyType = i; }
+    { print("tu viejjaaaaaa"); enemyType = i; }
 
 
     List<spawnInfo> spawns = new List<spawnInfo>();
@@ -83,7 +85,7 @@ public class PlacementSystem : MonoBehaviour
                 if (enemyType == 0 && teamResourses.SpendResourses(100))
                 {
                     GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
-                    //fog_.AddFogRevealer(new csFogWar.FogRevealer(soldier.transform, 2, false));
+                    fog_.AddFogRevealer(new csFogWar.FogRevealer(soldier.transform, 1, true));
 
                     soldier.transform.Rotate(new Vector3(0, 90, 0));
 
@@ -137,14 +139,29 @@ public class PlacementSystem : MonoBehaviour
       
     public void SpawnBasicSoldier(InputAction.CallbackContext callback)
     {
-        if(callback.started )
-        {
-            spawnSoldier = true;
-        }
         if (callback.canceled)
         {
             spawnSoldier = false;
         }
+        if (callback.started )
+        {
+
+            Vector3 mousePos = Input.mousePosition;
+
+            mousePos.z = Camera.main.nearClipPlane;
+
+            Ray ray = Camera.main.ScreenPointToRay(mousePos);
+
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100, placementLayer))
+            {
+                //return;
+                //solo spawn si tca el terreno
+                spawnSoldier = true;
+            }
+        }
+       
     
     }
 
