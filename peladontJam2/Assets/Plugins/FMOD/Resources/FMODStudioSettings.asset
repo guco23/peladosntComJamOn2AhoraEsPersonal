@@ -238,7 +238,7 @@ MonoBehaviour:
   sourceProjectPath: FMod/ConJamOn2324/ConJamOn2324.fspro
   sourceBankPath: FMod/ConJamOn2324/Build
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131617
   Platforms:
+  - {fileID: -3005134491366445813}
   - {fileID: -6038645448682736237}
   - {fileID: -3291631820527678786}
-  - {fileID: -3005134491366445813}
   MigratedPlatforms: 0c000000150000000b0000000a0000000900000012000000000000000800000005000000060000000200000001000000
