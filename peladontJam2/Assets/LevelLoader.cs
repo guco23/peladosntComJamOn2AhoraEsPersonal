@@ -11,21 +11,24 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        fadeIn();
     }
-
     // Update is called once per frame
     void Update()
     {
         
     }
 
+    public void fadeIn()
+    {
+        _animator.SetTrigger("FadeIn");
+    }
     public void fadeToGame()
     {
-        _animator.SetTrigger(1);
+        _animator.SetTrigger("FadeOut");
     }
 
-    public void fadeCompleted()
+    public void fadeOutCompleted()
     {
         SceneManager.LoadScene(1);
     }
