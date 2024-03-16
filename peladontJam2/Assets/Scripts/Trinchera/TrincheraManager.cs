@@ -59,12 +59,19 @@ public class TrincheraManager : MonoBehaviour
         }
         //Añade al soldado al array de soldados
         MeterSoldado(soldado);
+        //Añade a la trinchera la vida del soldado
+        this.GetComponent<LifeComponentTrinchera>().AddLife(soldado.GetComponent<LifeComponent>().getLife());
         return true;
     }
 
     //A llamar cuando la trinchera haya MUERTO, es decir, se haya quedado sin vida.
     public void DeadTrinchera()
     {
+        //Mata a todos los pibes en la trinchera
+        for(int i = 0; i < ocupacion; i++)
+        {
+            Destroy(contenidos[i]);
+        }
         estado = ControlTrinchera.VACIA;
     }
 
