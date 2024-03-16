@@ -11,6 +11,8 @@ public class InputManager : MonoBehaviour
 
     [SerializeField] private LayerMask placementLayer;
 
+    [SerializeField] private PauseMenuComponent PMC;
+
     #endregion
 
     #region parameters
@@ -54,6 +56,16 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            PMC.Pausa();
+        }
+        else if(Input.GetKeyDown(KeyCode.O)) 
+        {
+            PMC.Resume();
+
+        }
         
     }
 }
