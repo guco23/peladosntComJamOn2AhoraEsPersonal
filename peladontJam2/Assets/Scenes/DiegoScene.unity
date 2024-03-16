@@ -6038,8 +6038,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b852aa698b53154682574fc579aaba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneID: {fileID: 0}
   pauseButton: {fileID: 1524464191}
   pauseMenu: {fileID: 1401889824}
+  controlsPanel: {fileID: 0}
 --- !u!114 &1702521970
 MonoBehaviour:
   m_ObjectHideFlags: 0
