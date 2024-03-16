@@ -20,7 +20,9 @@ public class TrincheraManager : MonoBehaviour
     ControlTrinchera estado;
     //El numero de gente en la trinchera (y el indice en el que colocar el siguiente).
     int ocupacion;
-
+    [SerializeField]
+    [Tooltip("Campo para probar la caracteríatica de sacar a los bichones de la trinchera")]
+    bool debugSacar;
     // Start is called before the first frame update.
     void Start()
     {
@@ -29,6 +31,14 @@ public class TrincheraManager : MonoBehaviour
         estado = ControlTrinchera.VACIA;
     }
 
+    private void Update()
+    {
+        //ESTO ES PARA PODER PROBAR LA FUNCIONALIDAD HABRA QUE QUITARLO MAS TARDE
+        if(debugSacar) {
+            SacarDeTrinchera();
+            debugSacar = false;
+        }
+    }
 
     //Cambia la posesion de la trinchera
     public void CambiarControl(ControlTrinchera estado)
@@ -60,9 +70,15 @@ public class TrincheraManager : MonoBehaviour
 
     //Saca a todas las unidades en la trinchera.
     public void SacarDeTrinchera() {
-        
+        for (int i = 0; i < ocupacion; i++)
+        {
+            SacarSoldado(contenidos[i]);
+        }
+        estado = ControlTrinchera.VACIA;
+        ocupacion = 0;
+        contenidos = new GameObject[30];
     }
-    
+
     //Aqui el tema de detener al soldado, agregar la vida, ocultarlo, etc
     private void MeterSoldado(GameObject soldado) {
         contenidos[ocupacion] = soldado;
@@ -74,5 +90,10 @@ public class TrincheraManager : MonoBehaviour
         soldado.transform.position = this.transform.position - new Vector3(0,0.5f,0);
     }
 
-
+    private void SacarSoldado(GameObject soldado)
+    {
+        soldado.transform.position = this.transform.position + new Vector3(0, 0.5f, 0);
+        soldado.GetComponent<SoldierMoveComponent>().continueMoving();
+        soldado.GetComponent<SoldierMoveComponent>().setEstadoSoldado(EstadoSoldado.SOLDADO_EN_CAMPO);
+    }
 }
