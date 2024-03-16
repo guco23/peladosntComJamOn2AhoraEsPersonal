@@ -15,6 +15,9 @@ public class IA_Manager : MonoBehaviour
     private GameObject enemySoldierPrefab;
 
     [SerializeField]
+    private GameObject basicSoldierPickAxePrefab;
+
+    [SerializeField]
     private Vector3 spawnPosOffSet;
 
     [SerializeField] private Grid grid_;
@@ -56,6 +59,24 @@ public class IA_Manager : MonoBehaviour
         soldier.transform.Rotate(new Vector3(0, -90, 0));
     }
 
+    void spawnTrincher(int fila,int col) {
+
+        Vector3Int cellPos = new Vector3Int(col, fil1PosY + fila - 1, 0);
+
+        Vector3Int cellPosSpawn = new Vector3Int(spawnPosX, fil1PosY + fila - 1, 0);
+
+        GameObject soldierPickaxe = Instantiate(basicSoldierPickAxePrefab, grid_.CellToWorld(cellPosSpawn) , Quaternion.identity);
+
+        soldierPickaxe.transform.Rotate(new Vector3(0, -90, 0));
+
+        BuildTrinchera trinBuild = soldierPickaxe.GetComponent<BuildTrinchera>();
+
+        trinBuild.setTrinPos(grid_.CellToWorld(cellPos));
+
+        trinBuild.setType(1);
+    }
+
+
     private void Update()
     {
         elapsedTime += Time.deltaTime;  
@@ -92,13 +113,17 @@ public class IA_Manager : MonoBehaviour
         }
         else if(state == IA_STATE.BUILD_TRINCHER)
         {
+            if (resourceManager.getResources() >= 300){
 
+            }
         }
     }
 
     private void Start()
     {
         state = IA_STATE.ATACK_TACTIC;
+
+        spawnTrincher(1, 2);
         //spawnEnemy(Random.Range((int)1, (int)2));
     }
 }
