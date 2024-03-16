@@ -51,6 +51,9 @@ public class PlacementSystem : MonoBehaviour
 
     #endregion
 
+    public void setSoldierType(int i)
+    { enemyType = i; }
+
 
     List<spawnInfo> spawns = new List<spawnInfo>();
     // Update is called once per frame
