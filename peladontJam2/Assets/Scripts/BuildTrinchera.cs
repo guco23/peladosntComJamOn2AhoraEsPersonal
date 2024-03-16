@@ -11,6 +11,8 @@ public class BuildTrinchera : MonoBehaviour
 
     [SerializeField] private Vector3 offsetTrinchera;
 
+    [SerializeField] private int tipo = 0;
+
     private SoldierMoveComponent moveComponent;
 
     private float elapsedTime;
@@ -20,6 +22,10 @@ public class BuildTrinchera : MonoBehaviour
     private bool building = false;
 
 
+    public void setType(int type)
+    {
+        tipo = type;
+    }
 
     public void setTrinPos(Vector3 pos)
     {
@@ -40,13 +46,21 @@ public class BuildTrinchera : MonoBehaviour
     void Update()
     {
 
-        if(transform.position.x >= posWhereBuild.x && !building)
+        if(tipo == 0)
         {
-
-            building = true;
-
-            moveComponent.stopMoving();
-
+            if(transform.position.x >= posWhereBuild.x && !building)
+            {
+                building = true;
+                moveComponent.stopMoving();
+            }
+        }
+        if (tipo == 1)
+        {
+            if (transform.position.x <= posWhereBuild.x && !building)
+            {
+                building = true;
+                moveComponent.stopMoving();
+            }
         }
 
         if (building)
@@ -59,7 +73,9 @@ public class BuildTrinchera : MonoBehaviour
 
                 GameObject trin = Instantiate(trinchera, posWhereBuild + offsetTrinchera, Quaternion.identity);
 
-                Destroy(this.gameObject);
+
+
+                Destroy(gameObject);
 
             }
 

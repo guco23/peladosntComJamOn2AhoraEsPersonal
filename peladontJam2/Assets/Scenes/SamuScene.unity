@@ -28448,17 +28448,21 @@ PrefabInstance:
       propertyPath: resourseWinAmount
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4918166309192739351, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: basicSoldierPickAxePrefab
+      value: 
+      objectReference: {fileID: 7405620062232497659, guid: d539e9da531596d4db99ae6fa05fad77, type: 3}
     - target: {fileID: 4918166309193917542, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: cooldown
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918166309193917542, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: resourseAmount
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4918166309193917542, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: resourseWinAmount
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: enemyType
