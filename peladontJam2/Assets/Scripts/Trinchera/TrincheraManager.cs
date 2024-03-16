@@ -29,6 +29,7 @@ public class TrincheraManager : MonoBehaviour
         contenidos = new GameObject[30];
         ocupacion = 0;
         estado = ControlTrinchera.VACIA;
+        ComprobarFusion();
     }
 
     private void Update()
@@ -46,7 +47,7 @@ public class TrincheraManager : MonoBehaviour
         //Hacer todo lo que sea necesario al cambiar el control de la trinchera
         this.estado = estado;
         this.gameObject.layer = (int) estado;
-
+        ComprobarFusion();
     }
 
     //A llamar cuando un soldado llega a la trinchera, para meterse dentro, si devuelve true ha entrado y hace lo que proceda, si devuelve false no ha entrado.
@@ -102,5 +103,14 @@ public class TrincheraManager : MonoBehaviour
         soldado.transform.position = this.transform.position + new Vector3(0, 0.5f, 0);
         soldado.GetComponent<SoldierMoveComponent>().continueMoving();
         soldado.GetComponent<SoldierMoveComponent>().setEstadoSoldado(EstadoSoldado.SOLDADO_EN_CAMPO);
+    }
+
+    //Lanzar al crear la instancia de trinchera y al cambiar de bando
+    private void ComprobarFusion()
+    {
+        //Debe comprobar si hay trincheras adyacentes, con el mismo bando
+        //Crea una instancia del tamaño apropiado, suma sus características y destruye las anteriores.
+
+        //RECORDATORIO: los soldados de la trinchera pueden atacar a cualquiera de las filas accesibles.
     }
 }
