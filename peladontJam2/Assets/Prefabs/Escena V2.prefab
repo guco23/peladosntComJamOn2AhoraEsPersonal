@@ -117,8 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosX: 19
   fil1PosY: -3
-  enemySoldierPrefab: {fileID: 8458075916828830884, guid: 9396dc5f4a113364dabe497954b4cdf1, type: 3}
-  spawnPosOffSet: {x: 1, y: 1.5, z: 1}
+  enemySoldierPrefab: {fileID: 6811220729997808166, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+  spawnPosOffSet: {x: 1, y: 0, z: 0.8}
   grid_: {fileID: 7697793064134218859}
   enemySpawnRate: 1
   stateTime: 15
@@ -606,6 +606,18 @@ PrefabInstance:
       propertyPath: teamResourses
       value: 
       objectReference: {fileID: 4918166307911865899}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: basicSoldierPrefab
+      value: 
+      objectReference: {fileID: 6811220729997808166, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: placeOffSetSpawn.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: placeOffSetSpawn.z
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: basicSoldierPickAxePrefab
       value: 
