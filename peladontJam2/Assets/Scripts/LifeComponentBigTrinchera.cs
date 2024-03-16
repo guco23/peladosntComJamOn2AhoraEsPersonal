@@ -19,12 +19,13 @@ public class LifeComponentBigTrinchera : LifeComponent
             //Derrota
             if (type == 0)
             {
-                SceneManager.LoadScene("BloodTest", LoadSceneMode.Additive);
+                SceneManager.LoadScene("DefeatScene");
+                
             }
             //Victoria
             else
             {
-                //Pasar a la siguiente escena
+                SceneManager.LoadScene("VictoryScene");
             }
 
             return base.reciveDamage(damage);

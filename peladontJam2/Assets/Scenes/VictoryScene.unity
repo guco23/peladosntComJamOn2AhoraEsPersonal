@@ -560,7 +560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.0058594, y: 26.401054}
+  m_AnchoredPosition: {x: -6.0058594, y: 28.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794546250
@@ -583,12 +583,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'maldito shlyukha, tu ineptitud a provocado el fracaso de toda la operacion
-    y el ascenso de nuestro glorioso pueblo. regresa inmediatamente a la patria para
-    tu ejecucion publica.
-
-
-    Sovnarkom,  Tvoyamama'
+  m_text: "felicidades camarada, tus grandes esfuerzos nos han permitido invadir
+    al enemigo y tomar todo para contuniar con nuestra misi\xF3n. Seras gratamente
+    recomoensado por tus servicios. en cuanto a las familias de los caidos... mandaremos
+    flores"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd44f051af272d04596ca150985a2083, type: 2}
   m_sharedMaterial: {fileID: -374854039786267819, guid: dd44f051af272d04596ca150985a2083, type: 2}
