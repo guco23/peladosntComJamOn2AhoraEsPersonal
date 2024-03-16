@@ -85,7 +85,7 @@ public class PlacementSystem : MonoBehaviour
                 if (enemyType == 0 && teamResourses.SpendResourses(100))
                 {
                     GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
-                    //fog_.AddFogRevealer(new csFogWar.FogRevealer(soldier.transform, 2, false));
+                    fog_.AddFogRevealer(new csFogWar.FogRevealer(soldier.transform, 1, true));
 
                     soldier.transform.Rotate(new Vector3(0, 90, 0));
 
