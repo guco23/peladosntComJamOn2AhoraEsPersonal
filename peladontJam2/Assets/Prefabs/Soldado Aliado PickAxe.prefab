@@ -5045,11 +5045,11 @@ MonoBehaviour:
   speed: 8
   inputsound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 2124073749
+      Data2: 1325532620
+      Data3: -325574209
+      Data4: 89965162
+    Path: event:/Walk
   timeBetweenSteps: 0.5
 --- !u!114 &7137625083669611914
 MonoBehaviour:
@@ -5067,11 +5067,11 @@ MonoBehaviour:
   life: 10
   inputsound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 978851718
+      Data2: 1239059808
+      Data3: 612297624
+      Data4: 1288530296
+    Path: event:/Damage
 --- !u!114 &-5309955403272233215
 MonoBehaviour:
   m_ObjectHideFlags: 0
