@@ -4996,7 +4996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estado: 0
-  speed: 8
+  speed: 4
   inputsound:
     Guid:
       Data1: 2124073749
