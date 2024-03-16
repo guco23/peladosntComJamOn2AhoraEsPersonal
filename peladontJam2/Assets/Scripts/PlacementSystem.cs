@@ -92,15 +92,6 @@ public class PlacementSystem : MonoBehaviour
                         menosRango = !menosRango;
                     }
 
-                    /*
-
-                    if(b)
-                    {
-                        soldier.transform.position += new Vector3(0, 0, 1);
-                    }
-                    b = !b;
-                     */
-
                 }
                 else if(enemyType == 1 && teamResourses.SpendResourses(300))
                 {
@@ -120,6 +111,7 @@ public class PlacementSystem : MonoBehaviour
         }
     }
 
+      
     public void SpawnBasicSoldier(InputAction.CallbackContext callback)
     {
         if(callback.started )
