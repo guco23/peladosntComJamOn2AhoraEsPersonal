@@ -3,6 +3,7 @@ using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class LifeComponent : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class LifeComponent : MonoBehaviour
     [SerializeField]
     protected FMODUnity.EventReference inputsound;
 
+    [SerializeField] 
+    private VisualEffect bloodEffect;
+    
+    [SerializeField] 
+    private VisualEffect miniBloodEffect;
+
     protected void Start()
     {
         life = maxLife;
@@ -26,11 +33,22 @@ public class LifeComponent : MonoBehaviour
     {
         life -= damage;
         EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
+
+        if (miniBloodEffect)
+        {
+            miniBloodEffect.SendEvent("Bleed");
+        }
+
         //si tenemos 0 o menos vida, destroy
         if (life <= 0) {
             soundInstance.setParameterByName("Alive",1f);
             soundInstance.start();
             soundInstance.release();
+            if (bloodEffect)
+            {
+                bloodEffect.SendEvent("Bleed");
+                bloodEffect.gameObject.transform.parent = null;
+            }
             Destroy(gameObject);
             return true;
         }

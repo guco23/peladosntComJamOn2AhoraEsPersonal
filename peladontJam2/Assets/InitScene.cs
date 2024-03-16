@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader : MonoBehaviour
+public class InitScene : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
 
@@ -13,6 +13,7 @@ public class LevelLoader : MonoBehaviour
     {
         fadeIn();
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -22,14 +23,5 @@ public class LevelLoader : MonoBehaviour
     public void fadeIn()
     {
         _animator.SetTrigger("FadeIn");
-    }
-    public void fadeToGame()
-    {
-        _animator.SetTrigger("FadeOut");
-    }
-
-    public void fadeOutCompleted()
-    {
-        SceneManager.LoadScene(1);
     }
 }

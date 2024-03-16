@@ -70,7 +70,7 @@ public class ShootComponent : MonoBehaviour
             }
         }
 
-        if(target == null) {
+        if(target == null || target.GetComponent<LifeComponent>().getLife() <= 0) {
             StopShooting(); 
         }
 
