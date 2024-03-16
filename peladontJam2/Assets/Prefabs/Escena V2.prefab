@@ -595,6 +595,14 @@ PrefabInstance:
       value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: placeOffSet.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: placeOffSet.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: teamResourses
       value: 
       objectReference: {fileID: 4918166307911865899}
