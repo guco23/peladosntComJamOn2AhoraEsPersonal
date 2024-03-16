@@ -11,5 +11,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SamuScene.unity
     guid: 6b7fccdfe6f298b4e94271be05f80a9c
+  - enabled: 1
+    path: Assets/Scenes/Trincheras grandes.unity
+    guid: d31e6bfc0d0776b4682126b66c88da9c
+  - enabled: 1
+    path: Assets/Scenes/DefeatScene.unity
+    guid: 975c467b7d77e09419511735686c1f17
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene.unity
+    guid: 118446c2bf63e794da8076fa1917dfd8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 81d5a3852a78ef24ba2e10058701da89, type: 2}
