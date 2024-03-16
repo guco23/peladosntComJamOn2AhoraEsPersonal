@@ -1,11 +1,26 @@
 using FischlWorks_FogWar;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
+
+    public struct spawnInfo
+    {
+        public spawnInfo(bool pos,bool rango, int contador)
+        {
+            posIzq = pos;
+            menosRango = rango;
+            contadorRango = contador;
+        }
+
+        public bool posIzq;
+        public bool menosRango;
+        public int contadorRango;
+    }
 
     [SerializeField]
     private float minSpawnRate = 0.3f;
@@ -34,11 +49,9 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] ManagerResourcesTrincher teamResourses;
 
     #endregion
-    bool posIzq = true;
-    bool menosRango = false;
-    int contadorRango = 0;
 
 
+    List<spawnInfo> spawns = new List<spawnInfo>();
     // Update is called once per frame
     void Update()
     {
@@ -70,7 +83,9 @@ public class PlacementSystem : MonoBehaviour
 
                     soldier.transform.Rotate(new Vector3(0, 90, 0));
 
-                    if(posIzq)
+                    spawnInfo sp = spawns[cellPosSpawn.y];
+
+                    if(sp.posIzq)
                     {
                         soldier.transform.position += new Vector3(0, 0, 0.45f);
                     }
@@ -79,19 +94,21 @@ public class PlacementSystem : MonoBehaviour
                         soldier.transform.position += new Vector3(0, 0, -0.45f);
                     }
 
-                    if(menosRango)
+                    if(sp.menosRango)
                     {
                         soldier.GetComponent<SoldierDetectSoldierComponent>().ReduceRange(0.5f);
                     }
 
-                    posIzq = !posIzq;
-                    contadorRango++;
-                    if(contadorRango >= 2)
+                    sp.posIzq = !sp.posIzq;
+                    sp.contadorRango++;
+                    if(sp.contadorRango >= 2)
                     {
-                        contadorRango = 0;
-                        menosRango = !menosRango;
+                        sp.contadorRango = 0;
+                        sp.menosRango = !sp.menosRango;
                     }
 
+
+                    spawns[cellPosSpawn.y] = sp;
                 }
                 else if(enemyType == 1 && teamResourses.SpendResourses(300))
                 {
@@ -123,5 +140,10 @@ public class PlacementSystem : MonoBehaviour
             spawnSoldier = false;
         }
     
+    }
+
+    private void Start()
+    {
+        spawns.Add(new spawnInfo(false, false, 0));
     }
 }
