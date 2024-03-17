@@ -7,6 +7,8 @@ public class TutorialManager : MonoBehaviour
 
     [SerializeField] private GameObject resoursesSystem_;
 
+    [SerializeField] private GameObject spawnSystem_;
+
     [SerializeField] private GameObject iaSystem_;
 
     [SerializeField] private GameObject canvas_;
@@ -45,7 +47,7 @@ public class TutorialManager : MonoBehaviour
         else if(currentText_ == 2)
         {
 
-            
+            canvas_.SetActive(true);
 
         }
         //colocar soldado
@@ -53,7 +55,7 @@ public class TutorialManager : MonoBehaviour
         {
 
             resoursesSystem_.SetActive(true);
-            canvas_.SetActive(true);
+            spawnSystem_.SetActive(true);
             trincheras_.SetActive(false);
             menuTrinchera_.SetActive(false);
 
@@ -79,6 +81,7 @@ public class TutorialManager : MonoBehaviour
     {
 
         resoursesSystem_.SetActive(false);
+        spawnSystem_.SetActive(false);
         iaSystem_.SetActive(false);
         canvas_.SetActive(false);
 
@@ -97,6 +100,7 @@ public class TutorialManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            texts_[currentText_ - 1].SetActive(false);
             CompleteCondition();
         }
 

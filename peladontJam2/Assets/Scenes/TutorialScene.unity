@@ -1471,6 +1471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resoursesSystem_: {fileID: 4918166309535079647}
+  spawnSystem_: {fileID: 1939766901}
   iaSystem_: {fileID: 4918166309535079646}
   canvas_: {fileID: 1147952068}
   tropa_: {fileID: 341591835}
@@ -4061,6 +4062,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 474}
   m_SizeDelta: {x: 10, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1939766901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7697793063303488480, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+  m_PrefabInstance: {fileID: 4918166309535079645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956597732
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,7 +4674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4918166307911865899, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: resourseAmount
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4918166307911865899, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: resourseWinAmount
