@@ -2,11 +2,14 @@ using FischlWorks_FogWar;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
+
+    [SerializeField] private ManagerResourcesTrincher resources_iA;
     [SerializeField] private int rangoVisionSoldados = 3;
     [SerializeField] private int rangoVisionMineros = 2;
 
@@ -193,6 +196,21 @@ public class PlacementSystem : MonoBehaviour
 
     private void Start()
     {
+
+        if (currentLevel == 0)
+        {
+            resources_iA.setResourcesAmount(50);
+        }
+        else if (currentLevel == 1)
+        {
+            resources_iA.setResourcesAmount(60);
+
+        }
+        else if (currentLevel == 2)
+        {
+            resources_iA.setResourcesAmount(75);
+
+        }
 
         setSoldierType(0);
         for (int i = 0;i <6;i++)
