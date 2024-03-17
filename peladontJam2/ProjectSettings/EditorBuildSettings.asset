@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Build Scenes/New Main Menu.unity
     guid: a87ddb655631a0b4aa1835c1b3438336
+  - enabled: 0
+    path: Assets/Scenes/SamuScene.unity
+    guid: 6b7fccdfe6f298b4e94271be05f80a9c
+  - enabled: 1
+    path: Assets/Scenes/Trincheras grandes.unity
+    guid: d31e6bfc0d0776b4682126b66c88da9c
   - enabled: 1
     path: Assets/Scenes/Build Scenes/DefeatScene.unity
     guid: 975c467b7d77e09419511735686c1f17
@@ -15,10 +21,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Build Scenes/VictoryScene.unity
     guid: 118446c2bf63e794da8076fa1917dfd8
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2d391c9750072304ca588e30a5f5d0f6
+  - enabled: 1
     path: Assets/Scenes/Build Scenes/Pou.unity
     guid: b866dbbb9861c0449a41ec59d8a793d8
   - enabled: 1
     path: Assets/Scenes/Build Scenes/Overworld.unity
     guid: 48b6442717e8c9f419d15391cec6def1
+  - enabled: 0
+    path: Assets/Prefabs/chapaFMOD.unity
+    guid: 2356f29223de9de4f9da16ce2152a3e8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 81d5a3852a78ef24ba2e10058701da89, type: 2}
