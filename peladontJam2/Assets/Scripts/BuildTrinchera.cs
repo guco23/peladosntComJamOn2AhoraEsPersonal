@@ -1,5 +1,8 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BuildTrinchera : MonoBehaviour
@@ -21,6 +24,11 @@ public class BuildTrinchera : MonoBehaviour
 
     private bool building = false;
 
+    private EventInstance eventInstance;
+
+    [SerializeField]
+    private FMODUnity.EventReference buildEvent;
+
 
     public void setType(int type)
     {
@@ -39,7 +47,7 @@ public class BuildTrinchera : MonoBehaviour
     {
         
         moveComponent = GetComponent<SoldierMoveComponent>();
-
+        eventInstance = RuntimeManager.CreateInstance(buildEvent.Path);
     }
 
     // Update is called once per frame
@@ -52,6 +60,7 @@ public class BuildTrinchera : MonoBehaviour
             {
                 building = true;
                 moveComponent.stopMoving();
+                eventInstance.start();
             }
         }
         if (tipo == 1)
@@ -60,6 +69,7 @@ public class BuildTrinchera : MonoBehaviour
             {
                 building = true;
                 moveComponent.stopMoving();
+                eventInstance.start();
             }
         }
 
@@ -68,13 +78,11 @@ public class BuildTrinchera : MonoBehaviour
 
             elapsedTime += Time.deltaTime;
 
+
             if (elapsedTime > timeBuildSpend)
             {
-
+                eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 GameObject trin = Instantiate(trinchera, posWhereBuild + offsetTrinchera, Quaternion.identity);
-
-
-
                 Destroy(gameObject);
 
             }

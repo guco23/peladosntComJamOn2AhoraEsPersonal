@@ -94,6 +94,7 @@
 			<destination>{92df0a16-8fc7-47cc-8748-c9a9d711ede7}</destination>
 			<destination>{1c2669bd-1f95-4d9f-9e75-c9d2d843ed8a}</destination>
 			<destination>{cc1e948c-3a42-4fcc-b677-ba6e679bb50f}</destination>
+			<destination>{11fcb585-74d6-43b7-8bab-8e262f9fb3ef}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ec8e2fb9-33e4-4bd3-a2f8-eabe3f1fc633}">
@@ -244,7 +245,7 @@
 	</object>
 	<object class="TransitionMarker" id="{6edab82f-a02e-40c4-b92e-792d44644637}">
 		<property name="position">
-			<value>95.401452795231407</value>
+			<value>95.990000000000009</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{d345d9ad-65ae-420a-bf2c-b160bdff67ff}</destination>
@@ -304,6 +305,23 @@
 			<destination>{69518980-f1f5-4122-bc2c-1d28f1496594}</destination>
 		</relationship>
 	</object>
+	<object class="TransitionMarker" id="{11fcb585-74d6-43b7-8bab-8e262f9fb3ef}">
+		<property name="position">
+			<value>178.28571428571428</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{d345d9ad-65ae-420a-bf2c-b160bdff67ff}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{0dc1ab79-26b8-4c53-84f9-acc8d624136d}</destination>
+		</relationship>
+		<relationship name="destination">
+			<destination>{92df0a16-8fc7-47cc-8748-c9a9d711ede7}</destination>
+		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{914409c6-2b17-4dad-8d01-cacfcea4d36b}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{6e1d0731-c714-4501-9e01-d34fe5bf6546}">
 		<relationship name="effects">
 			<destination>{4f982b2f-afc1-43ea-a5c3-edb925a8c2a3}</destination>
@@ -343,7 +361,7 @@
 	</object>
 	<object class="ParameterCondition" id="{656986f7-50d8-461f-b376-73c43ef04b68}">
 		<property name="minimum">
-			<value>0</value>
+			<value>20.5</value>
 		</property>
 		<property name="maximum">
 			<value>50</value>
@@ -363,13 +381,27 @@
 			<destination>{b1fa5815-1732-49d9-9cc8-974b9b79ad65}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterCondition" id="{914409c6-2b17-4dad-8d01-cacfcea4d36b}">
+		<property name="minimum">
+			<value>20.5</value>
+		</property>
+		<property name="maximum">
+			<value>50</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{b1fa5815-1732-49d9-9cc8-974b9b79ad65}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{4f982b2f-afc1-43ea-a5c3-edb925a8c2a3}" />
 	<object class="ThreeEQEffect" id="{63eec6c2-c99c-4e01-9746-11899939cbfc}">
-		<property name="midGain">
-			<value>-5.5</value>
+		<property name="lowGain">
+			<value>3</value>
 		</property>
-		<property name="highGain">
-			<value>-8</value>
+		<property name="midGain">
+			<value>-10.5</value>
+		</property>
+		<property name="lowCrossover">
+			<value>950</value>
 		</property>
 		<property name="highCrossover">
 			<value>5000</value>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{1bfb8cd4-c808-4d0f-92ef-9ab6fa093a04}">
+		<property name="name">
+			<value>TimeMining</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d35528aa-f2a7-4079-9099-5b8dc052b01f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{acf81bab-47ba-423d-a741-c9da888c9f56}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{acf81bab-47ba-423d-a741-c9da888c9f56}">
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
