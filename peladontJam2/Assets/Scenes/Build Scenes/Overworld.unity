@@ -609,7 +609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236972899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.9, y: -2.4123383, z: 0.91053295}
+  m_LocalPosition: {x: 69.2, y: -2.4123383, z: 0.91053295}
   m_LocalScale: {x: 3.49088, y: 1, z: 1.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2422,7 +2422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503404674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.41, y: -2.4123383, z: 0.91053295}
+  m_LocalPosition: {x: -12.2, y: -2.4123383, z: 0.91053295}
   m_LocalScale: {x: 3.49088, y: 1, z: 1.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3827,7 +3827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4473090870891328377, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.4
+      value: 4.9
       objectReference: {fileID: 0}
     - target: {fileID: 4918166307911865899, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: cooldown
@@ -3860,6 +3860,10 @@ PrefabInstance:
     - target: {fileID: 4918166309193917542, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: resourseWinAmount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198952566305156510, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 52.7
       objectReference: {fileID: 0}
     - target: {fileID: 7648706328244795580, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3903,7 +3907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7697793062901033600, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.8347318
+      value: 4.8440332
       objectReference: {fileID: 0}
     - target: {fileID: 7697793062901033600, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_LocalScale.z
@@ -3927,7 +3931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: spawnCellX
-      value: -8
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: mouseIconZafarero
