@@ -3963,9 +3963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: genial, con las tricheras podras tanto proteger a tus soldados como acumularlos
-    para un gran contrataque. pero ten cuidado que una vez que la trinchera este
-    vacia los enemigos podran tomarla.
+  m_text: Ya estas listo para la verdadera batalla mi generaloski
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd44f051af272d04596ca150985a2083, type: 2}
   m_sharedMaterial: {fileID: -374854039786267819, guid: dd44f051af272d04596ca150985a2083, type: 2}

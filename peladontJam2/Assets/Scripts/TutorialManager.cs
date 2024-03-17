@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -100,6 +101,10 @@ public class TutorialManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            if(currentText_ == texts_.Length - 1)
+            {
+                SceneManager.LoadScene("New Main Menu");
+            }
             texts_[currentText_ - 1].SetActive(false);
             CompleteCondition();
         }
