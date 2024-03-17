@@ -20,6 +20,10 @@ public class SoldierMoveComponent : MonoBehaviour
     [Tooltip("La velocidad del personaje")]
     float speed;
     public FMODUnity.EventReference inputsound;
+
+    [SerializeField]
+    protected StudioEventEmitter emitter;
+
     public float timeBetweenSteps = 0.5f;
     InFrustrumChecker checker;
 
@@ -39,9 +43,7 @@ public class SoldierMoveComponent : MonoBehaviour
             time = timeBetweenSteps;
             if (checker.IsVisible)
             {
-                EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
-                soundInstance.start();
-                soundInstance.release();
+                emitter.Play();
             }
         }
 

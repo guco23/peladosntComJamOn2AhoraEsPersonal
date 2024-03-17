@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8149022385055343333}
   - component: {fileID: 2450111703287105347}
   - component: {fileID: 4019470710523688663}
+  - component: {fileID: -2714290795510013562}
   m_Layer: 7
   m_Name: TheBigTrincheraEnem
   m_TagString: Untagged
@@ -122,6 +123,7 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  emitter: {fileID: 0}
   bloodEffect: {fileID: 0}
   miniBloodEffect: {fileID: 0}
   type: 1
@@ -176,10 +178,35 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1040333240147439518, guid: 1f4ff7d51bf52784dadabf70684299df, type: 3}
   spawnPoint: {fileID: 6632707733512493943}
   soldierDectect: {fileID: 8149022385055343333}
-  inputsound:
+  emitter: {fileID: -2714290795510013562}
+--- !u!114 &-2714290795510013562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6632707733512493948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -856145737
+      Data2: 1188983198
+      Data3: 1546288299
+      Data4: -2125214151
+    Path: event:/Shoot
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

@@ -44,7 +44,8 @@ public class ShootComponent : MonoBehaviour
     [SerializeField]
     protected SoldierDetectSoldierComponent soldierDectect;
 
-    public FMODUnity.EventReference inputsound;
+    //public FMODUnity.EventReference inputsound;
+    public StudioEventEmitter emitter;
 
     protected InFrustrumChecker checker;
 
@@ -82,7 +83,7 @@ public class ShootComponent : MonoBehaviour
 
     }
 
-    protected void shoot()
+    protected virtual void shoot()
     {
 
         SpawnBullet();
@@ -105,9 +106,10 @@ public class ShootComponent : MonoBehaviour
         //llamar al sonido de disparo(LUIS HAZ TU COSA)
         if (checker.IsVisible)
         { 
-            EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
-            soundInstance.start();
-            soundInstance.release();
+            //EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
+            emitter.Play();
+            //soundInstance.start();
+            //soundInstance.release();
         }
     }
 
@@ -142,7 +144,7 @@ public class ShootComponent : MonoBehaviour
         soldierDectect.enemyDefeated();
     }
 
-    private void SpawnBullet()
+    protected void SpawnBullet()
     {
         BulletComponent bullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity).GetComponent<BulletComponent>();
 

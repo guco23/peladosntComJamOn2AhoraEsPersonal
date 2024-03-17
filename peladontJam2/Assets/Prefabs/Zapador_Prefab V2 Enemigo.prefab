@@ -51,8 +51,8 @@ GameObject:
   - component: {fileID: 7063546880956506897}
   - component: {fileID: -383752046527238068}
   - component: {fileID: -7409679166311613233}
-  m_Layer: 6
-  m_Name: Zapador_Prefab V2
+  m_Layer: 7
+  m_Name: Zapador_Prefab V2 Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

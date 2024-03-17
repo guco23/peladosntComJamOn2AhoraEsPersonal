@@ -31,6 +31,9 @@ public class BuildTrinchera : MonoBehaviour
     [SerializeField]
     private FMODUnity.EventReference buildEvent;
 
+    [SerializeField]
+    protected StudioEventEmitter emitter;
+
     private Animator anim;
 
 
@@ -51,7 +54,6 @@ public class BuildTrinchera : MonoBehaviour
     {
         
         moveComponent = GetComponent<SoldierMoveComponent>();
-        eventInstance = RuntimeManager.CreateInstance(buildEvent.Path);
         inFrustrum = GetComponent<InFrustrumChecker>();
         anim = GetComponentInChildren<Animator>();
         float num = Random.Range(0f, 1f);
@@ -73,8 +75,7 @@ public class BuildTrinchera : MonoBehaviour
                 moveComponent.stopMoving();
                 if (inFrustrum.IsVisible)
                 {
-                    Debug.Log("Sonido");
-                    eventInstance.start();
+                    emitter.Play();
                 }
                 anim.SetTrigger("Digging");
             }
@@ -87,8 +88,7 @@ public class BuildTrinchera : MonoBehaviour
                 moveComponent.stopMoving();
                 if (inFrustrum.IsVisible)
                 {
-                    Debug.Log("Sonido");
-                    eventInstance.start();
+                    emitter.Play();
                 }
                 anim.SetTrigger("Digging");
             }
@@ -105,7 +105,7 @@ public class BuildTrinchera : MonoBehaviour
 
             if (elapsedTime > timeBuildSpend)
             {
-                eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                emitter.Stop();
                 GameObject trin = Instantiate(trinchera, posWhereBuild + offsetTrinchera, Quaternion.identity);
 
                 List<FischlWorks_FogWar.csFogWar.FogRevealer> fogList = PlacementSystem.fog_._FogRevealers;

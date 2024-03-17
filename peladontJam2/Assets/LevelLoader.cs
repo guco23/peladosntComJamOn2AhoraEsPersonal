@@ -30,6 +30,6 @@ public class LevelLoader : MonoBehaviour
 
     public void fadeOutCompleted()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(4);
     }
 }
