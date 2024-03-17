@@ -36,7 +36,10 @@ public class ManagerResourcesTrincher : MonoBehaviour
         return resourseAmount;
     }
 
-
+    public float getElapsedTime()
+    {
+        return elapsedTime;
+    }
     #endregion
 
     void Start()
