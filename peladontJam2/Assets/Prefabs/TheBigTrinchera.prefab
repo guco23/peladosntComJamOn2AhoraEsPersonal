@@ -100,7 +100,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 180, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6632707733512493947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +122,7 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  emitter: {fileID: 0}
   bloodEffect: {fileID: 0}
   miniBloodEffect: {fileID: 0}
   type: 1
@@ -176,10 +177,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1040333240147439518, guid: 1f4ff7d51bf52784dadabf70684299df, type: 3}
   spawnPoint: {fileID: 6632707733512493943}
   soldierDectect: {fileID: 8149022385055343333}
-  inputsound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+  emitter: {fileID: 0}
