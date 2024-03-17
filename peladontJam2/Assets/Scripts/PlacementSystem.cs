@@ -40,6 +40,7 @@ public class PlacementSystem : MonoBehaviour
 
     #region references
 
+    [SerializeField] private GameObject mouseIconZafarero;
     [SerializeField] private GameObject mouseIcon, cellIndicator, basicSoldierPrefab, basicSoldierPickAxePrefab;
     [SerializeField] private InputManager inputManager;
     [SerializeField] private Grid grid_;
@@ -54,7 +55,14 @@ public class PlacementSystem : MonoBehaviour
     #endregion
 
     public void setSoldierType(int i)
-    { print("tu viejjaaaaaa"); enemyType = i; }
+    { 
+        print("tu viejjaaaaaa"); 
+        enemyType = i;
+
+        mouseIcon.SetActive(enemyType == 0);
+        mouseIconZafarero.SetActive(enemyType == 1);
+
+    }
 
 
     List<spawnInfo> spawns = new List<spawnInfo>();
@@ -64,7 +72,15 @@ public class PlacementSystem : MonoBehaviour
         Vector3 mousePos = inputManager.GetSelectedMapPoint();
         Vector3Int cellPos = grid_.WorldToCell(mousePos);
         //print(cellPos);
-        mouseIcon.transform.position = grid_.CellToWorld(cellPos) +placeOffSet;
+        if(enemyType == 0)
+        {
+            mouseIcon.transform.position = grid_.CellToWorld(cellPos) + placeOffSet;
+        }
+        else
+        {
+            mouseIconZafarero.transform.position = grid_.CellToWorld(cellPos) + placeOffSet;
+        }
+        
         cellIndicator.transform.position = grid_.CellToWorld(cellPos);
 
         elapsedTime += Time.deltaTime;
