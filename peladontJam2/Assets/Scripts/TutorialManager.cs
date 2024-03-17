@@ -49,6 +49,8 @@ public class TutorialManager : MonoBehaviour
         {
 
             canvas_.SetActive(true);
+            trincheras_.SetActive(false);
+            menuTrinchera_.SetActive(false);
 
         }
         //colocar soldado
@@ -57,9 +59,7 @@ public class TutorialManager : MonoBehaviour
 
             resoursesSystem_.SetActive(true);
             spawnSystem_.SetActive(true);
-            trincheras_.SetActive(false);
-            menuTrinchera_.SetActive(false);
-
+            
         }
         //colocar zafador
         else if(currentText_ == 4)
@@ -101,7 +101,7 @@ public class TutorialManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if(currentText_ == texts_.Length - 1)
+            if(currentText_ == texts_.Length)
             {
                 SceneManager.LoadScene("New Main Menu");
             }
