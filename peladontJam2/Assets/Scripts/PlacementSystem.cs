@@ -197,11 +197,16 @@ public class PlacementSystem : MonoBehaviour
 
     private void Start()
     {
+        if(levelText != null)
+        {
 
-        levelText.SetActive(true);
+            levelText.SetActive(true);
 
-        levelText.GetComponent<TMP_Text>().text = "LEVEL " + (currentLevel + 1);
+            levelText.GetComponent<TMP_Text>().text = "LEVEL " + (currentLevel + 1);
 
+        }
+
+        
         if (currentLevel == 0)
         {
             resources_iA.setResourcesAmount(50);
@@ -225,7 +230,11 @@ public class PlacementSystem : MonoBehaviour
 
         fog_ = myfog_;
 
-        StartCoroutine("Fade");
+
+        if (levelText != null)
+        {
+            StartCoroutine("Fade");
+        }
     }
 
     IEnumerator Fade()
