@@ -46,7 +46,8 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] private GameObject mouseIcon, cellIndicator, basicSoldierPrefab, basicSoldierPickAxePrefab;
     [SerializeField] private InputManager inputManager;
     [SerializeField] private Grid grid_;
-    [SerializeField] private csFogWar fog_;
+    [SerializeField] static public csFogWar fog_;
+    [SerializeField] private csFogWar myfog_;
 
     [SerializeField] int spawnCellX;
 
@@ -147,7 +148,7 @@ public class PlacementSystem : MonoBehaviour
 
                     fog_.AddFogRevealer(new csFogWar.FogRevealer(soldierPickaxe.transform, rangoVisionMineros, true));
 
-
+                    
                     BuildTrinchera trinBuild = soldierPickaxe.GetComponent<BuildTrinchera>();
 
                     trinBuild.setTrinPos(grid_.CellToWorld(cellPos));
@@ -196,5 +197,6 @@ public class PlacementSystem : MonoBehaviour
             spawns.Add(new spawnInfo(false, false, 0));
         }
 
+        fog_ = myfog_;
     }
 }

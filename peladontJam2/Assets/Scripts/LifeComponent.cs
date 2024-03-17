@@ -50,6 +50,28 @@ public class LifeComponent : MonoBehaviour
                 bloodEffect.gameObject.transform.parent = null;
             }
             Destroy(gameObject);
+            
+            List<FischlWorks_FogWar.csFogWar.FogRevealer> fogList =   PlacementSystem.fog_._FogRevealers;
+
+            bool encontrado = false;
+
+            int i = 0;
+
+            while (i < fogList.Count && !encontrado) 
+            {
+                if (fogList[i]._RevealerTransform == transform)
+                {
+                    encontrado = true;
+                }
+                else i++;
+            }
+
+            if(encontrado)
+            {
+                fogList.RemoveAt(i);
+                PlacementSystem.fog_.ReplaceFogRevealerList(fogList);   
+            }
+
             return true;
         }
         soundInstance.start();
