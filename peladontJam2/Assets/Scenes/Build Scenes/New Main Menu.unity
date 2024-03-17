@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.040745974, g: 0.050543424, b: 0.08338426, a: 1}
+  m_IndirectSpecularColor: {r: 0.040508375, g: 0.050361775, b: 0.08322008, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -4012159807693164750, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2881501046970087301, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1185425510250885346, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.048291344
@@ -1086,6 +1094,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.019318024
       objectReference: {fileID: 0}
+    - target: {fileID: 8977113679353729251, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9023937412332469320, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0070704212
@@ -1725,6 +1737,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -5415508859581163934, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2848098044362845256, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1769,9 +1785,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3674939699745546149, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6811220729997808166, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_Name
       value: Solado Aliado V2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630006373871600925, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
@@ -2183,6 +2207,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -4012159807693164750, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2881501046970087301, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2848098044362845256, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2234,6 +2266,10 @@ PrefabInstance:
     - target: {fileID: 6811220729997808166, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_Name
       value: Solado Enemigo V2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977113679353729251, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
@@ -2578,6 +2614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -5415508859581163934, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2848098044362845256, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2622,9 +2662,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3674939699745546149, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6811220729997808166, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_Name
       value: Solado Aliado V2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630006373871600925, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
@@ -3910,6 +3958,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -5415508859581163934, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2848098044362845256, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3954,9 +4006,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3674939699745546149, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6811220729997808166, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_Name
       value: Solado Aliado V2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630006373871600925, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
@@ -4604,6 +4664,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -4012159807693164750, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2881501046970087301, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1185425510250885346, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.048291344
@@ -5560,6 +5628,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.019318024
       objectReference: {fileID: 0}
+    - target: {fileID: 8977113679353729251, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9023937412332469320, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0070704212
@@ -5630,6 +5702,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -4012159807693164750, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2881501046970087301, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2848098044362845256, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -5681,6 +5761,10 @@ PrefabInstance:
     - target: {fileID: 6811220729997808166, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_Name
       value: Solado Enemigo V2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977113679353729251, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
@@ -6177,6 +6261,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -5415508859581163934, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2848098044362845256, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6221,9 +6309,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3674939699745546149, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6811220729997808166, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_Name
       value: Solado Aliado V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630006373871600925, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
@@ -14622,6 +14718,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -4012159807693164750, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2881501046970087301, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2848098044362845256, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -14673,6 +14777,10 @@ PrefabInstance:
     - target: {fileID: 6811220729997808166, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_Name
       value: Solado Enemigo V2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977113679353729251, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
@@ -14964,6 +15072,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -4012159807693164750, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2881501046970087301, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2848098044362845256, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -15016,6 +15132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solado Enemigo V2
       objectReference: {fileID: 0}
+    - target: {fileID: 8977113679353729251, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
 --- !u!4 &1953262062 stripped
@@ -15030,6 +15150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -5415508859581163934, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2848098044362845256, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -15074,9 +15198,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3674939699745546149, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6811220729997808166, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
       propertyPath: m_Name
       value: Solado Aliado V2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630006373871600925, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
@@ -15517,6 +15649,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1347359707}
     m_Modifications:
+    - target: {fileID: -4012159807693164750, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2881501046970087301, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1185425510250885346, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.048291344
@@ -16480,6 +16620,10 @@ PrefabInstance:
     - target: {fileID: 8966309187220554214, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.019318024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977113679353729251, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9023937412332469320, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
       propertyPath: m_LocalPosition.x
