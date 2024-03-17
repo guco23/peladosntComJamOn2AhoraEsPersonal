@@ -1183,7 +1183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc556dd335b877499380df122083e85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.43
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc556dd335b877499380df122083e85, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2913,6 +2913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1720617582}
   - component: {fileID: 1720617583}
+  - component: {fileID: 1720617584}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -2950,6 +2951,22 @@ MonoBehaviour:
   playerResources: {fileID: 1665157878}
   textMeshPro: {fileID: 1628896504}
   resourcesSlider: {fileID: 1590002563}
+--- !u!114 &1720617584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720617581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: GameState
+  TriggerEvent: 1
+  Value: 1
 --- !u!1 &1813963010
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,6 +3359,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7697793062863167632, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697793062901033600, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697793062901033660, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
