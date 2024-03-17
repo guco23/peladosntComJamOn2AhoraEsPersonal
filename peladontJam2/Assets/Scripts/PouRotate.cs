@@ -17,6 +17,6 @@ public class PouRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //tr_.rotation += Vector3(0, rot_, 0);
+        tr_.eulerAngles += new Vector3(0, rot_, 0);
     }
 }
