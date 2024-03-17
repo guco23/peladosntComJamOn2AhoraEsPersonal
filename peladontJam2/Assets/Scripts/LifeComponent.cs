@@ -56,7 +56,7 @@ public class LifeComponent : MonoBehaviour
             if (gameObject.TryGetComponent<SoldierMoveComponent>(out solMove_))
             {
 
-                solMove_.enabled= false;
+                solMove_.stopMoving();
 
             }
 
