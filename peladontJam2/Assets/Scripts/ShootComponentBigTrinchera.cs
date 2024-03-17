@@ -55,4 +55,33 @@ public class ShootComponentBigTrinchera : ShootComponent
         shooting = false;
         soldierDectect.enemyDefeated();
     }
+
+
+    protected override void shoot()
+    {
+
+        SpawnBullet();
+        //si matamos al enemigo
+        /*
+        if (target.reciveDamage(damage))
+        {
+            target = null;
+            shooting = false;
+        }
+         */
+
+        //recalcular el fire rate(aleatorio entre min y max)
+        RandFireRate();
+
+        //Debug.Log("disparo");
+
+        //llamar al sonido de disparo(LUIS HAZ TU COSA)
+        if (checker.IsVisible)
+        {
+            //EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
+            emitter.Play();
+            //soundInstance.start();
+            //soundInstance.release();
+        }
+    }
 }
