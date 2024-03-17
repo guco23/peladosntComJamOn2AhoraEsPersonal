@@ -48,6 +48,18 @@ public class LifeComponent : MonoBehaviour
 
         //si tenemos 0 o menos vida, destroy
         if (life <= 0) {
+
+            SoldierMoveComponent solMove_;
+
+            
+
+            if (gameObject.TryGetComponent<SoldierMoveComponent>(out solMove_))
+            {
+
+                solMove_.enabled= false;
+
+            }
+
             emitter.SetParameter("Alive", 1f);
             emitter.Play();
             if (bloodEffect)
