@@ -4925,6 +4925,7 @@ GameObject:
   - component: {fileID: 3849211497791706590}
   - component: {fileID: 194654207145889438}
   - component: {fileID: 2787748402267371320}
+  - component: {fileID: 3568994744833659740}
   m_Layer: 6
   m_Name: Solado Aliado V2
   m_TagString: Untagged
@@ -5084,6 +5085,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa68bd8702c33b4869f0151bb4660ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3568994744833659740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811220729997808166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5f5e1d0b19b554da7edece509cbb84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6907753729161884429

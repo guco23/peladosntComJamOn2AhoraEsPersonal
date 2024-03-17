@@ -21,13 +21,14 @@ public class SoldierMoveComponent : MonoBehaviour
     float speed;
     public FMODUnity.EventReference inputsound;
     public float timeBetweenSteps = 0.5f;
+    InFrustrumChecker checker;
 
     private float time;
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
-
+        checker = GetComponent<InFrustrumChecker>();
         continueMoving();
 
     }
@@ -36,10 +37,12 @@ public class SoldierMoveComponent : MonoBehaviour
         if(time < 0 && rb.velocity.magnitude >0)
         {
             time = timeBetweenSteps;
-            EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
-            soundInstance.start();
-            soundInstance.release();
-
+            if (checker.IsVisible)
+            {
+                EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
+                soundInstance.start();
+                soundInstance.release();
+            }
         }
 
         time -=Time.deltaTime;
