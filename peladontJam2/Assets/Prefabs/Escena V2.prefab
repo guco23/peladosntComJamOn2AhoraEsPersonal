@@ -153,7 +153,7 @@ MonoBehaviour:
   spawnPosX: 19
   fil1PosY: -3
   enemySoldierPrefab: {fileID: 6811220729997808166, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
-  basicSoldierPickAxePrefab: {fileID: 7405620062232497659, guid: d539e9da531596d4db99ae6fa05fad77, type: 3}
+  basicSoldierPickAxePrefab: {fileID: 2908700828725793553, guid: 492123d6de81f3643850f08182207971, type: 3}
   spawnPosOffSet: {x: 1, y: 0, z: 0.8}
   grid_: {fileID: 7697793064134218859}
   enemySpawnRate: 1
@@ -261,7 +261,7 @@ MonoBehaviour:
   fogPlaneHeight: 0
   fogPlaneMaterial: {fileID: 2100000, guid: 36b93ac6fcf129c449491654e397fe4a, type: 2}
   fogColor: {r: 0.33129224, g: 0.33545744, b: 0.33962262, a: 1}
-  fogPlaneAlpha: 0.995
+  fogPlaneAlpha: 1
   fogLerpSpeed: 2.5
   fogPlaneTextureLerpTarget: {fileID: 0}
   fogPlaneTextureLerpBuffer: {fileID: 0}
@@ -725,7 +725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632707733512493943, guid: 0791c19693ddd11458f5fa6404529e81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 66.56496
+      value: 48.2
       objectReference: {fileID: 0}
     - target: {fileID: 6632707733512493943, guid: 0791c19693ddd11458f5fa6404529e81, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1003,7 +1003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: rangoVisionSoldados
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: placementLayer.m_Bits
@@ -1012,7 +1012,7 @@ PrefabInstance:
     - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: basicSoldierPickAxePrefab
       value: 
-      objectReference: {fileID: 7405620062232497659, guid: d539e9da531596d4db99ae6fa05fad77, type: 3}
+      objectReference: {fileID: 2908700828725793553, guid: 6f48e343a5526eb46a20c7322b6fed6d, type: 3}
     - target: {fileID: 1048689122854863828, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: m_Name
       value: SpawnSystem

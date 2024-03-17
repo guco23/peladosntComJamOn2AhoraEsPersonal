@@ -3083,46 +3083,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
-      propertyPath: fogPlaneAlpha
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4302968764022458013, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_Name
       value: Escena V2
       objectReference: {fileID: 0}
-    - target: {fileID: 4918166309192739351, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
-      propertyPath: basicSoldierPickAxePrefab
-      value: 
-      objectReference: {fileID: 2908700828725793553, guid: 492123d6de81f3643850f08182207971, type: 3}
-    - target: {fileID: 6198952566305156498, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
-      propertyPath: life
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6198952566305156498, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
-      propertyPath: maxLife
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6198952566305156510, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 48.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697793062817694223, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.6800003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697793062817694223, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
-      propertyPath: rangoVisionSoldados
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
-      propertyPath: basicSoldierPickAxePrefab
-      value: 
-      objectReference: {fileID: 2908700828725793553, guid: 6f48e343a5526eb46a20c7322b6fed6d, type: 3}
     - target: {fileID: 9151729844168503522, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_RootOrder
       value: 1
