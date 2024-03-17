@@ -32,4 +32,8 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+    public void changeToTutorial()
+    {
+        SceneManager.LoadScene(5);
+    }
 }
