@@ -12,16 +12,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2086.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2086.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2086.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 58.458405
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1832361
+      value: 48.78703
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.0371656
+      value: -42.571064
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51,6 +63,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 4874126678125670354, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
     - target: {fileID: -1439730007547781893, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
