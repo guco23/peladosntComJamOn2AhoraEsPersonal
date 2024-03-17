@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138517989372139930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.177, y: -2.412, z: 0.9105}
+  m_LocalPosition: {x: 31.4, y: -2.412, z: 0.9105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -153,11 +153,11 @@ MonoBehaviour:
   spawnPosX: 19
   fil1PosY: -3
   enemySoldierPrefab: {fileID: 6811220729997808166, guid: de725d7a96fa1054b9ddb27aabce07fb, type: 3}
-  basicSoldierPickAxePrefab: {fileID: 0}
+  basicSoldierPickAxePrefab: {fileID: 7405620062232497659, guid: d539e9da531596d4db99ae6fa05fad77, type: 3}
   spawnPosOffSet: {x: 1, y: 0, z: 0.8}
   grid_: {fileID: 7697793064134218859}
   enemySpawnRate: 1
-  stateTime: 15
+  stateTime: 10
   resourceManager: {fileID: 4918166309193917542}
   posicionesConTrincheras: []
 --- !u!1 &5251666869794217650
@@ -204,9 +204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9851b2c0b3bad7468ead9df5cd8177f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.1
-  resourseWinAmount: 25
-  resourseAmount: 0
+  cooldown: 1
+  resourseWinAmount: 50
+  resourseAmount: 500
 --- !u!1 &6080117621200691389
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,20 +251,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5de54c084f472845b61ee9a97cb8a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogRevealers: []
+  fogRevealers:
+  - revealerTransform: {fileID: 4473090870891328377}
+    sightRange: 8
+    updateOnlyOnMove: 0
+    lastSeenAt: {x: 0, y: 0}
   levelMidPoint: {fileID: 7648706328244795580}
   FogRefreshRate: 30
   fogPlaneHeight: 0
   fogPlaneMaterial: {fileID: 2100000, guid: 36b93ac6fcf129c449491654e397fe4a, type: 2}
-  fogColor: {r: 0.019607844, g: 0.05882353, b: 0.09803922, a: 1}
-  fogPlaneAlpha: 1
+  fogColor: {r: 0.33129224, g: 0.33545744, b: 0.33962262, a: 1}
+  fogPlaneAlpha: 0.995
   fogLerpSpeed: 2.5
   fogPlaneTextureLerpTarget: {fileID: 0}
   fogPlaneTextureLerpBuffer: {fileID: 0}
   LevelDataToLoad: {fileID: 0}
   saveDataOnScan: 1
   levelNameToSave: Default
-  levelDimensionX: 15
+  levelDimensionX: 90
   levelDimensionY: 15
   unitScale: 1
   scanSpacingPerUnit: 0.25
@@ -289,6 +293,7 @@ GameObject:
   - component: {fileID: 7697793062817694224}
   - component: {fileID: 7697793062817694225}
   - component: {fileID: 2233690260433827347}
+  - component: {fileID: 179380563}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -304,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7697793062817694220}
   m_LocalRotation: {x: 0.37491396, y: -0, z: -0, w: 0.92705965}
-  m_LocalPosition: {x: 21.7773, y: 6.7, z: -10.93}
+  m_LocalPosition: {x: -4.6800003, y: 6.7, z: -10.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -422,6 +427,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &2233690260433827347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697793062817694220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+--- !u!114 &179380563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -691,9 +709,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9851b2c0b3bad7468ead9df5cd8177f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 2
-  resourseWinAmount: 25
-  resourseAmount: 10000
+  cooldown: 1
+  resourseWinAmount: 50
+  resourseAmount: 100
 --- !u!1001 &723678801869076201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -775,6 +793,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6632707733512493943, guid: 0791c19693ddd11458f5fa6404529e81, type: 3}
   m_PrefabInstance: {fileID: 723678801869076201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4918166309152721754
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7697793063303488481}
+    m_Modifications:
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.9399776
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.632757
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 33.449184
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330484077002881165, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_Name
+      value: Zapador Aliado Fake
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330484077002881165, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+--- !u!1 &4024816270134899671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8330484077002881165, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+  m_PrefabInstance: {fileID: 4918166309152721754}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7070511744069314574
 PrefabInstance:
@@ -878,6 +962,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 802842335094170246}
     - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: myfog_
+      value: 
+      objectReference: {fileID: 802842335094170246}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: spawnCellX
       value: -20
       objectReference: {fileID: 0}
@@ -894,6 +982,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4918166307911865899}
     - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: mouseIconZafarero
+      value: 
+      objectReference: {fileID: 4024816270134899671}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: basicSoldierPrefab
       value: 
       objectReference: {fileID: 6811220729997808166, guid: 9e98df4906311f44d8a26daaa45673ba, type: 3}
@@ -904,6 +996,18 @@ PrefabInstance:
     - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: placeOffSetSpawn.z
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: rangoVisionMineros
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: rangoVisionSoldados
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: placementLayer.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 1048689122746090122, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: basicSoldierPickAxePrefab
@@ -957,6 +1061,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8934004024058390118, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8934004024058390125, guid: 3632973f42f4cd14686900d237d2d920, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.16
@@ -1005,7 +1113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8863624752440007106, guid: 86fb9d37583286a4c99c45e44edb19f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.7773
+      value: -4.68
       objectReference: {fileID: 0}
     - target: {fileID: 8863624752440007106, guid: 86fb9d37583286a4c99c45e44edb19f1, type: 3}
       propertyPath: m_LocalPosition.y
