@@ -5090,6 +5090,13 @@ MonoBehaviour:
   trinchera: {fileID: 588691648375685508, guid: 0352b4a070768c0d18542f241acd3928, type: 3}
   offsetTrinchera: {x: 1, y: 0, z: 0.75}
   tipo: 0
+  buildEvent:
+    Guid:
+      Data1: -12910196
+      Data2: 1144744118
+      Data3: -1499771999
+      Data4: 1490558093
+    Path: event:/Trench
 --- !u!114 &7769188403861413989
 MonoBehaviour:
   m_ObjectHideFlags: 0

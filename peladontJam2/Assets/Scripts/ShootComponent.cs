@@ -46,12 +46,15 @@ public class ShootComponent : MonoBehaviour
 
     public FMODUnity.EventReference inputsound;
 
+    private InFrustrumChecker checker;
+
     private void Start()
     {
         RandFireRate();
         elapsedTime = fireRate - firstShootDelay;
 
         soldierDectect = GetComponent<SoldierDetectSoldierComponent>();    
+        checker = GetComponent<InFrustrumChecker>();
     }
 
     private void Update()
@@ -97,9 +100,12 @@ public class ShootComponent : MonoBehaviour
         _shootParticles.Play();
 
         //llamar al sonido de disparo(LUIS HAZ TU COSA)
-        EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
-        soundInstance.start();
-        soundInstance.release();
+        if (checker.IsVisible)
+        {
+            EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
+            soundInstance.start();
+            soundInstance.release();
+        }
     }
 
     private void StartShooting()
