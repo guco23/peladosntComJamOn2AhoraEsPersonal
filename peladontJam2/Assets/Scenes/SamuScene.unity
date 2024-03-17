@@ -3083,9 +3083,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: fogPlaneAlpha
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4302968764022458013, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_Name
       value: Escena V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198952566305156498, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: life
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198952566305156498, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: maxLife
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697793062817694223, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.6800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697793062817694223, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: rangoVisionSoldados
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9151729844168503522, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_RootOrder

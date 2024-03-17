@@ -112,6 +112,8 @@ public class ShootComponent : MonoBehaviour
     {
         shooting = true;
 
+
+
         RandFireRate();
 
         elapsedTime = fireRate - firstShootDelay;

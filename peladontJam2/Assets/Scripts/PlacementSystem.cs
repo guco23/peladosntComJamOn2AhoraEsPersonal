@@ -49,6 +49,8 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] static public csFogWar fog_;
     [SerializeField] private csFogWar myfog_;
 
+    public static int currentLevel = 0;
+
     [SerializeField] int spawnCellX;
 
     [SerializeField] int enemyType;
@@ -191,6 +193,7 @@ public class PlacementSystem : MonoBehaviour
 
     private void Start()
     {
+
         setSoldierType(0);
         for (int i = 0;i <5;i++)
         {
