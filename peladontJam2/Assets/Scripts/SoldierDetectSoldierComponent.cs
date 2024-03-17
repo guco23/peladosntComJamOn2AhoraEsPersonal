@@ -8,18 +8,18 @@ using UnityEngine;
 public class SoldierDetectSoldierComponent : MonoBehaviour
 {
     //El move component del soldado
-    SoldierMoveComponent soldierMoveComponent;
-    ShootComponent shootComponent;
-    RaycastHit deteccionEnemigos;
-    bool targetFocused;
+    protected SoldierMoveComponent soldierMoveComponent;
+    protected ShootComponent shootComponent;
+    protected RaycastHit deteccionEnemigos;
+    protected bool targetFocused;
 
     [SerializeField]
     [Tooltip("La distancia de detección")]
-    float distancia;
+    protected float distancia;
 
     [SerializeField]
     [Tooltip("El layerMASK de las unidades enemigas")]
-    LayerMask targetLayerMask;
+    protected LayerMask targetLayerMask;
     //LifeComponent enemyLife;
 
     // Start is called before the first frame update
@@ -59,7 +59,7 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
     /**
     A llamar una vez haya muerto el enemigo que tenía como objetuivo
     */
-    public void enemyDefeated()
+    public virtual void enemyDefeated()
     {
         targetFocused = false;
         if (soldierMoveComponent.GetEstadoSoldado() == EstadoSoldado.SOLDADO_EN_CAMPO)
@@ -71,12 +71,5 @@ public class SoldierDetectSoldierComponent : MonoBehaviour
     {
         distancia -= offSet;
     }
-
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireCube(transform.position + transform.forward * distancia, transform.lossyScale);
-    }
-
 
 }

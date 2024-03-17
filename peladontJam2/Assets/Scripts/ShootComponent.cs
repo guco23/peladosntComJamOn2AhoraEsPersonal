@@ -10,43 +10,43 @@ public class ShootComponent : MonoBehaviour
     ParticleSystem _shootParticles;
 
     [SerializeField]
-    private float firstShootDelay = 0.5f;
+    protected float firstShootDelay = 0.5f;
 
     [SerializeField]
-    private float fireRate = 1.5f;
-
-    [SerializeField]    
-    private float minFireRate = 1.3f;
+    protected float fireRate = 1.5f;
 
     [SerializeField]
-    private float maxFireRate = 1.7f;
-
-
-
-    private float elapsedTime = 0;
+    protected float minFireRate = 1.3f;
 
     [SerializeField]
-    private bool shooting = true;
+    protected float maxFireRate = 1.7f;
+
+
+
+    protected float elapsedTime = 0;
+
+    [SerializeField]
+    protected bool shooting = true;
 
 
     [SerializeField]
-    private float damage = 2f;
+    protected float damage = 2f;
 
     [SerializeField]
-    private LifeComponent target;
+    protected LifeComponent target;
 
     [SerializeField]
-    private GameObject bulletPrefab;
+    protected GameObject bulletPrefab;
 
     [SerializeField]
-    private Transform spawnPoint;
+    protected Transform spawnPoint;
 
     [SerializeField]
-    private SoldierDetectSoldierComponent soldierDectect;
+    protected SoldierDetectSoldierComponent soldierDectect;
 
     public FMODUnity.EventReference inputsound;
 
-    private InFrustrumChecker checker;
+    protected InFrustrumChecker checker;
 
     private Animator anim;
 
@@ -82,7 +82,7 @@ public class ShootComponent : MonoBehaviour
 
     }
 
-    private void shoot()
+    protected void shoot()
     {
 
         SpawnBullet();
@@ -111,7 +111,7 @@ public class ShootComponent : MonoBehaviour
         }
     }
 
-    private void StartShooting()
+    protected virtual void StartShooting()
     {
         shooting = true;
 
@@ -122,7 +122,7 @@ public class ShootComponent : MonoBehaviour
         elapsedTime = fireRate - firstShootDelay;
     }
 
-    private void RandFireRate()
+    protected void RandFireRate()
     {
         fireRate = Random.Range(minFireRate, maxFireRate); 
     }
@@ -134,7 +134,7 @@ public class ShootComponent : MonoBehaviour
         StartShooting();
     }
 
-    public void StopShooting()
+    public virtual void StopShooting()
     {
         target = null;
         shooting = false;

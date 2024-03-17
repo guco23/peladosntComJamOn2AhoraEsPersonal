@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -754,6 +754,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341591835}
   m_CullTransparentMesh: 1
+--- !u!1 &359640435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4473090870891328370, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+  m_PrefabInstance: {fileID: 4918166309535079645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &363308110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,6 +2305,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519425587}
   m_CullTransparentMesh: 1
+--- !u!198 &1530789562 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8347635293879563534, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+  m_PrefabInstance: {fileID: 4918166309535079645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1559588172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,6 +2955,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4473090870891328377, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
   m_PrefabInstance: {fileID: 4918166309535079645}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1912507067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359640435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f698b2e0802ecb42b166962360154ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootParticles: {fileID: 1530789562}
+  firstShootDelay: 0.5
+  fireRate: 1.5
+  minFireRate: 1.3
+  maxFireRate: 1.7
+  shooting: 1
+  damage: 2
+  target: {fileID: 0}
+  bulletPrefab: {fileID: 1040333240147439518, guid: 1f4ff7d51bf52784dadabf70684299df, type: 3}
+  spawnPoint: {fileID: 1912507062}
+  soldierDectect: {fileID: 1912507068}
+  inputsound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+--- !u!114 &1912507068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359640435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5820cd85c538b05438d69d0408bf9337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distancia: 10
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &2069564381
 GameObject:
   m_ObjectHideFlags: 0
@@ -3188,6 +3244,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 671511027699283490, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: fogColor.b
       value: 0.33962262
@@ -3290,7 +3350,7 @@ PrefabInstance:
       objectReference: {fileID: 226165297}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: enemyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: mouseIconZafarero
