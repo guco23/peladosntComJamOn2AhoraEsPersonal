@@ -107,6 +107,28 @@ public class BuildTrinchera : MonoBehaviour
             {
                 eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 GameObject trin = Instantiate(trinchera, posWhereBuild + offsetTrinchera, Quaternion.identity);
+
+                List<FischlWorks_FogWar.csFogWar.FogRevealer> fogList = PlacementSystem.fog_._FogRevealers;
+
+                bool encontrado = false;
+
+                int i = 0;
+
+                while (i < fogList.Count && !encontrado)
+                {
+                    if (fogList[i]._RevealerTransform == transform)
+                    {
+                        encontrado = true;
+                    }
+                    else i++;
+                }
+
+                if (encontrado)
+                {
+                    fogList.RemoveAt(i);
+                    PlacementSystem.fog_.ReplaceFogRevealerList(fogList);
+                }
+
                 Destroy(gameObject);
 
             }
