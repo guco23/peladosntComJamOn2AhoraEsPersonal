@@ -104,19 +104,20 @@ public class IA_Manager : MonoBehaviour
             if(resourceManager.getResources() >= 150)
             {
                 resourceManager.SpendResourses(100);
-                spawnEnemy(Random.Range((int)1, (int)6));
+                spawnEnemy(Random.Range((int)1, (int)7));
             }
         }
         else if (state == IA_STATE.ATACK_TACTIC)
         {
-            if (resourceManager.getResources() >= 500)
+            if (resourceManager.getResources() >= 600)
             {
-                resourceManager.SpendResourses(500);
+                resourceManager.SpendResourses(600);
                 spawnEnemy(1);
                 spawnEnemy(2);
                 spawnEnemy(3);
                 spawnEnemy(4);
                 spawnEnemy(5);
+                spawnEnemy(6);
             }
         }
         else if(state == IA_STATE.BUILD_TRINCHER)

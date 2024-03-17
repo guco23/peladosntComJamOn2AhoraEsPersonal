@@ -47,6 +47,11 @@ public class ManagerResourcesTrincher : MonoBehaviour
 
     }
 
+    public void setResourcesAmount(int amount)
+    {
+        resourseWinAmount = amount;
+    }
+
     // Update is called once per frame
     void Update()
     {
