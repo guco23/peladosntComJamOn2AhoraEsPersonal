@@ -110,6 +110,11 @@ public class BuildTrinchera : MonoBehaviour
 
                 List<FischlWorks_FogWar.csFogWar.FogRevealer> fogList = PlacementSystem.fog_._FogRevealers;
 
+                if (gameObject.layer != LayerMask.GetMask("Aliado"))
+                {
+                    trin.transform.Rotate(0, 180, 0);
+                }
+
                 bool encontrado = false;
 
                 int i = 0;
