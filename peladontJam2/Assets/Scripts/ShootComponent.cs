@@ -115,6 +115,7 @@ public class ShootComponent : MonoBehaviour
     {
         shooting = true;
 
+
         anim.SetBool("isShooting",shooting);
         RandFireRate();
 

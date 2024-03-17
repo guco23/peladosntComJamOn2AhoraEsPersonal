@@ -26,7 +26,17 @@ public class LifeComponentBigTrinchera : LifeComponent
             //Victoria
             else
             {
-                SceneManager.LoadScene("VictoryScene");
+                //si vences la trinchera enemiga
+
+                //SceneManager.LoadScene("VictoryScene");
+
+                if (PlacementSystem.currentLevel < 2)
+                {
+                    print(PlacementSystem.currentLevel);
+                    SceneManager.LoadScene("SamuScene");
+                    PlacementSystem.currentLevel += 1;
+                }
+                else SceneManager.LoadScene("VictoryScene");
             }
 
             return base.reciveDamage(damage);
