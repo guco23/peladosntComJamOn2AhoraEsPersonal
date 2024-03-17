@@ -4958,6 +4958,9 @@ GameObject:
   - component: {fileID: 194654207145889438}
   - component: {fileID: 2787748402267371320}
   - component: {fileID: 3568994744833659740}
+  - component: {fileID: -5415508859581163934}
+  - component: {fileID: 3674939699745546149}
+  - component: {fileID: 8630006373871600925}
   m_Layer: 6
   m_Name: Solado Aliado V2
   m_TagString: Untagged
@@ -5037,6 +5040,7 @@ MonoBehaviour:
       Data3: -325574209
       Data4: 89965162
     Path: event:/Walk
+  emitter: {fileID: 8630006373871600925}
   timeBetweenSteps: 0.5
 --- !u!114 &4287769332336253254
 MonoBehaviour:
@@ -5077,13 +5081,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1040333240147439518, guid: 1f4ff7d51bf52784dadabf70684299df, type: 3}
   spawnPoint: {fileID: 3057261010725432449}
   soldierDectect: {fileID: 0}
-  inputsound:
-    Guid:
-      Data1: -856145737
-      Data2: 1188983198
-      Data3: 1546288299
-      Data4: -2125214151
-    Path: event:/Shoot
+  emitter: {fileID: -5415508859581163934}
 --- !u!114 &194654207145889438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5105,6 +5103,7 @@ MonoBehaviour:
       Data3: 612297624
       Data4: 1288530296
     Path: event:/Damage
+  emitter: {fileID: 3674939699745546149}
   bloodEffect: {fileID: 8443043515642830939}
   miniBloodEffect: {fileID: 9133656503795013526}
 --- !u!114 &2787748402267371320
@@ -5131,6 +5130,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5f5e1d0b19b554da7edece509cbb84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5415508859581163934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811220729997808166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -856145737
+      Data2: 1188983198
+      Data3: 1546288299
+      Data4: -2125214151
+    Path: event:/Shoot
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &3674939699745546149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811220729997808166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 978851718
+      Data2: 1239059808
+      Data3: 612297624
+      Data4: 1288530296
+    Path: event:/Damage
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &8630006373871600925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811220729997808166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2124073749
+      Data2: 1325532620
+      Data3: -325574209
+      Data4: 89965162
+    Path: event:/Walk
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &8078887460600877606
 GameObject:
   m_ObjectHideFlags: 0
