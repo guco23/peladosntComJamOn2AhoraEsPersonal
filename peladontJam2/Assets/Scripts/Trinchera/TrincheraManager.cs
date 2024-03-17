@@ -24,6 +24,7 @@ public class TrincheraManager : MonoBehaviour
     [Tooltip("El soldado que spawnea al start")]
     [SerializeField]
     GameObject soldadoInicial;
+    int ammountToSalir;
 
     // Start is called before the first frame update.
     void Start()
@@ -31,6 +32,7 @@ public class TrincheraManager : MonoBehaviour
         //El la hora de hacer STRING TYPING
         contenidos = new GameObject[30];
         ocupacion = 0;
+        ammountToSalir = 0;
         estado = ControlTrinchera.VACIA;
         GameObject soldado = Instantiate(soldadoInicial, gameObject.transform.position, Quaternion.identity);
         //EntrarEnTrinchera(soldado);
@@ -73,6 +75,7 @@ public class TrincheraManager : MonoBehaviour
     }
 
     //Saca a todas las unidades en la trinchera.
+    //La cosa sería utilizar otra forma de sacar para que el jugador seleccione una cantidcad específica.
     public void SacarDeTrinchera() {
         for (int i = 0; i < ocupacion; i++)
         {
@@ -104,5 +107,20 @@ public class TrincheraManager : MonoBehaviour
         soldado.GetComponent<SoldierMoveComponent>().setEstadoSoldado(EstadoSoldado.SOLDADO_EN_CAMPO);
     }
 
+    public void Aumentar()
+    {
+        if (ammountToSalir < ocupacion)
+            ammountToSalir++;
+    }
 
+    public void Reducir()
+    {
+        if(ammountToSalir > 0)
+            ammountToSalir--;
+    }
+
+    public int getAmmountToSalir()
+    {
+        return ammountToSalir;
+    }
 }
