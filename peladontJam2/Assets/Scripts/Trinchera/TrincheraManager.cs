@@ -21,6 +21,9 @@ public class TrincheraManager : MonoBehaviour
     ControlTrinchera estado;
     //El numero de gente en la trinchera (y el indice en el que colocar el siguiente).
     int ocupacion;
+    [Tooltip("El soldado que spawnea al start")]
+    [SerializeField]
+    GameObject soldadoInicial;
 
     // Start is called before the first frame update.
     void Start()
@@ -29,6 +32,8 @@ public class TrincheraManager : MonoBehaviour
         contenidos = new GameObject[30];
         ocupacion = 0;
         estado = ControlTrinchera.VACIA;
+        GameObject soldado = Instantiate(soldadoInicial, gameObject.transform.position, Quaternion.identity);
+        //EntrarEnTrinchera(soldado);
     }
 
     //Cambia la posesion de la trinchera
