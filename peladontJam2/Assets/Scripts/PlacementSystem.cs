@@ -2,11 +2,14 @@ using FischlWorks_FogWar;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
+
+    [SerializeField] private ManagerResourcesTrincher resources_iA;
     [SerializeField] private int rangoVisionSoldados = 3;
     [SerializeField] private int rangoVisionMineros = 2;
 
@@ -49,6 +52,8 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] static public csFogWar fog_;
     [SerializeField] private csFogWar myfog_;
 
+    public static int currentLevel = 0;
+
     [SerializeField] int spawnCellX;
 
     [SerializeField] int enemyType;
@@ -74,7 +79,7 @@ public class PlacementSystem : MonoBehaviour
     {
         Vector3 mousePos = inputManager.GetSelectedMapPoint();
         Vector3Int cellPos = grid_.WorldToCell(mousePos);
-        //print(cellPos);
+        print(cellPos);
         if(enemyType == 0)
         {
             mouseIcon.transform.position = grid_.CellToWorld(cellPos) + placeOffSet;
@@ -191,8 +196,24 @@ public class PlacementSystem : MonoBehaviour
 
     private void Start()
     {
+
+        if (currentLevel == 0)
+        {
+            resources_iA.setResourcesAmount(50);
+        }
+        else if (currentLevel == 1)
+        {
+            resources_iA.setResourcesAmount(60);
+
+        }
+        else if (currentLevel == 2)
+        {
+            resources_iA.setResourcesAmount(75);
+
+        }
+
         setSoldierType(0);
-        for (int i = 0;i <5;i++)
+        for (int i = 0;i <6;i++)
         {
             spawns.Add(new spawnInfo(false, false, 0));
         }

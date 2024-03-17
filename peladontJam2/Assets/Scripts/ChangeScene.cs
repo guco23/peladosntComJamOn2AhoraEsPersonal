@@ -12,6 +12,10 @@ public class ChangeScene : MonoBehaviour
 
     public void LoadLevel(int sceneID)
     {
+        if (sceneID == 2)
+        {
+            PlacementSystem.currentLevel = 0;
+        }
         SceneManager.LoadScene(sceneID);
     }
 
