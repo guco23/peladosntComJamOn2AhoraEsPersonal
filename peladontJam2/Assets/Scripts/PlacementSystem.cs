@@ -2,13 +2,14 @@ using FischlWorks_FogWar;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
-
+    [SerializeField] private GameObject levelText;
     [SerializeField] private ManagerResourcesTrincher resources_iA;
     [SerializeField] private int rangoVisionSoldados = 3;
     [SerializeField] private int rangoVisionMineros = 2;
@@ -197,6 +198,10 @@ public class PlacementSystem : MonoBehaviour
     private void Start()
     {
 
+        levelText.SetActive(true);
+
+        levelText.GetComponent<TMP_Text>().text = "LEVEL " + (currentLevel + 1);
+
         if (currentLevel == 0)
         {
             resources_iA.setResourcesAmount(50);
@@ -219,5 +224,14 @@ public class PlacementSystem : MonoBehaviour
         }
 
         fog_ = myfog_;
+
+        StartCoroutine("Fade");
+    }
+
+    IEnumerator Fade()
+    {
+
+        yield return new WaitForSeconds(1.5f);
+        levelText.gameObject.SetActive(false);
     }
 }
