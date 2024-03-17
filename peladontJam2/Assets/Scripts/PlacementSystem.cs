@@ -199,16 +199,16 @@ public class PlacementSystem : MonoBehaviour
 
         if (currentLevel == 0)
         {
-            resources_iA.setResourcesAmount(24);
+            resources_iA.setResourcesAmount(50);
         }
         else if (currentLevel == 1)
         {
-            resources_iA.setResourcesAmount(33);
+            resources_iA.setResourcesAmount(60);
 
         }
         else if (currentLevel == 2)
         {
-            resources_iA.setResourcesAmount(45);
+            resources_iA.setResourcesAmount(75);
 
         }
 
