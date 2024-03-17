@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
 
+
 public class LifeComponentBigTrinchera : LifeComponent
 {
 
@@ -26,6 +27,7 @@ public class LifeComponentBigTrinchera : LifeComponent
             //Victoria
             else
             {
+
                 //si vences la trinchera enemiga
 
                 //SceneManager.LoadScene("VictoryScene");
