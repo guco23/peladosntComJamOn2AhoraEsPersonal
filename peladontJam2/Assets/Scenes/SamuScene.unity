@@ -609,6 +609,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
+--- !u!114 &226165297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+  m_PrefabInstance: {fileID: 4918166309535079645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5de54c084f472845b61ee9a97cb8a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &341591835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3188,6 +3199,10 @@ PrefabInstance:
       propertyPath: fogPlaneAlpha
       value: 0.995
       objectReference: {fileID: 0}
+    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: levelDimensionX
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 1285185888569477372, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.68
@@ -3236,6 +3251,10 @@ PrefabInstance:
       propertyPath: resourseWinAmount
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 7648706328244795580, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 31.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7697793062817694223, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.6800003
@@ -3248,6 +3267,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -10.93
       objectReference: {fileID: 0}
+    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: myfog_
+      value: 
+      objectReference: {fileID: 226165297}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: enemyType
       value: 0
