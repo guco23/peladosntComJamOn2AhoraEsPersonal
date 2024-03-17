@@ -17,7 +17,7 @@ public class showresources : MonoBehaviour
 
     private void Update()
     {
-        textMeshPro.text = "Resources \n " + playerResources.getResources();
+        textMeshPro.text = playerResources.getResources().ToString();
         resourcesSlider.value = playerResources.getElapsedTime()*1000;
     }
 
