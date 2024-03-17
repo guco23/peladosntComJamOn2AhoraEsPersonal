@@ -96,8 +96,16 @@ public class TrincheraManager : MonoBehaviour
         //Cambia su posicion para estar metido abajo, en la trinchera
         soldado.transform.position = this.transform.position - new Vector3(0,0.5f,0);
         this.GetComponent<LifeComponentTrinchera>().AddLife(soldado.GetComponent<LifeComponent>().getLife());
-    
-        soldado.transform.Rotate(new Vector3(0,90,0));
+
+
+        if (gameObject.layer == LayerMask.GetMask("Aliado")){
+
+            soldado.transform.Rotate(new Vector3(0,90,0));
+        }
+        else
+        {
+            soldado.transform.Rotate(new Vector3(0, -90, 0));
+        }
     }
 
     private void SacarSoldado(GameObject soldado)
