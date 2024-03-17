@@ -56,6 +56,7 @@ public class SoldierMoveComponent : MonoBehaviour
     }
 
     public void continueMoving() {
+        if(rb && transform)
         rb.velocity = transform.forward * speed;
         
     }
