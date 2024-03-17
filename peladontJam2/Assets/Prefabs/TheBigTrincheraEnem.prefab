@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2450111703287105347}
   - component: {fileID: 4019470710523688663}
   m_Layer: 7
-  m_Name: TheBigTrinchera
+  m_Name: TheBigTrincheraEnem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 180, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6632707733512493947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   distancia: 9
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
 --- !u!114 &2450111703287105347
 MonoBehaviour:
   m_ObjectHideFlags: 0
