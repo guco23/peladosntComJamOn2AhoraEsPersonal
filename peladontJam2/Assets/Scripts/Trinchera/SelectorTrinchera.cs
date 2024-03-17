@@ -50,6 +50,7 @@ public class SelectorTrinchera : MonoBehaviour
         UpdateNumber();
     }
 
+    //Se llama sacar todos, pero deberia sacar la cantidad que el jugador ha seleccionado lol
     public void SacarTodos()
     {
         trincheraManager.SacarDeTrinchera();
