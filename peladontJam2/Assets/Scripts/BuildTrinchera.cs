@@ -31,6 +31,8 @@ public class BuildTrinchera : MonoBehaviour
     [SerializeField]
     private FMODUnity.EventReference buildEvent;
 
+    private Animator anim;
+
 
     public void setType(int type)
     {
@@ -51,6 +53,12 @@ public class BuildTrinchera : MonoBehaviour
         moveComponent = GetComponent<SoldierMoveComponent>();
         eventInstance = RuntimeManager.CreateInstance(buildEvent.Path);
         inFrustrum = GetComponent<InFrustrumChecker>();
+        anim = GetComponentInChildren<Animator>();
+        float num = Random.Range(0f, 1f);
+        if ( num > 0.5f)
+        {
+            anim.SetTrigger("NarutoRun");
+        }
     }
 
     // Update is called once per frame
@@ -68,6 +76,7 @@ public class BuildTrinchera : MonoBehaviour
                     Debug.Log("Sonido");
                     eventInstance.start();
                 }
+                anim.SetTrigger("Digging");
             }
         }
         if (tipo == 1)
@@ -81,6 +90,7 @@ public class BuildTrinchera : MonoBehaviour
                     Debug.Log("Sonido");
                     eventInstance.start();
                 }
+                anim.SetTrigger("Digging");
             }
         }
         //if (!inFrustrum.IsVisible)
