@@ -26,6 +26,8 @@ public class BuildTrinchera : MonoBehaviour
 
     private EventInstance eventInstance;
 
+    private InFrustrumChecker inFrustrum;
+
     [SerializeField]
     private FMODUnity.EventReference buildEvent;
 
@@ -60,7 +62,8 @@ public class BuildTrinchera : MonoBehaviour
             {
                 building = true;
                 moveComponent.stopMoving();
-                eventInstance.start();
+                if(inFrustrum.IsVisible)
+                    eventInstance.start();
             }
         }
         if (tipo == 1)
@@ -69,10 +72,14 @@ public class BuildTrinchera : MonoBehaviour
             {
                 building = true;
                 moveComponent.stopMoving();
-                eventInstance.start();
+                if (inFrustrum.IsVisible)
+                    eventInstance.start();
             }
         }
-
+        if (inFrustrum.IsVisible)
+        {
+            eventInstance.release();
+        }
         if (building)
         {
 
