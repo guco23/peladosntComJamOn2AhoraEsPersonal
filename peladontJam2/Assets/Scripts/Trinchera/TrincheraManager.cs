@@ -98,12 +98,15 @@ public class TrincheraManager : MonoBehaviour
         this.GetComponent<LifeComponentTrinchera>().AddLife(soldado.GetComponent<LifeComponent>().getLife());
 
 
-        if (gameObject.layer == LayerMask.GetMask("Aliado")){
+        if (gameObject.layer == LayerMask.NameToLayer("Aliado")){
 
+            //print("aaaaaaaaaaaaaaaaaaaa");
             soldado.transform.Rotate(new Vector3(0,90,0));
         }
         else
         {
+            //print("bbbbbbbbbbbbbbbbbbbbbbb");
+
             soldado.transform.Rotate(new Vector3(0, -90, 0));
         }
     }
