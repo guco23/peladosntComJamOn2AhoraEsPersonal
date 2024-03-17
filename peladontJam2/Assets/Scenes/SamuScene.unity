@@ -1089,6 +1089,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417818667}
   m_CullTransparentMesh: 1
+--- !u!1 &419572377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8330484077002881165, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+  m_PrefabInstance: {fileID: 695621511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &522208454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1118,7 +1123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc556dd335b877499380df122083e85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc556dd335b877499380df122083e85, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1212,6 +1217,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bac6bb91876bb429c29ae6b13267fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &695621511
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1708951346}
+    m_Modifications:
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.9399776
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.632757
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 33.449184
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553353455974907256, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330484077002881165, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_Name
+      value: Zapador Aliado Fake
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330484077002881165, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ab3dfbb75c2d984eaf95e8f2e58dbac, type: 3}
 --- !u!1 &738359525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,6 +2838,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!4 &1708951346 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7697793063303488481, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+  m_PrefabInstance: {fileID: 4918166309535079645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1720617581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3101,9 +3172,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: fogColor.b
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: fogColor.g
+      value: 0.33545744
+      objectReference: {fileID: 0}
+    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: fogColor.r
+      value: 0.33129224
+      objectReference: {fileID: 0}
+    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: fogPlaneAlpha
+      value: 0.995
+      objectReference: {fileID: 0}
     - target: {fileID: 1285185888569477372, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279466144036685394, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302968764022458013, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_Name
@@ -3160,6 +3251,18 @@ PrefabInstance:
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: enemyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: mouseIconZafarero
+      value: 
+      objectReference: {fileID: 419572377}
+    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: rangoVisionMineros
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: rangoVisionSoldados
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: placementLayer.m_Bits

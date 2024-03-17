@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
+    [SerializeField] private int rangoVisionSoldados = 3;
+    [SerializeField] private int rangoVisionMineros = 2;
 
     [SerializeField] private LayerMask placementLayer;
     [SerializeField]
@@ -101,7 +103,9 @@ public class PlacementSystem : MonoBehaviour
                 if (enemyType == 0 && teamResourses.SpendResourses(100))
                 {
                     GameObject soldier = Instantiate(basicSoldierPrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
-                    fog_.AddFogRevealer(new csFogWar.FogRevealer(soldier.transform, 1, true));
+                    
+                    //niebla
+                    fog_.AddFogRevealer(new csFogWar.FogRevealer(soldier.transform, rangoVisionSoldados, true));
 
                     soldier.transform.Rotate(new Vector3(0, 90, 0));
 
@@ -140,6 +144,9 @@ public class PlacementSystem : MonoBehaviour
                     GameObject soldierPickaxe = Instantiate(basicSoldierPickAxePrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
 
                     soldierPickaxe.transform.Rotate(new Vector3(0, 90, 0));
+
+                    fog_.AddFogRevealer(new csFogWar.FogRevealer(soldierPickaxe.transform, rangoVisionMineros, true));
+
 
                     BuildTrinchera trinBuild = soldierPickaxe.GetComponent<BuildTrinchera>();
 
@@ -183,6 +190,7 @@ public class PlacementSystem : MonoBehaviour
 
     private void Start()
     {
+        setSoldierType(0);
         for (int i = 0;i <5;i++)
         {
             spawns.Add(new spawnInfo(false, false, 0));
