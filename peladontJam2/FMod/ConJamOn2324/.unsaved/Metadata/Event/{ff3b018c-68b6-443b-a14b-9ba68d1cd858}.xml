@@ -130,14 +130,14 @@
 		<relationship name="automators">
 			<destination>{23ab21fe-25bf-438f-9446-dd089a29091a}</destination>
 		</relationship>
+		<relationship name="fadeOutCurve">
+			<destination>{aa558879-d9c7-4264-a6c9-bf03267f089a}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{1360f490-15f8-498e-9dad-1a6baaa0e267}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{ae3c1107-bd71-462b-80d2-5830c2d98311}">
-		<property name="volume">
-			<value>-6.5</value>
-		</property>
 		<property name="name">
 			<value>Martilleo</value>
 		</property>
@@ -367,6 +367,14 @@
 			<value>pitch</value>
 		</property>
 	</object>
+	<object class="FadeCurve" id="{aa558879-d9c7-4264-a6c9-bf03267f089a}">
+		<relationship name="startPoint">
+			<destination>{6d2d513f-ea03-454a-84e4-1edfea4e2003}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{a8a280b5-eb61-40c3-8f99-da71c6c9b7f3}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{02455d7e-4479-48e9-9830-31322be83420}">
 		<relationship name="effects">
 			<destination>{eb48101b-4c74-448f-994a-365fa15eed67}</destination>
@@ -439,6 +447,25 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{53768263-9f2c-4d5e-b6c2-60e98fdd9f15}" />
+	<object class="AutomationPoint" id="{6d2d513f-ea03-454a-84e4-1edfea4e2003}">
+		<property name="position">
+			<value>1.5</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.25471893</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a8a280b5-eb61-40c3-8f99-da71c6c9b7f3}">
+		<property name="position">
+			<value>1.9000000000000001</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="ThreeEQEffect" id="{eb48101b-4c74-448f-994a-365fa15eed67}">
 		<property name="lowGain">
 			<value>-19</value>
