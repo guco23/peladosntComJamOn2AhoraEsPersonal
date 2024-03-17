@@ -148,7 +148,7 @@ public class IA_Manager : MonoBehaviour
     {
         //state = (IA_STATE)Random.Range((int)0, (int)3);
         NextState();
-        state = IA_STATE.BUILD_TRINCHER;
+        state = IA_STATE.ATACK_TACTIC;
         //spawnTrincher(1, 2);
         //spawnEnemy(Random.Range((int)1, (int)2));
     }

@@ -130,6 +130,10 @@ public class TrincheraManager : MonoBehaviour
 
     private void SacarSoldado(GameObject soldado)
     {
+        if(soldado == null)
+        {
+            return;
+        }
         //soldado.transform.position = this.transform.position + new Vector3(0, 0.5f, 0);
         soldado.transform.position += new Vector3(0, 0.5f, 0);
         soldado.GetComponent<SoldierMoveComponent>().continueMoving();
