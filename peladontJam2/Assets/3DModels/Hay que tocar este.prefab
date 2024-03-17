@@ -51,9 +51,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1439730007547781893, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad5aa5acde5d1ef4a8a5a79121b636f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
       propertyPath: m_Name
-      value: tree
+      value: Hay que tocar este
       objectReference: {fileID: 0}
     - target: {fileID: 7071182760956848314, guid: 7023fcbe4a9460546aed36287923bd9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
