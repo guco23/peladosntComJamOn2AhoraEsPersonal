@@ -4928,7 +4928,7 @@ GameObject:
   - component: {fileID: 7769188403861413989}
   - component: {fileID: -8155951639645920153}
   m_Layer: 6
-  m_Name: Soldado Aliado PickAxe
+  m_Name: Soldado Enemigo PickAxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5088,7 +5088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBuildSpend: 3
-  trinchera: {fileID: 588691648375685508, guid: 0fea2d7bc934fb34ba77f3ae9a08a3cd, type: 3}
+  trinchera: {fileID: 588691648375685508, guid: 649135c0f4cfd36409a07ecd1db3fc92, type: 3}
   offsetTrinchera: {x: 1, y: 0, z: 0.75}
   tipo: 0
   buildEvent:

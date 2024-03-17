@@ -48,6 +48,8 @@ public class ShootComponent : MonoBehaviour
 
     private InFrustrumChecker checker;
 
+    private Animator anim;
+
     private void Start()
     {
         RandFireRate();
@@ -55,6 +57,7 @@ public class ShootComponent : MonoBehaviour
 
         soldierDectect = GetComponent<SoldierDetectSoldierComponent>();    
         checker = GetComponent<InFrustrumChecker>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -113,7 +116,7 @@ public class ShootComponent : MonoBehaviour
         shooting = true;
 
 
-
+        anim.SetBool("isShooting",shooting);
         RandFireRate();
 
         elapsedTime = fireRate - firstShootDelay;
@@ -135,7 +138,7 @@ public class ShootComponent : MonoBehaviour
     {
         target = null;
         shooting = false;
-
+        anim.SetBool("isShooting", shooting);
         soldierDectect.enemyDefeated();
     }
 
