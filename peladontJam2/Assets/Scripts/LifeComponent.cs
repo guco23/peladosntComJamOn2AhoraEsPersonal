@@ -74,7 +74,7 @@ public class LifeComponent : MonoBehaviour
                 PlacementSystem.fog_.ReplaceFogRevealerList(fogList);
             }
             anim.SetTrigger("die");
-            Destroy(gameObject);
+            Destroy(gameObject,3f);
             
             return true;
         }
