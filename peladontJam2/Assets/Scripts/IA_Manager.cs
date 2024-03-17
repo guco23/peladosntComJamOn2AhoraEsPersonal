@@ -92,8 +92,8 @@ public class IA_Manager : MonoBehaviour
         if(elapsedTime > stateTime) {
             elapsedTime = 0;
 
-            state = (IA_STATE)Random.Range((int)0, (int)3);
-
+            //state = (IA_STATE)Random.Range((int)0, (int)3);
+            NextState();
             //spawnEnemy(Random.Range((int)1, (int)6));
             //spawnEnemy(Random.Range((int)1, (int)2));
         }
@@ -122,20 +122,20 @@ public class IA_Manager : MonoBehaviour
         }
         else if(state == IA_STATE.BUILD_TRINCHER)
         {
-            if (resourceManager.getResources() >= 300){
+            if (resourceManager.getResources() >= 400){
 
                 resourceManager.SpendResourses(300);
 
 
                 int fila = Random.Range((int)1,(int)6);
                 
-                int col = Random.Range((int)-10, (int)9);
+                int col = Random.Range((int)-2, (int)9);
            
                 Vector3Int cellPos = new Vector3Int(col, fil1PosY + fila - 1, 0);
 
                 while (posicionesConTrincheras.Contains(cellPos)){
                     fila = Random.Range((int)0, (int)6);
-                    col = Random.Range((int)-10, (int)9);
+                    col = Random.Range((int)-2, (int)9);
                     cellPos = new Vector3Int(col, fil1PosY + fila - 1, 0);
                 }
 
@@ -146,10 +146,30 @@ public class IA_Manager : MonoBehaviour
 
     private void Start()
     {
-        state = (IA_STATE)Random.Range((int)0, (int)3);
+        //state = (IA_STATE)Random.Range((int)0, (int)3);
+        NextState();
         state = IA_STATE.ATACK_TACTIC;
         //spawnTrincher(1, 2);
         //spawnEnemy(Random.Range((int)1, (int)2));
+    }
+
+
+    void NextState()
+    {
+        int x = Random.Range((int)0,(int)100);
+
+        if (x <= 40)
+        {
+            state = IA_STATE.ATACK_TACTIC;
+        }
+        else if (x <= 80)
+        {
+            state = IA_STATE.ATACK_FRENETIC;
+        }
+        else
+        {
+            state = IA_STATE.BUILD_TRINCHER;
+        }
     }
 }
 
