@@ -50,6 +50,7 @@ public class BuildTrinchera : MonoBehaviour
         
         moveComponent = GetComponent<SoldierMoveComponent>();
         eventInstance = RuntimeManager.CreateInstance(buildEvent.Path);
+        inFrustrum = GetComponent<InFrustrumChecker>();
     }
 
     // Update is called once per frame
@@ -62,8 +63,11 @@ public class BuildTrinchera : MonoBehaviour
             {
                 building = true;
                 moveComponent.stopMoving();
-                if(inFrustrum.IsVisible)
+                if (inFrustrum.IsVisible)
+                {
+                    Debug.Log("Sonido");
                     eventInstance.start();
+                }
             }
         }
         if (tipo == 1)
@@ -73,13 +77,16 @@ public class BuildTrinchera : MonoBehaviour
                 building = true;
                 moveComponent.stopMoving();
                 if (inFrustrum.IsVisible)
+                {
+                    Debug.Log("Sonido");
                     eventInstance.start();
+                }
             }
         }
-        if (inFrustrum.IsVisible)
-        {
-            eventInstance.release();
-        }
+        //if (!inFrustrum.IsVisible)
+        //{
+        //    eventInstance.release();
+        //}
         if (building)
         {
 
