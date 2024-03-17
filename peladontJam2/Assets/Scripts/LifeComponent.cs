@@ -22,9 +22,12 @@ public class LifeComponent : MonoBehaviour
     [SerializeField] 
     private VisualEffect miniBloodEffect;
 
+    private Animator anim;
+
     protected void Start()
     {
         life = maxLife;
+        anim = GetComponentInChildren<Animator>();
     }
 
     //damage must be positive
@@ -70,7 +73,7 @@ public class LifeComponent : MonoBehaviour
                 fogList.RemoveAt(i);
                 PlacementSystem.fog_.ReplaceFogRevealerList(fogList);
             }
-
+            anim.SetTrigger("die");
             Destroy(gameObject);
             
             return true;
