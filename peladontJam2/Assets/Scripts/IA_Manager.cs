@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 public class IA_Manager : MonoBehaviour
 {
     [SerializeField]
-    private int spawnPosX = 19;
+    private int spawnPosX = 10;
 
     [SerializeField]   
     private int fil1PosY = -3;
@@ -128,13 +128,13 @@ public class IA_Manager : MonoBehaviour
 
                 int fila = Random.Range((int)1,(int)6);
                 
-                int col = Random.Range((int)-10, (int)18);
+                int col = Random.Range((int)-10, (int)9);
            
                 Vector3Int cellPos = new Vector3Int(col, fil1PosY + fila - 1, 0);
 
                 while (posicionesConTrincheras.Contains(cellPos)){
                     fila = Random.Range((int)0, (int)6);
-                    col = Random.Range((int)-10, (int)18);
+                    col = Random.Range((int)-10, (int)9);
                     cellPos = new Vector3Int(col, fil1PosY + fila - 1, 0);
                 }
 
@@ -146,7 +146,7 @@ public class IA_Manager : MonoBehaviour
     private void Start()
     {
         state = (IA_STATE)Random.Range((int)0, (int)3);
-        state = IA_STATE.BUILD_TRINCHER;
+        state = IA_STATE.ATACK_TACTIC;
         //spawnTrincher(1, 2);
         //spawnEnemy(Random.Range((int)1, (int)2));
     }

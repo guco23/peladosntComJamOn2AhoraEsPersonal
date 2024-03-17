@@ -76,7 +76,7 @@ public class PlacementSystem : MonoBehaviour
     {
         Vector3 mousePos = inputManager.GetSelectedMapPoint();
         Vector3Int cellPos = grid_.WorldToCell(mousePos);
-        //print(cellPos);
+        print(cellPos);
         if(enemyType == 0)
         {
             mouseIcon.transform.position = grid_.CellToWorld(cellPos) + placeOffSet;
@@ -195,7 +195,7 @@ public class PlacementSystem : MonoBehaviour
     {
 
         setSoldierType(0);
-        for (int i = 0;i <5;i++)
+        for (int i = 0;i <6;i++)
         {
             spawns.Add(new spawnInfo(false, false, 0));
         }
