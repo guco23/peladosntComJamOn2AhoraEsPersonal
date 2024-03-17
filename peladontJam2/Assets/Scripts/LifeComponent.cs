@@ -49,15 +49,14 @@ public class LifeComponent : MonoBehaviour
                 bloodEffect.SendEvent("Bleed");
                 bloodEffect.gameObject.transform.parent = null;
             }
-            Destroy(gameObject);
-            
-            List<FischlWorks_FogWar.csFogWar.FogRevealer> fogList =   PlacementSystem.fog_._FogRevealers;
+
+            List<FischlWorks_FogWar.csFogWar.FogRevealer> fogList = PlacementSystem.fog_._FogRevealers;
 
             bool encontrado = false;
 
             int i = 0;
 
-            while (i < fogList.Count && !encontrado) 
+            while (i < fogList.Count && !encontrado)
             {
                 if (fogList[i]._RevealerTransform == transform)
                 {
@@ -66,12 +65,14 @@ public class LifeComponent : MonoBehaviour
                 else i++;
             }
 
-            if(encontrado)
+            if (encontrado)
             {
                 fogList.RemoveAt(i);
-                PlacementSystem.fog_.ReplaceFogRevealerList(fogList);   
+                PlacementSystem.fog_.ReplaceFogRevealerList(fogList);
             }
 
+            Destroy(gameObject);
+            
             return true;
         }
         soundInstance.start();

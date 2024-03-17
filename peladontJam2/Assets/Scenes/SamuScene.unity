@@ -2940,6 +2940,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &1912507062 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4473090870891328377, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+  m_PrefabInstance: {fileID: 4918166309535079645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2069564381
 GameObject:
   m_ObjectHideFlags: 0
@@ -3201,8 +3206,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: levelDimensionX
-      value: 70
+      value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: fogRevealers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: fogRevealers.Array.data[0].sightRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 802842335094170246, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: fogRevealers.Array.data[0].revealerTransform
+      value: 
+      objectReference: {fileID: 1912507062}
     - target: {fileID: 1285185888569477372, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.68
