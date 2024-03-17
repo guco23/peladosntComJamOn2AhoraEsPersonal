@@ -128,6 +128,7 @@ MonoBehaviour:
   bloodEffect: {fileID: 0}
   miniBloodEffect: {fileID: 0}
   type: 1
+  healthBar_: {fileID: 0}
 --- !u!114 &8149022385055343333
 MonoBehaviour:
   m_ObjectHideFlags: 0
