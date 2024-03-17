@@ -3094,7 +3094,7 @@ PrefabInstance:
     - target: {fileID: 4918166309192739351, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: basicSoldierPickAxePrefab
       value: 
-      objectReference: {fileID: 7405620062232497659, guid: 48e59a918e99b784ca2041fbc0a71c64, type: 3}
+      objectReference: {fileID: 2908700828725793553, guid: 492123d6de81f3643850f08182207971, type: 3}
     - target: {fileID: 6198952566305156498, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: life
       value: 1
