@@ -199,11 +199,9 @@ public class PlacementSystem : MonoBehaviour
     {
         if(levelText != null)
         {
-
             levelText.SetActive(true);
 
             levelText.GetComponent<TMP_Text>().text = "LEVEL " + (currentLevel + 1);
-
         }
 
         

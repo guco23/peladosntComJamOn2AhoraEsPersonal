@@ -29,6 +29,14 @@ public class LifeComponent : MonoBehaviour
 
     private Animator anim;
 
+    protected void Update()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();   
+        if(rb != null  && life <= 0)
+        {
+            rb.velocity = new Vector3(0, 0, 0);
+        }
+    }
     protected void Start()
     {
         life = maxLife;
