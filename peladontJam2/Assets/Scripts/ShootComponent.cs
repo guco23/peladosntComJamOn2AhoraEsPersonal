@@ -101,7 +101,7 @@ public class ShootComponent : MonoBehaviour
 
         //llamar al sonido de disparo(LUIS HAZ TU COSA)
         if (checker.IsVisible)
-        {
+        { 
             EventInstance soundInstance = RuntimeManager.CreateInstance(inputsound.Path);
             soundInstance.start();
             soundInstance.release();
