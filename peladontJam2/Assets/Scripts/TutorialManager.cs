@@ -15,7 +15,11 @@ public class TutorialManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        resoursesSystem_.SetActive(false);
+        iaSystem_.SetActive(false);
+        canvas_.SetActive(false);
+
     }
 
     // Update is called once per frame
