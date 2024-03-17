@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="ParameterPreset" id="{fbaa41dc-6bd4-4704-8e4e-27e020d30564}">
+	<object class="ParameterPreset" id="{5ec6a09a-c3cc-4d43-b7c4-c4f72cfe0a23}">
 		<property name="name">
-			<value>InMovingSoldiers</value>
+			<value>Activity</value>
 		</property>
 		<relationship name="folder">
 			<destination>{d35528aa-f2a7-4079-9099-5b8dc052b01f}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{1242f673-028a-4c4d-9741-0cd41a92a371}</destination>
+			<destination>{b1fa5815-1732-49d9-9cc8-974b9b79ad65}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{1242f673-028a-4c4d-9741-0cd41a92a371}">
+	<object class="GameParameter" id="{b1fa5815-1732-49d9-9cc8-974b9b79ad65}">
 		<property name="maximum">
-			<value>5</value>
+			<value>50</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
