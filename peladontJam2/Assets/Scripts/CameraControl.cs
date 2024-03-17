@@ -37,9 +37,15 @@ public class CameraControl : MonoBehaviour
 
     void Update()
     {
-        move = (myDir.y * mainCamera.transform.forward + myDir.x * mainCamera.transform.right) * speed_;
 
-        controller.Move(move * Time.deltaTime);
+        if((transform.position.x > -10 || myDir.x > 0) && (transform.position.x < 13 || myDir.x < 0)) {
+
+            move = (myDir.y * mainCamera.transform.forward + myDir.x * mainCamera.transform.right) * speed_;
+
+            controller.Move(move * Time.deltaTime);
+
+        }
+        
 
     }
 
