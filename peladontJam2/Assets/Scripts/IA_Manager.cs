@@ -122,9 +122,9 @@ public class IA_Manager : MonoBehaviour
         }
         else if(state == IA_STATE.BUILD_TRINCHER)
         {
-            if (resourceManager.getResources() >= 400){
+            if (resourceManager.getResources() >= 300){
 
-                resourceManager.SpendResourses(300);
+                resourceManager.SpendResourses(200);
 
 
                 int fila = Random.Range((int)1,(int)6);

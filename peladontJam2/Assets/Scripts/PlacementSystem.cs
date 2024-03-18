@@ -145,7 +145,7 @@ public class PlacementSystem : MonoBehaviour
 
                     spawns[cellPosSpawn.y - fil1PosY ] = sp;
                 }
-                else if(enemyType == 1 && teamResourses.SpendResourses(300))
+                else if(enemyType == 1 && teamResourses.SpendResourses(200))
                 {
 
                     GameObject soldierPickaxe = Instantiate(basicSoldierPickAxePrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
