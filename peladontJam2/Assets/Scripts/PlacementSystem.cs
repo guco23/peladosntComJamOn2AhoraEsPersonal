@@ -9,6 +9,11 @@ using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
+    [SerializeField] private GameObject resaltadorTropa_0;
+    [SerializeField] private GameObject resaltadorTropa_1;
+
+
+
     [SerializeField] private ManagerResourcesTrincher resources_player;
     [SerializeField] private GameObject resourcesText;
 
@@ -86,8 +91,16 @@ public class PlacementSystem : MonoBehaviour
         //texto UI
         resourcesText.GetComponent<TMP_Text>().text = "+" +resources_player.getResourcesPerSecond();
 
-
-
+        if(enemyType == 0)
+        {
+            resaltadorTropa_0.SetActive(true);
+            resaltadorTropa_1.SetActive(false);
+        }
+        else if(enemyType == 1)
+        {
+            resaltadorTropa_0.SetActive(false);
+            resaltadorTropa_1.SetActive(true);
+        }
         Vector3 mousePos = inputManager.GetSelectedMapPoint();
         Vector3Int cellPos = grid_.WorldToCell(mousePos);
         print(cellPos);
