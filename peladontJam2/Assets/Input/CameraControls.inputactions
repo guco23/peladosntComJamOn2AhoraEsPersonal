@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SaltarCinematica",
+                    "type": "Button",
+                    "id": "8b89d967-6760-41f8-a51d-602f3bc2399b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -86,6 +95,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "sELECTtRINCHERA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42c767bf-b4a3-4b6a-b6c9-b0a2267152c6",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SaltarCinematica",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
