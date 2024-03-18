@@ -1234,6 +1234,11 @@ Transform:
   m_Father: {fileID: 153997328}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1542816639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505785893046464919, guid: 20d55b24de1354e48a90d23dbf6adb64, type: 3}
+  m_PrefabInstance: {fileID: 1505785892490425936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1590002563 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1505785893660276179, guid: 20d55b24de1354e48a90d23dbf6adb64, type: 3}
@@ -2274,6 +2279,14 @@ PrefabInstance:
       propertyPath: spawnCellX
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: resourcesText
+      value: 
+      objectReference: {fileID: 1542816639}
+    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: resources_player
+      value: 
+      objectReference: {fileID: 1665157878}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: mouseIconZafarero
       value: 
