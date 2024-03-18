@@ -30,6 +30,10 @@ public class SelectorTrinchera : MonoBehaviour
                     trincheraManager = obj.GetComponent<TrincheraManager>();
                     UpdateNumber();
                 }
+                else
+                {
+                    Debug.LogWarning("Nop hay trincheraManager");
+                }
             }
             else
             {

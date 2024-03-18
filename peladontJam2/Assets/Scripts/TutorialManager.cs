@@ -80,6 +80,8 @@ public class TutorialManager : MonoBehaviour
         else if(currentText_ == 6)
         {
 
+            menuTrinchera_.SetActive(true);
+
         }
 
         NextPartText();
