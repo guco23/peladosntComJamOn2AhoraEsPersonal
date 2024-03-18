@@ -11,6 +11,8 @@ public class PlacementSystem : MonoBehaviour
 {
     [SerializeField] private GameObject levelText;
     [SerializeField] private ManagerResourcesTrincher resources_iA;
+
+    [SerializeField] private ManagerResourcesTrincher resources_player;
     [SerializeField] private int rangoVisionSoldados = 3;
     [SerializeField] private int rangoVisionMineros = 2;
 
@@ -207,24 +209,23 @@ public class PlacementSystem : MonoBehaviour
         
         if (currentLevel == 0)
         {
-            resources_iA.setResourcesAmount(35);
+            resources_iA.setResourcesAmount(53);
         }
         else if (currentLevel == 1)
         {
-            resources_iA.setResourcesAmount(45);
-
+            resources_iA.setResourcesAmount(60);
         }
         else if (currentLevel == 2)
         {
-            resources_iA.setResourcesAmount(53);
+            resources_iA.setResourcesAmount(68);
         }
         else if (currentLevel == 3)
         {
-            resources_iA.setResourcesAmount(60);
+            resources_iA.setResourcesAmount(75);
         }
         else if (currentLevel == 4)
         {
-            resources_iA.setResourcesAmount(70);
+            resources_iA.setResourcesAmount(83);
         }
 
         setSoldierType(0);
