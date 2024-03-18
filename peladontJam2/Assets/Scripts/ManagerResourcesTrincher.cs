@@ -15,6 +15,10 @@ public class ManagerResourcesTrincher : MonoBehaviour
     [SerializeField]
     private float resourseAmount = 0;
 
+    [SerializeField] private float maxWinAmount;
+
+    [SerializeField] private float upgradeAmount;
+
 
     #region methods
 
@@ -29,6 +33,32 @@ public class ManagerResourcesTrincher : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public bool UpgradeResourses(float cost)
+    {
+
+        if (cost <= resourseAmount && resourseWinAmount < maxWinAmount)
+        {
+            resourseAmount -= cost;
+
+            resourseWinAmount += upgradeAmount;
+
+            if(resourseWinAmount > maxWinAmount)
+            {
+
+                resourseWinAmount= maxWinAmount;
+
+            }
+
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 
     public float getResources()
