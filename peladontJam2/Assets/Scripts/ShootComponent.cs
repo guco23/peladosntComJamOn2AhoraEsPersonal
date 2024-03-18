@@ -83,7 +83,7 @@ public class ShootComponent : MonoBehaviour
 
     }
 
-    protected void shoot()
+    protected virtual void shoot()
     {
 
         SpawnBullet();
@@ -144,7 +144,7 @@ public class ShootComponent : MonoBehaviour
         soldierDectect.enemyDefeated();
     }
 
-    private void SpawnBullet()
+    protected void SpawnBullet()
     {
         BulletComponent bullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity).GetComponent<BulletComponent>();
 

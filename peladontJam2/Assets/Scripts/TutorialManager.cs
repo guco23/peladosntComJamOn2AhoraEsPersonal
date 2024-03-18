@@ -27,10 +27,14 @@ public class TutorialManager : MonoBehaviour
 
     public void NextPartText()
     {
+        if(currentText_ < texts_.Length) {
 
-        texts_[currentText_].SetActive(true);
+            texts_[currentText_].SetActive(true);
 
-        currentText_++;
+            currentText_++;
+
+        }
+        
 
     }
 
@@ -70,6 +74,13 @@ public class TutorialManager : MonoBehaviour
         //meter soldados en trincheras
         else if(currentText_ == 5)
         {
+
+        }
+        //Soltar soldados en las trincheras
+        else if(currentText_ == 6)
+        {
+
+            menuTrinchera_.SetActive(true);
 
         }
 

@@ -29,6 +29,14 @@ public class LifeComponent : MonoBehaviour
 
     private Animator anim;
 
+    protected void Update()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();   
+        if(rb != null  && life <= 0)
+        {
+            rb.velocity = new Vector3(0, 0, 0);
+        }
+    }
     protected void Start()
     {
         life = maxLife;
@@ -48,6 +56,18 @@ public class LifeComponent : MonoBehaviour
 
         //si tenemos 0 o menos vida, destroy
         if (life <= 0) {
+
+            SoldierMoveComponent solMove_;
+
+            
+
+            if (gameObject.TryGetComponent<SoldierMoveComponent>(out solMove_))
+            {
+
+                solMove_.stopMoving();
+
+            }
+
             emitter.SetParameter("Alive", 1f);
             emitter.Play();
             if (bloodEffect)

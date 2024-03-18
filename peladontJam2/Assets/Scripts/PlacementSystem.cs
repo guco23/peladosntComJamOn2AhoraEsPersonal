@@ -2,13 +2,14 @@ using FischlWorks_FogWar;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlacementSystem : MonoBehaviour
 {
-
+    [SerializeField] private GameObject levelText;
     [SerializeField] private ManagerResourcesTrincher resources_iA;
     [SerializeField] private int rangoVisionSoldados = 3;
     [SerializeField] private int rangoVisionMineros = 2;
@@ -144,7 +145,7 @@ public class PlacementSystem : MonoBehaviour
 
                     spawns[cellPosSpawn.y - fil1PosY ] = sp;
                 }
-                else if(enemyType == 1 && teamResourses.SpendResourses(300))
+                else if(enemyType == 1 && teamResourses.SpendResourses(200))
                 {
 
                     GameObject soldierPickaxe = Instantiate(basicSoldierPickAxePrefab, grid_.CellToWorld(cellPosSpawn) + placeOffSetSpawn, Quaternion.identity);
@@ -196,20 +197,34 @@ public class PlacementSystem : MonoBehaviour
 
     private void Start()
     {
+        if(levelText != null)
+        {
+            levelText.SetActive(true);
 
+            levelText.GetComponent<TMP_Text>().text = "LEVEL " + (currentLevel + 1);
+        }
+
+        
         if (currentLevel == 0)
         {
-            resources_iA.setResourcesAmount(50);
+            resources_iA.setResourcesAmount(35);
         }
         else if (currentLevel == 1)
         {
-            resources_iA.setResourcesAmount(60);
+            resources_iA.setResourcesAmount(45);
 
         }
         else if (currentLevel == 2)
         {
-            resources_iA.setResourcesAmount(75);
-
+            resources_iA.setResourcesAmount(53);
+        }
+        else if (currentLevel == 3)
+        {
+            resources_iA.setResourcesAmount(60);
+        }
+        else if (currentLevel == 4)
+        {
+            resources_iA.setResourcesAmount(70);
         }
 
         setSoldierType(0);
@@ -219,5 +234,18 @@ public class PlacementSystem : MonoBehaviour
         }
 
         fog_ = myfog_;
+
+
+        if (levelText != null)
+        {
+            StartCoroutine("Fade");
+        }
+    }
+
+    IEnumerator Fade()
+    {
+
+        yield return new WaitForSeconds(1.5f);
+        levelText.gameObject.SetActive(false);
     }
 }

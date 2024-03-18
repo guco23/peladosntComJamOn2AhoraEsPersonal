@@ -24,6 +24,7 @@ public class TrincheraManager : MonoBehaviour
     [Tooltip("El soldado que spawnea al start")]
     [SerializeField]
     GameObject soldadoInicial;
+    int ammountToSalir;
 
     // Start is called before the first frame update.
     void Start()
@@ -31,6 +32,7 @@ public class TrincheraManager : MonoBehaviour
         //El la hora de hacer STRING TYPING
         contenidos = new GameObject[30];
         ocupacion = 0;
+        ammountToSalir = 0;
         estado = ControlTrinchera.VACIA;
         GameObject soldado = Instantiate(soldadoInicial, gameObject.transform.position, Quaternion.identity);
         //EntrarEnTrinchera(soldado);
@@ -54,6 +56,23 @@ public class TrincheraManager : MonoBehaviour
         } else if(ocupacion >= MAX_OCUP) {
             return false;
         }
+        //rotar soldado
+
+        
+         
+        //soldado.transform.right = gameObject.transform.right;
+
+        if(soldado.layer == LayerMask.NameToLayer("Aliado"))
+        {
+            soldado.transform.right = gameObject.transform.right;
+        }
+        else
+        {
+            soldado.transform.right = -gameObject.transform.right;
+
+        }
+
+
         //Añade al soldado al array de soldados
         MeterSoldado(soldado);
         //Añade a la trinchera la vida del soldado
@@ -73,6 +92,7 @@ public class TrincheraManager : MonoBehaviour
     }
 
     //Saca a todas las unidades en la trinchera.
+    //La cosa sería utilizar otra forma de sacar para que el jugador seleccione una cantidcad específica.
     public void SacarDeTrinchera() {
         for (int i = 0; i < ocupacion; i++)
         {
@@ -91,16 +111,49 @@ public class TrincheraManager : MonoBehaviour
         soldado.GetComponent<SoldierMoveComponent>().stopMoving();
         soldado.GetComponent<SoldierMoveComponent>().setEstadoSoldado(EstadoSoldado.SOLDADO_ATRINCHERADO);
         //Cambia su posicion para estar metido abajo, en la trinchera
-        soldado.transform.position = this.transform.position - new Vector3(0,0.5f,0);
+        soldado.transform.position -=  new Vector3(0,0.5f,0);
         this.GetComponent<LifeComponentTrinchera>().AddLife(soldado.GetComponent<LifeComponent>().getLife());
+
+
+        if (gameObject.layer == LayerMask.NameToLayer("Aliado")){
+
+            //print("aaaaaaaaaaaaaaaaaaaa");
+            soldado.transform.Rotate(new Vector3(0,90,0));
+        }
+        else
+        {
+            //print("bbbbbbbbbbbbbbbbbbbbbbb");
+
+            soldado.transform.Rotate(new Vector3(0, -90, 0));
+        }
     }
 
     private void SacarSoldado(GameObject soldado)
     {
-        soldado.transform.position = this.transform.position + new Vector3(0, 0.5f, 0);
+        if(soldado == null)
+        {
+            return;
+        }
+        //soldado.transform.position = this.transform.position + new Vector3(0, 0.5f, 0);
+        soldado.transform.position += new Vector3(0, 0.5f, 0);
         soldado.GetComponent<SoldierMoveComponent>().continueMoving();
         soldado.GetComponent<SoldierMoveComponent>().setEstadoSoldado(EstadoSoldado.SOLDADO_EN_CAMPO);
     }
 
+    public void Aumentar()
+    {
+        if (ammountToSalir < ocupacion)
+            ammountToSalir++;
+    }
 
+    public void Reducir()
+    {
+        if(ammountToSalir > 0)
+            ammountToSalir--;
+    }
+
+    public int getAmmountToSalir()
+    {
+        return ammountToSalir;
+    }
 }

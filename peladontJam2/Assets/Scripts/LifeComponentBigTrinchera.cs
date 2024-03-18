@@ -4,17 +4,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.VFX;
 
 
-public class LifeComponentBigTrinchera : LifeComponent
+public class LifeComponentBigTrinchera : LifeComponent 
 {
 
     [SerializeField] private int type;
 
+    [SerializeField] private Image healthBar_;
+
     public override bool reciveDamage(float damage) 
     {
         life -= damage;
+
+        healthBar_.fillAmount = life / maxLife;
 
         if(life <= 0)
         {
@@ -32,7 +37,7 @@ public class LifeComponentBigTrinchera : LifeComponent
 
                 //SceneManager.LoadScene("VictoryScene");
 
-                if (PlacementSystem.currentLevel < 2)
+                if (PlacementSystem.currentLevel < 4)
                 {
                     print(PlacementSystem.currentLevel);
                     SceneManager.LoadScene("Overworld");
@@ -47,5 +52,6 @@ public class LifeComponentBigTrinchera : LifeComponent
         return false;
 
     }
+
 
 }
