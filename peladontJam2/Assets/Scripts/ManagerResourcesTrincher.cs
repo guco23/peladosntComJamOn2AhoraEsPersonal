@@ -66,6 +66,11 @@ public class ManagerResourcesTrincher : MonoBehaviour
         return resourseAmount;
     }
 
+    public float getResourcesPerSecond()
+    {
+        return resourseWinAmount;
+    }
+
     public float getElapsedTime()
     {
         return elapsedTime;
