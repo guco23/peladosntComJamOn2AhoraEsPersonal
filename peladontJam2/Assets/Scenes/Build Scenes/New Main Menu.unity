@@ -18306,7 +18306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 48}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1904991263
@@ -18869,6 +18869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2039460787}
   - component: {fileID: 2039460786}
+  - component: {fileID: 2039460788}
   m_Layer: 0
   m_Name: Saltar Cinematica
   m_TagString: Untagged
@@ -18889,7 +18890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: c012ba6971a756e438d674036d91ccec, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -18900,7 +18901,39 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f5b46bdb-785d-4a43-91f2-f79a2126cbaa
+    m_ActionName: CameraControl/Move[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3e39bf8b-5e52-4cfa-ad0e-13624d6d5f5f
+    m_ActionName: CameraControl/SpawnEnemy[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f7875653-dc42-4c58-ac8b-0a7907e82faf
+    m_ActionName: CameraControl/sELECTtRINCHERA[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2039460788}
+        m_TargetAssemblyTypeName: SaltarCinematica, Assembly-CSharp
+        m_MethodName: SaltarAnimacion
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8b89d967-6760-41f8-a51d-602f3bc2399b
+    m_ActionName: CameraControl/SaltarCinematica[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f0f79f28-51f3-480c-9704-a4924033599f
+    m_ActionName: UI/Click[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CameraControl
@@ -18921,6 +18954,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2039460788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039460785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976809b1e9f791f46b677c0de96f1305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camaraAnimacion: {fileID: 1939429402}
+  menuUi: {fileID: 16229093}
 --- !u!1001 &2040517022
 PrefabInstance:
   m_ObjectHideFlags: 0

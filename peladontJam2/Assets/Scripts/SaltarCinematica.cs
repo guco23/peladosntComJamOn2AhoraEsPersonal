@@ -1,39 +1,35 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SaltarCinematica : MonoBehaviour
-{		
-    #region References
+{
+    [SerializeField]
+    private CinemachineVirtualCamera camaraAnimacion;
+    [SerializeField]
+    private GameObject menuUi;
 
-    #endregion	
-
-    #region Parameters
-
-    #endregion	
-
-    #region Properties
-
-    #endregion	
-
-    #region Methods
-
-    #region Unity Methods
-	
-    // Start is called before the first frame update
-    void Start()
+    public void SaltarAnimacion(InputAction.CallbackContext callback)
     {
-        
+        if (callback.started)
+        {
+            print("tu vejaaaa");
+            camaraAnimacion.enabled = false;
+
+
+            StartCoroutine(activeMenu());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator activeMenu()
     {
-        
+
+        yield return new WaitForSecondsRealtime(2.0f);
+        menuUi.SetActive(true);
+
     }
 
-    #endregion	
-  
-    #endregion	
 }
 
