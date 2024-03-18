@@ -37,7 +37,7 @@ public class LifeComponentBigTrinchera : LifeComponent
 
                 //SceneManager.LoadScene("VictoryScene");
 
-                if (PlacementSystem.currentLevel < 2)
+                if (PlacementSystem.currentLevel < 4)
                 {
                     print(PlacementSystem.currentLevel);
                     SceneManager.LoadScene("Overworld");

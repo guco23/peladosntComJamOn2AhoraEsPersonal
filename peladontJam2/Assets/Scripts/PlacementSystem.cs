@@ -207,17 +207,24 @@ public class PlacementSystem : MonoBehaviour
         
         if (currentLevel == 0)
         {
-            resources_iA.setResourcesAmount(50);
+            resources_iA.setResourcesAmount(35);
         }
         else if (currentLevel == 1)
         {
-            resources_iA.setResourcesAmount(60);
+            resources_iA.setResourcesAmount(45);
 
         }
         else if (currentLevel == 2)
         {
-            resources_iA.setResourcesAmount(75);
-
+            resources_iA.setResourcesAmount(53);
+        }
+        else if (currentLevel == 3)
+        {
+            resources_iA.setResourcesAmount(60);
+        }
+        else if (currentLevel == 4)
+        {
+            resources_iA.setResourcesAmount(70);
         }
 
         setSoldierType(0);
