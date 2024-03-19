@@ -64,7 +64,7 @@ public class TutorialManager : MonoBehaviour
         //colocar soldado
         else if(currentText_ == 3)
         {
-
+            textLevel_.SetActive(false);
             resoursesSystem_.SetActive(true);
             spawnSystem_.SetActive(true);
             
