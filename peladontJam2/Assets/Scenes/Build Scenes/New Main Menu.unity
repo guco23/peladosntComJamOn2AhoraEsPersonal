@@ -8195,6 +8195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417631ae20bdf7f49a3356a9da561297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Banks:
+  - Master.strings
+  - SFX.strings
 --- !u!4 &1225730354
 Transform:
   m_ObjectHideFlags: 0
@@ -20658,9 +20661,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3356545335801065635}
   - component: {fileID: 3356545335801065634}
-  - component: {fileID: 3356545335801065633}
   - component: {fileID: 3356545335801065660}
   - component: {fileID: 3356545335801065661}
+  - component: {fileID: 3356545335801065662}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -20668,14 +20671,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &3356545335801065633
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3356545335801065632}
-  m_Enabled: 1
 --- !u!20 &3356545335801065634
 Camera:
   m_ObjectHideFlags: 0
@@ -20801,3 +20796,16 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3356545335801065662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3356545335801065632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
