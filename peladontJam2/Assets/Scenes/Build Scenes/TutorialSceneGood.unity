@@ -3374,8 +3374,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1505785893751125091, guid: 20d55b24de1354e48a90d23dbf6adb64, type: 3}
       propertyPath: m_text
-      value: 
+      value: Saca Soldados
       objectReference: {fileID: 0}
+    - target: {fileID: 1505785893751125091, guid: 20d55b24de1354e48a90d23dbf6adb64, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dd44f051af272d04596ca150985a2083, type: 2}
+    - target: {fileID: 1505785893751125091, guid: 20d55b24de1354e48a90d23dbf6adb64, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -374854039786267819, guid: dd44f051af272d04596ca150985a2083, type: 2}
     - target: {fileID: 3915801232835041807, guid: 20d55b24de1354e48a90d23dbf6adb64, type: 3}
       propertyPath: m_IsActive
       value: 0
