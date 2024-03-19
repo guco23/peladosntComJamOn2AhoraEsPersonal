@@ -20,6 +20,10 @@ public class TutorialManager : MonoBehaviour
 
     [SerializeField] private GameObject menuTrinchera_;
 
+    [SerializeField] private GameObject textLevel_;
+
+    [SerializeField] private GameObject mejoraBase_;
+
     [SerializeField] private GameObject [] texts_;
 
     private int currentText_;
@@ -82,6 +86,13 @@ public class TutorialManager : MonoBehaviour
 
 
         }
+        //Mejorar base
+        else if(currentText_ == 7)
+        {
+
+            mejoraBase_.SetActive(true);
+
+        }
 
         NextPartText();
 
@@ -95,8 +106,10 @@ public class TutorialManager : MonoBehaviour
         spawnSystem_.SetActive(false);
         iaSystem_.SetActive(false);
         canvas_.SetActive(false);
+        textLevel_.SetActive(false);
+        mejoraBase_.SetActive(false);
 
-        for(int i = 0; i < texts_.Length; i++)
+        for (int i = 0; i < texts_.Length; i++)
         {
             texts_[i].SetActive(false);
         }
