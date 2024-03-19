@@ -27,6 +27,8 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] private LayerMask placementLayer;
     [SerializeField]
     private int fil1PosY = -3;
+
+    [SerializeField] private bool tutorial = false;
     public struct spawnInfo
     {
         public spawnInfo(bool pos,bool rango, int contador)
@@ -220,12 +222,17 @@ public class PlacementSystem : MonoBehaviour
 
     private void Start()
     {
-        if(levelText != null)
-        {
-            levelText.SetActive(true);
 
-            levelText.GetComponent<TMP_Text>().text = "LEVEL " + (currentLevel + 1);
+        if (!tutorial)
+        {
+            if (levelText != null)
+            {
+                levelText.SetActive(true);
+
+                levelText.GetComponent<TMP_Text>().text = "LEVEL " + (currentLevel + 1);
+            }
         }
+        
 
         
         if (currentLevel == 0)
@@ -246,7 +253,7 @@ public class PlacementSystem : MonoBehaviour
         }
         else if (currentLevel == 4)
         {
-            resources_iA.setResourcesAmount(83);
+            resources_iA.setResourcesAmount(80);
         }
 
         setSoldierType(0);
@@ -257,11 +264,14 @@ public class PlacementSystem : MonoBehaviour
 
         fog_ = myfog_;
 
-
-        if (levelText != null)
+        if (!tutorial)
         {
-            StartCoroutine("Fade");
+            if (levelText != null)
+            {
+                StartCoroutine("Fade");
+            }
         }
+        
     }
 
     IEnumerator Fade()

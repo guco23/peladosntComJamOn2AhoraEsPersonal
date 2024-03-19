@@ -4120,6 +4120,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 226165297}
     - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
+      propertyPath: tutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697793063261299390, guid: 166e64e8a01d9f3469721b487c89006d, type: 3}
       propertyPath: enemyType
       value: 0
       objectReference: {fileID: 0}
