@@ -24,7 +24,7 @@ public class DotDestroyMusic : MonoBehaviour
     }
     public void TurnDownSound(Scene sc)
     {
-        if (sc.buildIndex == 1 || sc.buildIndex == 2 || sc.buildIndex == 5 || sc.buildIndex == 3)
+        if (sc.buildIndex == 1 || sc.buildIndex == 2 || sc.buildIndex == 5 || sc.buildIndex == 3|| sc.buildIndex == 6)
         {
             GetComponent<StudioEventEmitter>().Stop();
         }
