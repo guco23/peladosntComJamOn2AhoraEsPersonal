@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class DotDestroyMusic : MonoBehaviour
 {
+    [FMODUnity.BankRef]
+    public List<string> Banks = new List<string>();
     private void Awake()
     {
         //SceneManager.sceneLoaded += TurnDownSound;
@@ -15,6 +17,10 @@ public class DotDestroyMusic : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        foreach (var bank in Banks)
+        {
+            FMODUnity.RuntimeManager.LoadBank(bank, true);
+        }
     }
 
     // Update is called once per frame
